@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class VirtualLocation extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:VirtualLocation'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = []
+        static _rdfs_comment = 'An online or virtual location for attending events. For example, one may attend an online seminar or educational event. While a virtual location may be used as the location of an event, virtual locations should not be confused with physical locations in the real world.'
+        static _rdfs_label = 'VirtualLocation'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

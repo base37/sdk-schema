@@ -1,0 +1,274 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalCondition extends window.LiveElement.Element.elements.MedicalEntity {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalCondition'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalEntity'
+        static __properties = ['associatedAnatomy', 'differentialDiagnosis', 'drug', 'epidemiology', 'expectedPrognosis', 'naturalProgression', 'pathophysiology', 'possibleComplication', 'possibleTreatment', 'primaryPrevention', 'riskFactor', 'secondaryPrevention', 'signOrSymptom', 'stage', 'status', 'typicalTest']
+        static _rdfs_comment = 'Any condition of the human body that affects the normal functioning of a person, whether physically or mentally. Includes diseases, injuries, disabilities, disorders, syndromes, etc.'
+        static _rdfs_label = 'MedicalCondition'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        associatedAnatomy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The anatomy of the underlying organ system or structures associated with this entity.",
+				container: $this,
+				propertyName: "associatedAnatomy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AnatomicalSystem",
+					"SuperficialAnatomy",
+					"AnatomicalStructure"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        differentialDiagnosis($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms to reach the most parsimonious diagnosis or diagnoses in a patient.",
+				container: $this,
+				propertyName: "differentialDiagnosis",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DDxElement"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        drug($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specifying a drug or medicine used in a medication procedure",
+				container: $this,
+				propertyName: "drug",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Drug"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        epidemiology($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The characteristics of associated patients, such as age, gender, race etc.",
+				container: $this,
+				propertyName: "epidemiology",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        expectedPrognosis($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The likely outcome in either the short term or long term of the medical condition.",
+				container: $this,
+				propertyName: "expectedPrognosis",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        naturalProgression($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The expected progression of the condition if it is not treated and allowed to progress naturally.",
+				container: $this,
+				propertyName: "naturalProgression",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        pathophysiology($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.",
+				container: $this,
+				propertyName: "pathophysiology",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        possibleComplication($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the disease, extension of the condition to other organ systems, etc.",
+				container: $this,
+				propertyName: "possibleComplication",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        possibleTreatment($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A possible treatment to address this condition, sign or symptom.",
+				container: $this,
+				propertyName: "possibleTreatment",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalTherapy"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        primaryPrevention($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.",
+				container: $this,
+				propertyName: "primaryPrevention",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalTherapy"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        riskFactor($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition.",
+				container: $this,
+				propertyName: "riskFactor",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalRiskFactor"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        secondaryPrevention($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition.",
+				container: $this,
+				propertyName: "secondaryPrevention",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalTherapy"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        signOrSymptom($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.",
+				container: $this,
+				propertyName: "signOrSymptom",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalSignOrSymptom"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        stage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The stage of the condition, if applicable.",
+				container: $this,
+				propertyName: "stage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalConditionStage"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        status($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The status of the study (enumerated).",
+				container: $this,
+				propertyName: "status",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"EventStatusType",
+					"MedicalStudyStatus"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        typicalTest($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A medical test typically performed given this condition.",
+				container: $this,
+				propertyName: "typicalTest",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalTest"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

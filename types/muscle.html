@@ -1,0 +1,105 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Muscle extends window.LiveElement.Element.elements.AnatomicalStructure {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Muscle'
+        static __type = 'rdfs:Class'
+        static __extends = 'AnatomicalStructure'
+        static __properties = ['antagonist', 'bloodSupply', 'insertion', 'muscleAction', 'nerve']
+        static _rdfs_comment = 'A muscle is an anatomical structure consisting of a contractile form of tissue that animals use to effect movement.'
+        static _rdfs_label = 'Muscle'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        antagonist($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The muscle whose action counteracts the specified muscle.",
+				container: $this,
+				propertyName: "antagonist",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Muscle"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        bloodSupply($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The blood vessel that carries blood from the heart to the muscle.",
+				container: $this,
+				propertyName: "bloodSupply",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Vessel"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        insertion($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The place of attachment of a muscle, or what the muscle moves.",
+				container: $this,
+				propertyName: "insertion",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AnatomicalStructure"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        muscleAction($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The movement the muscle generates.",
+				container: $this,
+				propertyName: "muscleAction",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        nerve($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The underlying innervation associated with the muscle.",
+				container: $this,
+				propertyName: "nerve",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Nerve"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

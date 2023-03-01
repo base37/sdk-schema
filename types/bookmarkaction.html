@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class BookmarkAction extends window.LiveElement.Element.elements.OrganizeAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:BookmarkAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'OrganizeAction'
+        static __properties = []
+        static _rdfs_comment = 'An agent bookmarks\/flags\/labels\/tags\/marks an object.'
+        static _rdfs_label = 'BookmarkAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

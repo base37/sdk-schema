@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Audience extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Audience'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['audienceType', 'geographicArea']
+        static _rdfs_comment = 'Intended audience for an item, i.e. the group for whom the item was created.'
+        static _rdfs_label = 'Audience'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        audienceType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).",
+				container: $this,
+				propertyName: "audienceType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        geographicArea($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The geographic area associated with the audience.",
+				container: $this,
+				propertyName: "geographicArea",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AdministrativeArea"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

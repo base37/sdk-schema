@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ClaimReview extends window.LiveElement.Element.elements.Review {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ClaimReview'
+        static __type = 'rdfs:Class'
+        static __extends = 'Review'
+        static __properties = ['claimReviewed']
+        static _rdfs_comment = 'A fact-checking review of claims made (or reported) in some creative work (referenced via itemReviewed).'
+        static _rdfs_label = 'ClaimReview'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        claimReviewed($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A short summary of the specific claims reviewed in a ClaimReview.",
+				container: $this,
+				propertyName: "claimReviewed",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

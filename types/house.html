@@ -1,0 +1,46 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class House extends window.LiveElement.Element.elements.Accommodation {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:House'
+        static __type = 'rdfs:Class'
+        static __extends = 'Accommodation'
+        static __properties = ['numberOfRooms']
+        static _rdfs_comment = 'A house is a building or structure that has the ability to be occupied for habitation by humans or other creatures (Source: Wikipedia, the free encyclopedia, see <a href="http:\/\/en.wikipedia.org\/wiki\/House">http:\/\/en.wikipedia.org\/wiki\/House<\/a>).'
+        static _rdfs_label = 'House'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        numberOfRooms($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.\nTypical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.",
+				container: $this,
+				propertyName: "numberOfRooms",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

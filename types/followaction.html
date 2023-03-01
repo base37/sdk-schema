@@ -1,0 +1,46 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class FollowAction extends window.LiveElement.Element.elements.InteractAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:FollowAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'InteractAction'
+        static __properties = ['followee']
+        static _rdfs_comment = 'The act of forming a personal connection with someone\/something (object) unidirectionally\/asymmetrically to get updates polled from.\n\nRelated actions:\n\n* [[BefriendAction]]: Unlike BefriendAction, FollowAction implies that the connection is *not* necessarily reciprocal.\n* [[SubscribeAction]]: Unlike SubscribeAction, FollowAction implies that the follower acts as an active agent constantly\/actively polling for updates.\n* [[RegisterAction]]: Unlike RegisterAction, FollowAction implies that the agent is interested in continuing receiving updates from the object.\n* [[JoinAction]]: Unlike JoinAction, FollowAction implies that the agent is interested in getting updates from the object.\n* [[TrackAction]]: Unlike TrackAction, FollowAction refers to the polling of updates of all aspects of animate objects rather than the location of inanimate objects (e.g. you track a package, but you don\'t follow it).'
+        static _rdfs_label = 'FollowAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        followee($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of object. The person or organization being followed.",
+				container: $this,
+				propertyName: "followee",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PreOrderAction extends window.LiveElement.Element.elements.TradeAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PreOrderAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'TradeAction'
+        static __properties = []
+        static _rdfs_comment = 'An agent orders a (not yet released) object\/product\/service to be delivered\/sent.'
+        static _rdfs_label = 'PreOrderAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

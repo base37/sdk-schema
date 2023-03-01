@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class VideoGameClip extends window.LiveElement.Element.elements.Clip {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:VideoGameClip'
+        static __type = 'rdfs:Class'
+        static __extends = 'Clip'
+        static __properties = []
+        static _rdfs_comment = 'A short segment\/part of a video game.'
+        static _rdfs_label = 'VideoGameClip'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

@@ -1,0 +1,105 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DrugStrength extends window.LiveElement.Element.elements.MedicalIntangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DrugStrength'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalIntangible'
+        static __properties = ['activeIngredient', 'availableIn', 'maximumIntake', 'strengthUnit', 'strengthValue']
+        static _rdfs_comment = 'A specific strength in which a medical drug is available in a specific country.'
+        static _rdfs_label = 'DrugStrength'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        activeIngredient($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An active ingredient, typically chemical compounds and\\/or biologic substances.",
+				container: $this,
+				propertyName: "activeIngredient",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        availableIn($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The location in which the strength is available.",
+				container: $this,
+				propertyName: "availableIn",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AdministrativeArea"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        maximumIntake($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Recommended intake of this supplement for a given population as defined by a specific recommending authority.",
+				container: $this,
+				propertyName: "maximumIntake",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MaximumDoseSchedule"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        strengthUnit($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The units of an active ingredient's strength, e.g. mg.",
+				container: $this,
+				propertyName: "strengthUnit",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        strengthValue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The value of an active ingredient's strength, e.g. 325.",
+				container: $this,
+				propertyName: "strengthValue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

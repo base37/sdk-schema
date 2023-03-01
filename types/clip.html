@@ -1,0 +1,199 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Clip extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Clip'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['actor', 'actors', 'clipNumber', 'director', 'directors', 'endOffset', 'musicBy', 'partOfEpisode', 'partOfSeason', 'partOfSeries', 'startOffset']
+        static _rdfs_comment = 'A short TV or radio program or a segment\/part of a program.'
+        static _rdfs_label = 'Clip'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        actor($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.",
+				container: $this,
+				propertyName: "actor",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        actors($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.",
+				container: $this,
+				propertyName: "actors",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        clipNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Position of the clip within an ordered group of clips.",
+				container: $this,
+				propertyName: "clipNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        director($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A director of e.g. tv, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.",
+				container: $this,
+				propertyName: "director",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        directors($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.",
+				container: $this,
+				propertyName: "directors",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        endOffset($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The end time of the clip expressed as the number of seconds from the beginning of the work.",
+				container: $this,
+				propertyName: "endOffset",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"HyperTocEntry",
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        musicBy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The composer of the soundtrack.",
+				container: $this,
+				propertyName: "musicBy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"MusicGroup"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        partOfEpisode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The episode to which this clip belongs.",
+				container: $this,
+				propertyName: "partOfEpisode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Episode"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        partOfSeason($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The season to which this episode belongs.",
+				container: $this,
+				propertyName: "partOfSeason",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWorkSeason"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        partOfSeries($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The series to which this episode or season belongs.",
+				container: $this,
+				propertyName: "partOfSeries",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWorkSeries"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        startOffset($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The start time of the clip expressed as the number of seconds from the beginning of the work.",
+				container: $this,
+				propertyName: "startOffset",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"HyperTocEntry",
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

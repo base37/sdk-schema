@@ -1,0 +1,178 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Message extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Message'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['bccRecipient', 'ccRecipient', 'dateRead', 'dateReceived', 'dateSent', 'messageAttachment', 'recipient', 'sender', 'toRecipient']
+        static _rdfs_comment = 'A single message from a sender to one or more organizations or people.'
+        static _rdfs_label = 'Message'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        bccRecipient($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of recipient. The recipient blind copied on a message.",
+				container: $this,
+				propertyName: "bccRecipient",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization",
+					"ContactPoint"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        ccRecipient($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of recipient. The recipient copied on a message.",
+				container: $this,
+				propertyName: "ccRecipient",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person",
+					"ContactPoint"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        dateRead($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date\\/time at which the message has been read by the recipient if a single recipient exists.",
+				container: $this,
+				propertyName: "dateRead",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        dateReceived($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date\\/time the message was received if a single recipient exists.",
+				container: $this,
+				propertyName: "dateReceived",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        dateSent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date\\/time at which the message was sent.",
+				container: $this,
+				propertyName: "dateSent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        messageAttachment($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A CreativeWork attached to the message.",
+				container: $this,
+				propertyName: "messageAttachment",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        recipient($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of participant. The participant who is at the receiving end of the action.",
+				container: $this,
+				propertyName: "recipient",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Audience",
+					"ContactPoint",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sender($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of participant. The participant who is at the sending end of the action.",
+				container: $this,
+				propertyName: "sender",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Audience",
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        toRecipient($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of recipient. The recipient who was directly sent the message.",
+				container: $this,
+				propertyName: "toRecipient",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ContactPoint",
+					"Organization",
+					"Audience",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

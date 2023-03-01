@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Audiobook extends window.LiveElement.Element.elements.AudioObject {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Audiobook'
+        static __type = 'rdfs:Class'
+        static __extends = 'AudioObject'
+        static __properties = ['duration', 'readBy']
+        static _rdfs_comment = 'An audiobook.'
+        static _rdfs_label = 'Audiobook'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        duration($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_8601).",
+				container: $this,
+				propertyName: "duration",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Duration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        readBy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A person who reads (performs) the audiobook.",
+				container: $this,
+				propertyName: "readBy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

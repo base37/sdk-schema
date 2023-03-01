@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Embassy extends window.LiveElement.Element.elements.GovernmentBuilding {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Embassy'
+        static __type = 'rdfs:Class'
+        static __extends = 'GovernmentBuilding'
+        static __properties = []
+        static _rdfs_comment = 'An embassy.'
+        static _rdfs_label = 'Embassy'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

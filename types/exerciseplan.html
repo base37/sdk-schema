@@ -1,0 +1,156 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ExercisePlan extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ExercisePlan'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['activityDuration', 'activityFrequency', 'additionalVariable', 'exerciseType', 'intensity', 'repetitions', 'restPeriods', 'workload']
+        static _rdfs_comment = 'Fitness-related activity designed for a specific health-related purpose, including defined exercise routines as well as activity prescribed by a clinician.'
+        static _rdfs_label = 'ExercisePlan'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        activityDuration($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Length of time to engage in the activity.",
+				container: $this,
+				propertyName: "activityDuration",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"Duration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        activityFrequency($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "How often one should engage in the activity.",
+				container: $this,
+				propertyName: "activityFrequency",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        additionalVariable($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Any additional component of the exercise prescription that may need to be articulated to the patient. This may include the order of exercises, the number of repetitions of movement, quantitative distance, progressions over time, etc.",
+				container: $this,
+				propertyName: "additionalVariable",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        exerciseType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.",
+				container: $this,
+				propertyName: "exerciseType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        intensity($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of the movement.",
+				container: $this,
+				propertyName: "intensity",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        repetitions($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Number of times one should repeat the activity.",
+				container: $this,
+				propertyName: "repetitions",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        restPeriods($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "How often one should break from the activity.",
+				container: $this,
+				propertyName: "restPeriods",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        workload($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.",
+				container: $this,
+				propertyName: "workload",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"Energy"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

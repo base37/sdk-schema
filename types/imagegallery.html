@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ImageGallery extends window.LiveElement.Element.elements.MediaGallery {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ImageGallery'
+        static __type = 'rdfs:Class'
+        static __extends = 'MediaGallery'
+        static __properties = []
+        static _rdfs_comment = 'Web page type: Image gallery page.'
+        static _rdfs_label = 'ImageGallery'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

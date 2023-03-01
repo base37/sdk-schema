@@ -1,0 +1,76 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MusicPlaylist extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MusicPlaylist'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['numTracks', 'track', 'tracks']
+        static _rdfs_comment = 'A collection of music tracks in playlist form.'
+        static _rdfs_label = 'MusicPlaylist'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        numTracks($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of tracks in this album or playlist.",
+				container: $this,
+				propertyName: "numTracks",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        track($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.",
+				container: $this,
+				propertyName: "track",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicRecording",
+					"ItemList"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        tracks($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A music recording (track)&#x2014;usually a single song.",
+				container: $this,
+				propertyName: "tracks",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicRecording"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

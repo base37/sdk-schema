@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PerformingGroup extends window.LiveElement.Element.elements.Organization {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PerformingGroup'
+        static __type = 'rdfs:Class'
+        static __extends = 'Organization'
+        static __properties = []
+        static _rdfs_comment = 'A performance group, such as a band, an orchestra, or a circus.'
+        static _rdfs_label = 'PerformingGroup'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

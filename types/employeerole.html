@@ -1,0 +1,62 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class EmployeeRole extends window.LiveElement.Element.elements.OrganizationRole {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:EmployeeRole'
+        static __type = 'rdfs:Class'
+        static __extends = 'OrganizationRole'
+        static __properties = ['baseSalary', 'salaryCurrency']
+        static _rdfs_comment = 'A subclass of OrganizationRole used to describe employee relationships.'
+        static _rdfs_label = 'EmployeeRole'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        baseSalary($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The base salary of the job or of an employee in an EmployeeRole.",
+				container: $this,
+				propertyName: "baseSalary",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MonetaryAmount",
+					"Number",
+					"PriceSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        salaryCurrency($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The currency (coded using [ISO 4217](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_4217) ) used for the main salary information in this job posting or for this employee.",
+				container: $this,
+				propertyName: "salaryCurrency",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

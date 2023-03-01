@@ -1,0 +1,123 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalProcedure extends window.LiveElement.Element.elements.MedicalEntity {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalProcedure'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalEntity'
+        static __properties = ['bodyLocation', 'followup', 'howPerformed', 'preparation', 'procedureType', 'status']
+        static _rdfs_comment = 'A process of care used in either a diagnostic, therapeutic, preventive or palliative capacity that relies on invasive (surgical), non-invasive, or other techniques.'
+        static _rdfs_label = 'MedicalProcedure'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        bodyLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Location in the body of the anatomical structure.",
+				container: $this,
+				propertyName: "bodyLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        followup($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Typical or recommended followup care after the procedure is performed.",
+				container: $this,
+				propertyName: "followup",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        howPerformed($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "How the procedure is performed.",
+				container: $this,
+				propertyName: "howPerformed",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        preparation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Typical preparation that a patient must undergo before having the procedure performed.",
+				container: $this,
+				propertyName: "preparation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"MedicalEntity"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        procedureType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type of procedure, for example Surgical, Noninvasive, or Percutaneous.",
+				container: $this,
+				propertyName: "procedureType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalProcedureType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        status($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The status of the study (enumerated).",
+				container: $this,
+				propertyName: "status",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"EventStatusType",
+					"MedicalStudyStatus"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

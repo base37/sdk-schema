@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalSign extends window.LiveElement.Element.elements.MedicalSignOrSymptom {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalSign'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalSignOrSymptom'
+        static __properties = ['identifyingExam', 'identifyingTest']
+        static _rdfs_comment = 'Any physical manifestation of a person\'s medical condition discoverable by objective diagnostic tests or physical examination.'
+        static _rdfs_label = 'MedicalSign'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        identifyingExam($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A physical examination that can identify this sign.",
+				container: $this,
+				propertyName: "identifyingExam",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PhysicalExam"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        identifyingTest($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A diagnostic test that can identify this sign.",
+				container: $this,
+				propertyName: "identifyingTest",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalTest"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

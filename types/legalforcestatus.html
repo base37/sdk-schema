@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class LegalForceStatus extends window.LiveElement.Element.elements.StatusEnumeration {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:LegalForceStatus'
+        static __type = 'rdfs:Class'
+        static __extends = 'StatusEnumeration'
+        static __properties = []
+        static _rdfs_comment = 'A list of possible statuses for the legal force of a legislation.'
+        static _rdfs_label = 'LegalForceStatus'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

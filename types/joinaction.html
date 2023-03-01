@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class JoinAction extends window.LiveElement.Element.elements.InteractAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:JoinAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'InteractAction'
+        static __properties = ['event']
+        static _rdfs_comment = 'An agent joins an event\/group with participants\/friends at a location.\n\nRelated actions:\n\n* [[RegisterAction]]: Unlike RegisterAction, JoinAction refers to joining a group\/team of people.\n* [[SubscribeAction]]: Unlike SubscribeAction, JoinAction does not imply that you\'ll be receiving updates.\n* [[FollowAction]]: Unlike FollowAction, JoinAction does not imply that you\'ll be polling for updates.'
+        static _rdfs_label = 'JoinAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        event($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Upcoming or past event associated with this place, organization, or action.",
+				container: $this,
+				propertyName: "event",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Event"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

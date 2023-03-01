@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Intangible extends window.LiveElement.Element.elements.Thing {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Intangible'
+        static __type = 'rdfs:Class'
+        static __extends = 'Thing'
+        static __properties = []
+        static _rdfs_comment = 'A utility class that serves as the umbrella for a number of \'intangible\' things such as quantities, structured values, etc.'
+        static _rdfs_label = 'Intangible'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

@@ -1,0 +1,75 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class BusinessAudience extends window.LiveElement.Element.elements.Audience {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:BusinessAudience'
+        static __type = 'rdfs:Class'
+        static __extends = 'Audience'
+        static __properties = ['numberOfEmployees', 'yearlyRevenue', 'yearsInOperation']
+        static _rdfs_comment = 'A set of characteristics belonging to businesses, e.g. who compose an item\'s target audience.'
+        static _rdfs_label = 'BusinessAudience'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        numberOfEmployees($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of employees in an organization e.g. business.",
+				container: $this,
+				propertyName: "numberOfEmployees",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        yearlyRevenue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The size of the business in annual revenue.",
+				container: $this,
+				propertyName: "yearlyRevenue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        yearsInOperation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The age of the business.",
+				container: $this,
+				propertyName: "yearsInOperation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

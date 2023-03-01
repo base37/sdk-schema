@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CreditCard extends window.LiveElement.Element.elements.PaymentCard {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CreditCard'
+        static __type = 'rdfs:Class'
+        static __extends = 'PaymentCard'
+        static __properties = []
+        static _rdfs_comment = 'A card payment method of a particular brand or name.  Used to mark up a particular payment method and\/or the financial product\/service that supplies the card account.\n\nCommonly used values:\n\n* http:\/\/purl.org\/goodrelations\/v1#AmericanExpress\n* http:\/\/purl.org\/goodrelations\/v1#DinersClub\n* http:\/\/purl.org\/goodrelations\/v1#Discover\n* http:\/\/purl.org\/goodrelations\/v1#JCB\n* http:\/\/purl.org\/goodrelations\/v1#MasterCard\n* http:\/\/purl.org\/goodrelations\/v1#VISA        '
+        static _rdfs_label = 'CreditCard'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

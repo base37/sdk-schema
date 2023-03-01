@@ -1,0 +1,183 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class WebPage extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:WebPage'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['breadcrumb', 'lastReviewed', 'mainContentOfPage', 'primaryImageOfPage', 'relatedLink', 'reviewedBy', 'significantLink', 'significantLinks', 'speakable', 'specialty']
+        static _rdfs_comment = 'A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as <code>breadcrumb<\/code> may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page.'
+        static _rdfs_label = 'WebPage'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        breadcrumb($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A set of links that can help a user understand and navigate a website hierarchy.",
+				container: $this,
+				propertyName: "breadcrumb",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"BreadcrumbList"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        lastReviewed($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Date on which the content on this web page was last reviewed for accuracy and\\/or completeness.",
+				container: $this,
+				propertyName: "lastReviewed",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        mainContentOfPage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates if this web page element is the main subject of the page.",
+				container: $this,
+				propertyName: "mainContentOfPage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"WebPageElement"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        primaryImageOfPage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the main image on the page.",
+				container: $this,
+				propertyName: "primaryImageOfPage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ImageObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        relatedLink($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A link related to this web page, for example to other related web pages.",
+				container: $this,
+				propertyName: "relatedLink",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        reviewedBy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "People or organizations that have reviewed the content on this web page for accuracy and\\/or completeness.",
+				container: $this,
+				propertyName: "reviewedBy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        significantLink($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "One of the more significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.",
+				container: $this,
+				propertyName: "significantLink",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        significantLinks($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The most significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.",
+				container: $this,
+				propertyName: "significantLinks",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        speakable($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates sections of a Web page that are particularly 'speakable' in the sense of being highlighted as being especially appropriate for text-to-speech conversion. Other sections of a page may also be usefully spoken in particular circumstances; the 'speakable' property serves to indicate the parts most likely to be generally useful for speech.\n\nThe *speakable* property can be repeated an arbitrary number of times, with three kinds of possible 'content-locator' values:\n\n1.) *id-value* URL references - uses *id-value* of an element in the page being annotated. The simplest use of *speakable* has (potentially relative) URL values, referencing identified sections of the document concerned.\n\n2.) CSS Selectors - addresses content in the annotated page, eg. via class attribute. Use the [[cssSelector]] property.\n\n3.)  XPaths - addresses content via XPaths (assuming an XML view of the content). Use the [[xpath]] property.\n\n\nFor more sophisticated markup of speakable sections beyond simple ID references, either CSS selectors or XPath expressions to pick out document section(s) as speakable. For this\nwe define a supporting type, [[SpeakableSpecification]]  which is defined to be a possible value of the *speakable* property.\n         ",
+				container: $this,
+				propertyName: "speakable",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"SpeakableSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        specialty($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "One of the domain specialities to which this web page's content applies.",
+				container: $this,
+				propertyName: "specialty",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Specialty"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

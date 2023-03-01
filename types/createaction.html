@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CreateAction extends window.LiveElement.Element.elements.Action {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CreateAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'Action'
+        static __properties = []
+        static _rdfs_comment = 'The act of deliberately creating\/producing\/generating\/building a result out of the agent.'
+        static _rdfs_label = 'CreateAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

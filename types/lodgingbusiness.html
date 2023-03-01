@@ -1,0 +1,155 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class LodgingBusiness extends window.LiveElement.Element.elements.LocalBusiness {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:LodgingBusiness'
+        static __type = 'rdfs:Class'
+        static __extends = 'LocalBusiness'
+        static __properties = ['amenityFeature', 'audience', 'availableLanguage', 'checkinTime', 'checkoutTime', 'numberOfRooms', 'petsAllowed', 'starRating']
+        static _rdfs_comment = 'A lodging business, such as a motel, hotel, or inn.'
+        static _rdfs_label = 'LodgingBusiness'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        amenityFeature($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.",
+				container: $this,
+				propertyName: "amenityFeature",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"LocationFeatureSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        audience($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An intended audience, i.e. a group for whom something was created.",
+				container: $this,
+				propertyName: "audience",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Audience"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        availableLanguage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http:\\/\\/tools.ietf.org\\/html\\/bcp47). See also [[inLanguage]]",
+				container: $this,
+				propertyName: "availableLanguage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Language",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        checkinTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The earliest someone may check into a lodging establishment.",
+				container: $this,
+				propertyName: "checkinTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Time",
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        checkoutTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The latest someone may check out of a lodging establishment.",
+				container: $this,
+				propertyName: "checkoutTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Time"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfRooms($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.\nTypical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.",
+				container: $this,
+				propertyName: "numberOfRooms",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        petsAllowed($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.",
+				container: $this,
+				propertyName: "petsAllowed",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        starRating($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).",
+				container: $this,
+				propertyName: "starRating",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Rating"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,62 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ChooseAction extends window.LiveElement.Element.elements.AssessAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ChooseAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'AssessAction'
+        static __properties = ['actionOption', 'option']
+        static _rdfs_comment = 'The act of expressing a preference from a set of options or a large or unbounded set of choices\/options.'
+        static _rdfs_label = 'ChooseAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        actionOption($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of object. The options subject to this action.",
+				container: $this,
+				propertyName: "actionOption",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        option($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of object. The options subject to this action.",
+				container: $this,
+				propertyName: "option",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TrackAction extends window.LiveElement.Element.elements.FindAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TrackAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'FindAction'
+        static __properties = ['deliveryMethod']
+        static _rdfs_comment = 'An agent tracks an object for updates.\n\nRelated actions:\n\n* [[FollowAction]]: Unlike FollowAction, TrackAction refers to the interest on the location of innanimates objects.\n* [[SubscribeAction]]: Unlike SubscribeAction, TrackAction refers to  the interest on the location of innanimate objects.'
+        static _rdfs_label = 'TrackAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        deliveryMethod($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of instrument. The method of delivery.",
+				container: $this,
+				propertyName: "deliveryMethod",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DeliveryMethod"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

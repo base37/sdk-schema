@@ -1,0 +1,572 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class JobPosting extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:JobPosting'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['applicantLocationRequirements', 'applicationContact', 'baseSalary', 'benefits', 'datePosted', 'educationRequirements', 'eligibilityToWorkRequirement', 'employerOverview', 'employmentType', 'employmentUnit', 'estimatedSalary', 'experienceRequirements', 'hiringOrganization', 'incentiveCompensation', 'incentives', 'industry', 'jobBenefits', 'jobImmediateStart', 'jobLocation', 'jobLocationType', 'jobStartDate', 'occupationalCategory', 'physicalRequirement', 'qualifications', 'relevantOccupation', 'responsibilities', 'salaryCurrency', 'securityClearanceRequirement', 'sensoryRequirement', 'skills', 'specialCommitments', 'title', 'totalJobOpenings', 'validThrough', 'workHours']
+        static _rdfs_comment = 'A listing that describes a job opening in a certain organization.'
+        static _rdfs_label = 'JobPosting'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        applicantLocationRequirements($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The location(s) applicants can apply from. This is usually used for telecommuting jobs where the applicant does not need to be in a physical office. Note: This should not be used for citizenship or work visa requirements.",
+				container: $this,
+				propertyName: "applicantLocationRequirements",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AdministrativeArea"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        applicationContact($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Contact details for further information relevant to this job posting.",
+				container: $this,
+				propertyName: "applicationContact",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ContactPoint"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        baseSalary($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The base salary of the job or of an employee in an EmployeeRole.",
+				container: $this,
+				propertyName: "baseSalary",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MonetaryAmount",
+					"Number",
+					"PriceSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        benefits($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Description of benefits associated with the job.",
+				container: $this,
+				propertyName: "benefits",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        datePosted($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Publication date of an online listing.",
+				container: $this,
+				propertyName: "datePosted",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        educationRequirements($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Educational background needed for the position or Occupation.",
+				container: $this,
+				propertyName: "educationRequirements",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"EducationalOccupationalCredential"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        eligibilityToWorkRequirement($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The legal requirements such as citizenship, visa and other documentation required for an applicant to this job.",
+				container: $this,
+				propertyName: "eligibilityToWorkRequirement",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        employerOverview($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A description of the employer, career opportunities and work environment for this position.",
+				container: $this,
+				propertyName: "employerOverview",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        employmentType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship).",
+				container: $this,
+				propertyName: "employmentType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        employmentUnit($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the department, unit and\\/or facility where the employee reports and\\/or in which the job is to be performed.",
+				container: $this,
+				propertyName: "employmentUnit",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        estimatedSalary($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An estimated salary for a job posting or occupation, based on a variety of variables including, but not limited to industry, job title, and location. Estimated salaries  are often computed by outside organizations rather than the hiring organization, who may not have committed to the estimated value.",
+				container: $this,
+				propertyName: "estimatedSalary",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MonetaryAmountDistribution",
+					"Number",
+					"MonetaryAmount"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        experienceRequirements($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Description of skills and experience needed for the position or Occupation.",
+				container: $this,
+				propertyName: "experienceRequirements",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hiringOrganization($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Organization offering the job position.",
+				container: $this,
+				propertyName: "hiringOrganization",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        incentiveCompensation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Description of bonus and commission compensation aspects of the job.",
+				container: $this,
+				propertyName: "incentiveCompensation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        incentives($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Description of bonus and commission compensation aspects of the job.",
+				container: $this,
+				propertyName: "incentives",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        industry($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The industry associated with the job position.",
+				container: $this,
+				propertyName: "industry",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DefinedTerm",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        jobBenefits($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Description of benefits associated with the job.",
+				container: $this,
+				propertyName: "jobBenefits",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        jobImmediateStart($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An indicator as to whether a position is available for an immediate start.",
+				container: $this,
+				propertyName: "jobImmediateStart",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        jobLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A (typically single) geographic location associated with the job position.",
+				container: $this,
+				propertyName: "jobLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        jobLocationType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A description of the job location (e.g TELECOMMUTE for telecommute jobs).",
+				container: $this,
+				propertyName: "jobLocationType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        jobStartDate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date on which a successful applicant for this job would be expected to start work. Choose a specific date in the future or use the jobImmediateStart property to indicate the position is to be filled as soon as possible.",
+				container: $this,
+				propertyName: "jobStartDate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Date",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        occupationalCategory($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http:\\/\\/www.onetcenter.org\\/taxonomy.html), [ISCO-08](https:\\/\\/www.ilo.org\\/public\\/english\\/bureau\\/stat\\/isco\\/isco08\\/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\\n\nNote: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.",
+				container: $this,
+				propertyName: "occupationalCategory",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CategoryCode",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        physicalRequirement($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A description of the types of physical activity associated with the job. Defined terms such as those in O*net may be used, but note that there is no way to specify the level of ability as well as its nature when using a defined term.",
+				container: $this,
+				propertyName: "physicalRequirement",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL",
+					"DefinedTerm"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        qualifications($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specific qualifications required for this role or Occupation.",
+				container: $this,
+				propertyName: "qualifications",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"EducationalOccupationalCredential",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        relevantOccupation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The Occupation for the JobPosting.",
+				container: $this,
+				propertyName: "relevantOccupation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Occupation"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        responsibilities($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Responsibilities associated with this role or Occupation.",
+				container: $this,
+				propertyName: "responsibilities",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        salaryCurrency($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The currency (coded using [ISO 4217](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_4217) ) used for the main salary information in this job posting or for this employee.",
+				container: $this,
+				propertyName: "salaryCurrency",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        securityClearanceRequirement($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A description of any security clearance requirements of the job.",
+				container: $this,
+				propertyName: "securityClearanceRequirement",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sensoryRequirement($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A description of any sensory requirements and levels necessary to function on the job, including hearing and vision. Defined terms such as those in O*net may be used, but note that there is no way to specify the level of ability as well as its nature when using a defined term.",
+				container: $this,
+				propertyName: "sensoryRequirement",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"DefinedTerm",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        skills($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A statement of knowledge, skill, ability, task or any other assertion expressing a competency that is desired or required to fulfill this role or to work in this occupation.",
+				container: $this,
+				propertyName: "skills",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"DefinedTerm"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        specialCommitments($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Any special commitments associated with this job posting. Valid entries include VeteranCommit, MilitarySpouseCommit, etc.",
+				container: $this,
+				propertyName: "specialCommitments",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        title($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The title of the job.",
+				container: $this,
+				propertyName: "title",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        totalJobOpenings($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of positions open for this job posting. Use a positive integer. Do not use if the number of positions is unclear or not known.",
+				container: $this,
+				propertyName: "totalJobOpenings",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        validThrough($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.",
+				container: $this,
+				propertyName: "validThrough",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        workHours($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm).",
+				container: $this,
+				propertyName: "workHours",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

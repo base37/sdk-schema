@@ -1,0 +1,135 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PeopleAudience extends window.LiveElement.Element.elements.Audience {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PeopleAudience'
+        static __type = 'rdfs:Class'
+        static __extends = 'Audience'
+        static __properties = ['healthCondition', 'requiredGender', 'requiredMaxAge', 'requiredMinAge', 'suggestedGender', 'suggestedMaxAge', 'suggestedMinAge']
+        static _rdfs_comment = 'A set of characteristics belonging to people, e.g. who compose an item\'s target audience.'
+        static _rdfs_label = 'PeopleAudience'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        healthCondition($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specifying the health condition(s) of a patient, medical study, or other target audience.",
+				container: $this,
+				propertyName: "healthCondition",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalCondition"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        requiredGender($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Audiences defined by a person's gender.",
+				container: $this,
+				propertyName: "requiredGender",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        requiredMaxAge($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Audiences defined by a person's maximum age.",
+				container: $this,
+				propertyName: "requiredMaxAge",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        requiredMinAge($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Audiences defined by a person's minimum age.",
+				container: $this,
+				propertyName: "requiredMinAge",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        suggestedGender($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The gender of the person or audience.",
+				container: $this,
+				propertyName: "suggestedGender",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        suggestedMaxAge($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Maximal age recommended for viewing content.",
+				container: $this,
+				propertyName: "suggestedMaxAge",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        suggestedMinAge($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Minimal age recommended for viewing content.",
+				container: $this,
+				propertyName: "suggestedMinAge",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

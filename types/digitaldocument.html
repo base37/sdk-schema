@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DigitalDocument extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DigitalDocument'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['hasDigitalDocumentPermission']
+        static _rdfs_comment = 'An electronic file or document.'
+        static _rdfs_label = 'DigitalDocument'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        hasDigitalDocumentPermission($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A permission related to the access to this document (e.g. permission to read or write an electronic document). For a public document, specify a grantee with an Audience with audienceType equal to \"public\".",
+				container: $this,
+				propertyName: "hasDigitalDocumentPermission",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DigitalDocumentPermission"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DiagnosticProcedure extends window.LiveElement.Element.elements.MedicalProcedure {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DiagnosticProcedure'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalProcedure'
+        static __properties = []
+        static _rdfs_comment = 'A medical procedure intended primarily for diagnostic, as opposed to therapeutic, purposes.'
+        static _rdfs_label = 'DiagnosticProcedure'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

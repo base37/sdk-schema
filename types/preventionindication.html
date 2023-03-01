@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PreventionIndication extends window.LiveElement.Element.elements.MedicalIndication {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PreventionIndication'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalIndication'
+        static __properties = []
+        static _rdfs_comment = 'An indication for preventing an underlying condition, symptom, etc.'
+        static _rdfs_label = 'PreventionIndication'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

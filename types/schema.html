@@ -1,0 +1,61 @@
+<style>
+:host {
+    contain: content;
+}
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global CustomEvent showdown */
+    class Schema extends window.LiveElement.Element.elements.HTMLElement {
+        
+        static __release
+        static __prefix = window.LiveElement.Element.prefix
+        static __context = 'https:\/\/schema.org\/'
+        static __properties = []
+        static _rdfs_label = 'Schema'
+
+        static get __allProperties() {
+            return Array.from(new Set((this.__extends && typeof window.LiveElement.Element.elements[this.__extends] == 'function' ? (window.LiveElement.Element.elements[this.__extends].__allProperties || []).concat(this.__properties || []) : (this.__properties || []))))
+        } 
+
+        static get observedAttributes() {
+            return (this.__allProperties || []).map(v => v.toLowerCase())
+        }
+        
+        static __render(element, asClass, style, template) {
+            //placeholder for render functions if the class is used as a renderer
+        }
+
+        constructor() {
+            super()
+            var $this = this
+            $this.__isConnected = false
+            Object.keys($this).forEach(k => k.slice(0,2) == '__' ? Object.defineProperty($this, k, {configurable: false, enumerable: false}) : null ) 
+        }
+        
+        connectedCallback() {
+            var $this = this
+            $this.__isConnected = true
+        }
+        
+        toString() {
+            return this.__input && typeof this.__input === 'object' ? JSON.stringify(this.__input) : String(this.__input)
+        }
+        
+        valueOf() {
+            return this.__value
+        }
+        
+        __input = this.__input === undefined ? undefined : this.__input
+        __value = this.__value === undefined ? undefined : this.__value
+        __validation = {...(this.__validation || {}), ...{}}
+        __map = {...(this.__map || {}), ...{}}
+        __container = this.__container === undefined ? undefined : this.__container
+        __containerPropertyName = this.__containerPropertyName === undefined ? undefined : this.__containerPropertyName
+        __propertyMap = this.__propertyMap === undefined ? undefined : this.__propertyMap
+        __isConnected = this.__isConnected || false
+        
+    }
+</script>

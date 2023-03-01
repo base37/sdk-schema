@@ -1,0 +1,61 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DefinedTerm extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DefinedTerm'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['inDefinedTermSet', 'termCode']
+        static _rdfs_comment = 'A word, name, acronym, phrase, etc. with a formal definition. Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term.'
+        static _rdfs_label = 'DefinedTerm'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        inDefinedTermSet($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A [[DefinedTermSet]] that contains this term.",
+				container: $this,
+				propertyName: "inDefinedTermSet",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DefinedTermSet",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        termCode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A code that identifies this [[DefinedTerm]] within a [[DefinedTermSet]]",
+				container: $this,
+				propertyName: "termCode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

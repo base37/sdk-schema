@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class LeaveAction extends window.LiveElement.Element.elements.InteractAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:LeaveAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'InteractAction'
+        static __properties = ['event']
+        static _rdfs_comment = 'An agent leaves an event \/ group with participants\/friends at a location.\n\nRelated actions:\n\n* [[JoinAction]]: The antonym of LeaveAction.\n* [[UnRegisterAction]]: Unlike UnRegisterAction, LeaveAction implies leaving a group\/team of people rather than a service.'
+        static _rdfs_label = 'LeaveAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        event($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Upcoming or past event associated with this place, organization, or action.",
+				container: $this,
+				propertyName: "event",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Event"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

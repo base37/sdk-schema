@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Map extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Map'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['mapType']
+        static _rdfs_comment = 'A map.'
+        static _rdfs_label = 'Map'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        mapType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the kind of Map, from the MapCategoryType Enumeration.",
+				container: $this,
+				propertyName: "mapType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MapCategoryType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

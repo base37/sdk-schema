@@ -1,0 +1,47 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class HowToItem extends window.LiveElement.Element.elements.ListItem {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:HowToItem'
+        static __type = 'rdfs:Class'
+        static __extends = 'ListItem'
+        static __properties = ['requiredQuantity']
+        static _rdfs_comment = 'An item used as either a tool or supply when performing the instructions for how to to achieve a result.'
+        static _rdfs_label = 'HowToItem'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        requiredQuantity($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The required quantity of the item(s).",
+				container: $this,
+				propertyName: "requiredQuantity",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"Text",
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

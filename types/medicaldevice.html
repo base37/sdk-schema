@@ -1,0 +1,121 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalDevice extends window.LiveElement.Element.elements.MedicalEntity {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalDevice'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalEntity'
+        static __properties = ['adverseOutcome', 'contraindication', 'postOp', 'preOp', 'procedure', 'seriousAdverseOutcome']
+        static _rdfs_comment = 'Any object used in a medical capacity, such as to diagnose or treat a patient.'
+        static _rdfs_label = 'MedicalDevice'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        adverseOutcome($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A possible complication and\\/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in death, disability, or permanent damage; requiring hospitalization; or is otherwise life-threatening or requires immediate medical attention), tag it as a seriouseAdverseOutcome instead.",
+				container: $this,
+				propertyName: "adverseOutcome",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalEntity"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        contraindication($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A contraindication for this therapy.",
+				container: $this,
+				propertyName: "contraindication",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalContraindication",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        postOp($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A description of the postoperative procedures, care, and\\/or followups for this device.",
+				container: $this,
+				propertyName: "postOp",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        preOp($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A description of the workup, testing, and other preparations required before implanting this device.",
+				container: $this,
+				propertyName: "preOp",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        procedure($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A description of the procedure involved in setting up, using, and\\/or installing the device.",
+				container: $this,
+				propertyName: "procedure",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        seriousAdverseOutcome($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A possible serious complication and\\/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in death, disability, or permanent damage; require hospitalization or prolong existing hospitalization; cause congenital anomalies or birth defects; or jeopardize the patient and may require medical or surgical intervention to prevent one of the outcomes in this definition.",
+				container: $this,
+				propertyName: "seriousAdverseOutcome",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalEntity"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class OrderAction extends window.LiveElement.Element.elements.TradeAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:OrderAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'TradeAction'
+        static __properties = ['deliveryMethod']
+        static _rdfs_comment = 'An agent orders an object\/product\/service to be delivered\/sent.'
+        static _rdfs_label = 'OrderAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        deliveryMethod($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of instrument. The method of delivery.",
+				container: $this,
+				propertyName: "deliveryMethod",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DeliveryMethod"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

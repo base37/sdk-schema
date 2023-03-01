@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class URL extends window.LiveElement.Element.elements.Text {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:URL'
+        static __type = 'rdfs:Class'
+        static __extends = 'Text'
+        static __properties = []
+        static _rdfs_comment = 'Data type: URL.'
+        static _rdfs_label = 'URL'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class VitalSign extends window.LiveElement.Element.elements.MedicalSign {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:VitalSign'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalSign'
+        static __properties = []
+        static _rdfs_comment = 'Vital signs are measures of various physiological functions in order to assess the most basic body functions.'
+        static _rdfs_label = 'VitalSign'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

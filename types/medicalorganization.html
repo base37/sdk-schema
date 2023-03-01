@@ -1,0 +1,75 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalOrganization extends window.LiveElement.Element.elements.Organization {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalOrganization'
+        static __type = 'rdfs:Class'
+        static __extends = 'Organization'
+        static __properties = ['healthPlanNetworkId', 'isAcceptingNewPatients', 'medicalSpecialty']
+        static _rdfs_comment = 'A medical organization (physical or not), such as hospital, institution or clinic.'
+        static _rdfs_label = 'MedicalOrganization'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        healthPlanNetworkId($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Name or unique ID of network. (Networks are often reused across different insurance plans).",
+				container: $this,
+				propertyName: "healthPlanNetworkId",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isAcceptingNewPatients($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Whether the provider is accepting new patients.",
+				container: $this,
+				propertyName: "isAcceptingNewPatients",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        medicalSpecialty($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A medical specialty of the provider.",
+				container: $this,
+				propertyName: "medicalSpecialty",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalSpecialty"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

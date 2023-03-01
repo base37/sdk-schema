@@ -1,0 +1,259 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Flight extends window.LiveElement.Element.elements.Trip {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Flight'
+        static __type = 'rdfs:Class'
+        static __extends = 'Trip'
+        static __properties = ['aircraft', 'arrivalAirport', 'arrivalGate', 'arrivalTerminal', 'boardingPolicy', 'carrier', 'departureAirport', 'departureGate', 'departureTerminal', 'estimatedFlightDuration', 'flightDistance', 'flightNumber', 'mealService', 'seller', 'webCheckinTime']
+        static _rdfs_comment = 'An airline flight.'
+        static _rdfs_label = 'Flight'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        aircraft($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The kind of aircraft (e.g., \"Boeing 747\").",
+				container: $this,
+				propertyName: "aircraft",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Vehicle"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        arrivalAirport($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The airport where the flight terminates.",
+				container: $this,
+				propertyName: "arrivalAirport",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Airport"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        arrivalGate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Identifier of the flight's arrival gate.",
+				container: $this,
+				propertyName: "arrivalGate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        arrivalTerminal($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Identifier of the flight's arrival terminal.",
+				container: $this,
+				propertyName: "arrivalTerminal",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        boardingPolicy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type of boarding policy used by the airline (e.g. zone-based or group-based).",
+				container: $this,
+				propertyName: "boardingPolicy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BoardingPolicyType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        carrier($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "'carrier' is an out-dated term indicating the 'provider' for parcel delivery and flights.",
+				container: $this,
+				propertyName: "carrier",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        departureAirport($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The airport where the flight originates.",
+				container: $this,
+				propertyName: "departureAirport",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Airport"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        departureGate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Identifier of the flight's departure gate.",
+				container: $this,
+				propertyName: "departureGate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        departureTerminal($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Identifier of the flight's departure terminal.",
+				container: $this,
+				propertyName: "departureTerminal",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        estimatedFlightDuration($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The estimated time the flight will take.",
+				container: $this,
+				propertyName: "estimatedFlightDuration",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Duration",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        flightDistance($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The distance of the flight.",
+				container: $this,
+				propertyName: "flightDistance",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Distance"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        flightNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The unique identifier for a flight including the airline IATA code. For example, if describing United flight 110, where the IATA code for United is 'UA', the flightNumber is 'UA110'.",
+				container: $this,
+				propertyName: "flightNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        mealService($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Description of the meals that will be provided or available for purchase.",
+				container: $this,
+				propertyName: "mealService",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        seller($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An entity which offers (sells \\/ leases \\/ lends \\/ loans) the services \\/ goods.  A seller may also be a provider.",
+				container: $this,
+				propertyName: "seller",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        webCheckinTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The time when a passenger can check into the flight online.",
+				container: $this,
+				propertyName: "webCheckinTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

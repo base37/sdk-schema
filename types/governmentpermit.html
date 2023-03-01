@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class GovernmentPermit extends window.LiveElement.Element.elements.Permit {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:GovernmentPermit'
+        static __type = 'rdfs:Class'
+        static __extends = 'Permit'
+        static __properties = []
+        static _rdfs_comment = 'A permit issued by a government agency.'
+        static _rdfs_label = 'GovernmentPermit'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

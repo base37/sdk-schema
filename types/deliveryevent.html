@@ -1,0 +1,90 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DeliveryEvent extends window.LiveElement.Element.elements.Event {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DeliveryEvent'
+        static __type = 'rdfs:Class'
+        static __extends = 'Event'
+        static __properties = ['accessCode', 'availableFrom', 'availableThrough', 'hasDeliveryMethod']
+        static _rdfs_comment = 'An event involving the delivery of an item.'
+        static _rdfs_label = 'DeliveryEvent'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        accessCode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Password, PIN, or access code needed for delivery (e.g. from a locker).",
+				container: $this,
+				propertyName: "accessCode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        availableFrom($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "When the item is available for pickup from the store, locker, etc.",
+				container: $this,
+				propertyName: "availableFrom",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        availableThrough($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "After this date, the item will no longer be available for pickup.",
+				container: $this,
+				propertyName: "availableThrough",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hasDeliveryMethod($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Method used for delivery or shipping.",
+				container: $this,
+				propertyName: "hasDeliveryMethod",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DeliveryMethod"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

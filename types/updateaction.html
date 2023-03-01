@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class UpdateAction extends window.LiveElement.Element.elements.Action {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:UpdateAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'Action'
+        static __properties = ['collection', 'targetCollection']
+        static _rdfs_comment = 'The act of managing by changing\/editing the state of the object.'
+        static _rdfs_label = 'UpdateAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        collection($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of object. The collection target of the action.",
+				container: $this,
+				propertyName: "collection",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        targetCollection($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of object. The collection target of the action.",
+				container: $this,
+				propertyName: "targetCollection",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

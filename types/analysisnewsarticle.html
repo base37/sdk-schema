@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AnalysisNewsArticle extends window.LiveElement.Element.elements.NewsArticle {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AnalysisNewsArticle'
+        static __type = 'rdfs:Class'
+        static __extends = 'NewsArticle'
+        static __properties = []
+        static _rdfs_comment = 'An AnalysisNewsArticle is a [[NewsArticle]] that, while based on factual reporting, incorporates the expertise of the author\/producer, offering interpretations and conclusions.'
+        static _rdfs_label = 'AnalysisNewsArticle'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

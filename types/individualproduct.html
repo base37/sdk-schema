@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class IndividualProduct extends window.LiveElement.Element.elements.Product {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:IndividualProduct'
+        static __type = 'rdfs:Class'
+        static __extends = 'Product'
+        static __properties = ['serialNumber']
+        static _rdfs_comment = 'A single, identifiable product instance (e.g. a laptop with a particular serial number).'
+        static _rdfs_label = 'IndividualProduct'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        serialNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.",
+				container: $this,
+				propertyName: "serialNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

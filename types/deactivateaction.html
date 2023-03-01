@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DeactivateAction extends window.LiveElement.Element.elements.ControlAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DeactivateAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'ControlAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of stopping or deactivating a device or application (e.g. stopping a timer or turning off a flashlight).'
+        static _rdfs_label = 'DeactivateAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

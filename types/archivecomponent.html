@@ -1,0 +1,62 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ArchiveComponent extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ArchiveComponent'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['holdingArchive', 'itemLocation']
+        static _rdfs_comment = 'An intangible type to be applied to any archive content, carrying with it a set of properties required to describe archival items and collections.'
+        static _rdfs_label = 'ArchiveComponent'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        holdingArchive($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "[[ArchiveOrganization]] that holds, keeps or maintains the [[ArchiveComponent]].",
+				container: $this,
+				propertyName: "holdingArchive",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ArchiveOrganization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        itemLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Current location of the item.",
+				container: $this,
+				propertyName: "itemLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"PostalAddress",
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

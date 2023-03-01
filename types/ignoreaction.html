@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class IgnoreAction extends window.LiveElement.Element.elements.AssessAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:IgnoreAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'AssessAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of intentionally disregarding the object. An agent ignores an object.'
+        static _rdfs_label = 'IgnoreAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

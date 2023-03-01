@@ -1,0 +1,46 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class EndorseAction extends window.LiveElement.Element.elements.ReactAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:EndorseAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'ReactAction'
+        static __properties = ['endorsee']
+        static _rdfs_comment = 'An agent approves\/certifies\/likes\/supports\/sanction an object.'
+        static _rdfs_label = 'EndorseAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        endorsee($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of participant. The person\\/organization being supported.",
+				container: $this,
+				propertyName: "endorsee",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AppendAction extends window.LiveElement.Element.elements.InsertAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AppendAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'InsertAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of inserting at the end if an ordered collection.'
+        static _rdfs_label = 'AppendAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

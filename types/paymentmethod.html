@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PaymentMethod extends window.LiveElement.Element.elements.Enumeration {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PaymentMethod'
+        static __type = 'rdfs:Class'
+        static __extends = 'Enumeration'
+        static __properties = []
+        static _rdfs_comment = 'A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction.\n\nCommonly used values:\n\n* http:\/\/purl.org\/goodrelations\/v1#ByBankTransferInAdvance\n* http:\/\/purl.org\/goodrelations\/v1#ByInvoice\n* http:\/\/purl.org\/goodrelations\/v1#Cash\n* http:\/\/purl.org\/goodrelations\/v1#CheckInAdvance\n* http:\/\/purl.org\/goodrelations\/v1#COD\n* http:\/\/purl.org\/goodrelations\/v1#DirectDebit\n* http:\/\/purl.org\/goodrelations\/v1#GoogleCheckout\n* http:\/\/purl.org\/goodrelations\/v1#PayPal\n* http:\/\/purl.org\/goodrelations\/v1#PaySwarm         '
+        static _rdfs_label = 'PaymentMethod'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

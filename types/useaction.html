@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class UseAction extends window.LiveElement.Element.elements.ConsumeAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:UseAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'ConsumeAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of applying an object to its intended purpose.'
+        static _rdfs_label = 'UseAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

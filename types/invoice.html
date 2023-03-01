@@ -1,0 +1,280 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Invoice extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Invoice'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['accountId', 'billingPeriod', 'broker', 'category', 'confirmationNumber', 'customer', 'minimumPaymentDue', 'paymentDue', 'paymentDueDate', 'paymentMethod', 'paymentMethodId', 'paymentStatus', 'provider', 'referencesOrder', 'scheduledPaymentDate', 'totalPaymentDue']
+        static _rdfs_comment = 'A statement of the money due for goods or services; a bill.'
+        static _rdfs_label = 'Invoice'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        accountId($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The identifier for the account the payment will be applied to.",
+				container: $this,
+				propertyName: "accountId",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        billingPeriod($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The time interval used to compute the invoice.",
+				container: $this,
+				propertyName: "billingPeriod",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Duration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        broker($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.",
+				container: $this,
+				propertyName: "broker",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        category($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.",
+				container: $this,
+				propertyName: "category",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Thing",
+					"PhysicalActivityCategory",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        confirmationNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A number that confirms the given order or payment has been received.",
+				container: $this,
+				propertyName: "confirmationNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        customer($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Party placing the order or paying the invoice.",
+				container: $this,
+				propertyName: "customer",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        minimumPaymentDue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The minimum payment required at this time.",
+				container: $this,
+				propertyName: "minimumPaymentDue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MonetaryAmount",
+					"PriceSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        paymentDue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date that payment is due.",
+				container: $this,
+				propertyName: "paymentDue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        paymentDueDate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date that payment is due.",
+				container: $this,
+				propertyName: "paymentDueDate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Date",
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        paymentMethod($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The name of the credit card or other method of payment for the order.",
+				container: $this,
+				propertyName: "paymentMethod",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PaymentMethod"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        paymentMethodId($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An identifier for the method of payment used (e.g. the last 4 digits of the credit card).",
+				container: $this,
+				propertyName: "paymentMethodId",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        paymentStatus($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The status of payment; whether the invoice has been paid or not.",
+				container: $this,
+				propertyName: "paymentStatus",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PaymentStatusType",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        provider($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
+				container: $this,
+				propertyName: "provider",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        referencesOrder($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The Order(s) related to this Invoice. One or more Orders may be combined into a single Invoice.",
+				container: $this,
+				propertyName: "referencesOrder",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Order"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        scheduledPaymentDate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date the invoice is scheduled to be paid.",
+				container: $this,
+				propertyName: "scheduledPaymentDate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        totalPaymentDue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The total amount due.",
+				container: $this,
+				propertyName: "totalPaymentDue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PriceSpecification",
+					"MonetaryAmount"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,121 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MusicRecording extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MusicRecording'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['byArtist', 'duration', 'inAlbum', 'inPlaylist', 'isrcCode', 'recordingOf']
+        static _rdfs_comment = 'A music recording (track), usually a single song.'
+        static _rdfs_label = 'MusicRecording'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        byArtist($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The artist that performed this album or recording.",
+				container: $this,
+				propertyName: "byArtist",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicGroup",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        duration($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_8601).",
+				container: $this,
+				propertyName: "duration",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Duration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        inAlbum($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The album to which this recording belongs.",
+				container: $this,
+				propertyName: "inAlbum",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicAlbum"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        inPlaylist($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The playlist to which this recording belongs.",
+				container: $this,
+				propertyName: "inPlaylist",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicPlaylist"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isrcCode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The International Standard Recording Code for the recording.",
+				container: $this,
+				propertyName: "isrcCode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        recordingOf($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The composition this track is a recording of.",
+				container: $this,
+				propertyName: "recordingOf",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicComposition"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ReservationStatusType extends window.LiveElement.Element.elements.StatusEnumeration {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ReservationStatusType'
+        static __type = 'rdfs:Class'
+        static __extends = 'StatusEnumeration'
+        static __properties = []
+        static _rdfs_comment = 'Enumerated status values for Reservation.'
+        static _rdfs_label = 'ReservationStatusType'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

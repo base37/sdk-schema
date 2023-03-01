@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Artery extends window.LiveElement.Element.elements.Vessel {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Artery'
+        static __type = 'rdfs:Class'
+        static __extends = 'Vessel'
+        static __properties = ['arterialBranch', 'supplyTo']
+        static _rdfs_comment = 'A type of blood vessel that specifically carries blood away from the heart.'
+        static _rdfs_label = 'Artery'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        arterialBranch($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The branches that comprise the arterial structure.",
+				container: $this,
+				propertyName: "arterialBranch",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AnatomicalStructure"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        supplyTo($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The area to which the artery supplies blood.",
+				container: $this,
+				propertyName: "supplyTo",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AnatomicalStructure"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

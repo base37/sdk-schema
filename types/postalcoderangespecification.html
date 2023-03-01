@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PostalCodeRangeSpecification extends window.LiveElement.Element.elements.StructuredValue {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PostalCodeRangeSpecification'
+        static __type = 'rdfs:Class'
+        static __extends = 'StructuredValue'
+        static __properties = ['postalCodeBegin', 'postalCodeEnd']
+        static _rdfs_comment = 'Indicates a range of postalcodes, usually defined as the set of valid codes between [[postalCodeBegin]] and [[postalCodeEnd]], inclusively.'
+        static _rdfs_label = 'PostalCodeRangeSpecification'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        postalCodeBegin($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "First postal code in a range (included).",
+				container: $this,
+				propertyName: "postalCodeBegin",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        postalCodeEnd($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Last postal code in the range (included). Needs to be after [[postalCodeBegin]].",
+				container: $this,
+				propertyName: "postalCodeEnd",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

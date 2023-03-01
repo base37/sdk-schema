@@ -1,0 +1,61 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AudioObject extends window.LiveElement.Element.elements.MediaObject {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AudioObject'
+        static __type = 'rdfs:Class'
+        static __extends = 'MediaObject'
+        static __properties = ['caption', 'transcript']
+        static _rdfs_comment = 'An audio file.'
+        static _rdfs_label = 'AudioObject'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        caption($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].",
+				container: $this,
+				propertyName: "caption",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"MediaObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        transcript($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "If this MediaObject is an AudioObject or VideoObject, the transcript of that object.",
+				container: $this,
+				propertyName: "transcript",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

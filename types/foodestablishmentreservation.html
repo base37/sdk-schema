@@ -1,0 +1,78 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class FoodEstablishmentReservation extends window.LiveElement.Element.elements.Reservation {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:FoodEstablishmentReservation'
+        static __type = 'rdfs:Class'
+        static __extends = 'Reservation'
+        static __properties = ['endTime', 'partySize', 'startTime']
+        static _rdfs_comment = 'A reservation to dine at a food-related business.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.'
+        static _rdfs_label = 'FoodEstablishmentReservation'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        endTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\\n\\nNote that Event uses startDate\\/endDate instead of startTime\\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+				container: $this,
+				propertyName: "endTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Time"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        partySize($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Number of people the reservation should accommodate.",
+				container: $this,
+				propertyName: "partySize",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer",
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        startTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\\n\\nNote that Event uses startDate\\/endDate instead of startTime\\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+				container: $this,
+				propertyName: "startTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Time"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

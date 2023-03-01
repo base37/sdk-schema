@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class SteeringPositionValue extends window.LiveElement.Element.elements.QualitativeValue {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:SteeringPositionValue'
+        static __type = 'rdfs:Class'
+        static __extends = 'QualitativeValue'
+        static __properties = []
+        static _rdfs_comment = 'A value indicating a steering position.'
+        static _rdfs_label = 'SteeringPositionValue'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

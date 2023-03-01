@@ -1,0 +1,213 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ParcelDelivery extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ParcelDelivery'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['carrier', 'deliveryAddress', 'deliveryStatus', 'expectedArrivalFrom', 'expectedArrivalUntil', 'hasDeliveryMethod', 'itemShipped', 'originAddress', 'partOfOrder', 'provider', 'trackingNumber', 'trackingUrl']
+        static _rdfs_comment = 'The delivery of a parcel either via the postal service or a commercial service.'
+        static _rdfs_label = 'ParcelDelivery'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        carrier($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "'carrier' is an out-dated term indicating the 'provider' for parcel delivery and flights.",
+				container: $this,
+				propertyName: "carrier",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        deliveryAddress($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Destination address.",
+				container: $this,
+				propertyName: "deliveryAddress",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PostalAddress"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        deliveryStatus($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "New entry added as the package passes through each leg of its journey (from shipment to final delivery).",
+				container: $this,
+				propertyName: "deliveryStatus",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DeliveryEvent"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        expectedArrivalFrom($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The earliest date the package may arrive.",
+				container: $this,
+				propertyName: "expectedArrivalFrom",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        expectedArrivalUntil($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The latest date the package may arrive.",
+				container: $this,
+				propertyName: "expectedArrivalUntil",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Date",
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hasDeliveryMethod($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Method used for delivery or shipping.",
+				container: $this,
+				propertyName: "hasDeliveryMethod",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DeliveryMethod"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        itemShipped($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Item(s) being shipped.",
+				container: $this,
+				propertyName: "itemShipped",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Product"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        originAddress($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Shipper's address.",
+				container: $this,
+				propertyName: "originAddress",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PostalAddress"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        partOfOrder($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The overall order the items in this delivery were included in.",
+				container: $this,
+				propertyName: "partOfOrder",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Order"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        provider($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
+				container: $this,
+				propertyName: "provider",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        trackingNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Shipper tracking number.",
+				container: $this,
+				propertyName: "trackingNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        trackingUrl($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Tracking url for the parcel delivery.",
+				container: $this,
+				propertyName: "trackingUrl",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

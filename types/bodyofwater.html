@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class BodyOfWater extends window.LiveElement.Element.elements.Landform {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:BodyOfWater'
+        static __type = 'rdfs:Class'
+        static __extends = 'Landform'
+        static __properties = []
+        static _rdfs_comment = 'A body of water, such as a sea, ocean, or lake.'
+        static _rdfs_label = 'BodyOfWater'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Motorcycle extends window.LiveElement.Element.elements.Vehicle {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Motorcycle'
+        static __type = 'rdfs:Class'
+        static __extends = 'Vehicle'
+        static __properties = []
+        static _rdfs_comment = 'A motorcycle or motorbike is a single-track, two-wheeled motor vehicle.'
+        static _rdfs_label = 'Motorcycle'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

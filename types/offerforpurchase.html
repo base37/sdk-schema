@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class OfferForPurchase extends window.LiveElement.Element.elements.Offer {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:OfferForPurchase'
+        static __type = 'rdfs:Class'
+        static __extends = 'Offer'
+        static __properties = []
+        static _rdfs_comment = 'An [[OfferForPurchase]] in Schema.org represents an [[Offer]] to sell something, i.e. an [[Offer]] whose   [[businessFunction]] is [sell](http:\/\/purl.org\/goodrelations\/v1#Sell.). See [Good Relations](https:\/\/en.wikipedia.org\/wiki\/GoodRelations) for   background on the underlying concepts.   '
+        static _rdfs_label = 'OfferForPurchase'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

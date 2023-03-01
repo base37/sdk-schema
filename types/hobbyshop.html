@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class HobbyShop extends window.LiveElement.Element.elements.Store {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:HobbyShop'
+        static __type = 'rdfs:Class'
+        static __extends = 'Store'
+        static __properties = []
+        static _rdfs_comment = 'A store that sells materials useful or necessary for various hobbies.'
+        static _rdfs_label = 'HobbyShop'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

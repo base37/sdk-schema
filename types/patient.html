@@ -1,0 +1,75 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Patient extends window.LiveElement.Element.elements.Person {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Patient'
+        static __type = 'rdfs:Class'
+        static __extends = 'Person'
+        static __properties = ['diagnosis', 'drug', 'healthCondition']
+        static _rdfs_comment = 'A patient is any person recipient of health care services.'
+        static _rdfs_label = 'Patient'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        diagnosis($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.",
+				container: $this,
+				propertyName: "diagnosis",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalCondition"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        drug($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specifying a drug or medicine used in a medication procedure",
+				container: $this,
+				propertyName: "drug",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Drug"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        healthCondition($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specifying the health condition(s) of a patient, medical study, or other target audience.",
+				container: $this,
+				propertyName: "healthCondition",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalCondition"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

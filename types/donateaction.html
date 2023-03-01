@@ -1,0 +1,48 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DonateAction extends window.LiveElement.Element.elements.TradeAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DonateAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'TradeAction'
+        static __properties = ['recipient']
+        static _rdfs_comment = 'The act of providing goods, services, or money without compensation, often for philanthropic reasons.'
+        static _rdfs_label = 'DonateAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        recipient($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of participant. The participant who is at the receiving end of the action.",
+				container: $this,
+				propertyName: "recipient",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Audience",
+					"ContactPoint",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

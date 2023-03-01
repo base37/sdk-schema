@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalRiskCalculator extends window.LiveElement.Element.elements.MedicalRiskEstimator {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalRiskCalculator'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalRiskEstimator'
+        static __properties = []
+        static _rdfs_comment = 'A complex mathematical calculation requiring an online calculator, used to assess prognosis. Note: use the url property of Thing to record any URLs for online calculators.'
+        static _rdfs_label = 'MedicalRiskCalculator'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

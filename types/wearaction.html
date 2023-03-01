@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class WearAction extends window.LiveElement.Element.elements.UseAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:WearAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'UseAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of dressing oneself in clothing.'
+        static _rdfs_label = 'WearAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MediaSubscription extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MediaSubscription'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['authenticator', 'expectsAcceptanceOf']
+        static _rdfs_comment = 'A subscription which allows a user to access media including audio, video, books, etc.'
+        static _rdfs_label = 'MediaSubscription'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        authenticator($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The Organization responsible for authenticating the user's subscription. For example, many media apps require a cable\\/satellite provider to authenticate your subscription before playing media.",
+				container: $this,
+				propertyName: "authenticator",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        expectsAcceptanceOf($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.",
+				container: $this,
+				propertyName: "expectsAcceptanceOf",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Offer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

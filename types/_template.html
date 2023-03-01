@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class {rdfslabel_safe} extends window.LiveElement.Element.elements.{rdfssubclassof_id_safe_no_schemaprefix} {{
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '{release}'
+        static __id = '{_id}'
+        static __type = '{_type}'
+        static __extends = '{rdfssubclassof_id_safe_no_schemaprefix}'
+        static __properties = [{properties_list_comma}]
+        static _rdfs_comment = '{rdfscomment}'
+        static _rdfs_label = '{rdfslabel}'
+
+        constructor() {{
+            super()
+        }}
+        
+        connectedCallback() {{
+            super.connectedCallback()
+        }}
+        
+        {properties_list_getters}
+        
+    }}
+</script>

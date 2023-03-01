@@ -1,0 +1,90 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class RentalCarReservation extends window.LiveElement.Element.elements.Reservation {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:RentalCarReservation'
+        static __type = 'rdfs:Class'
+        static __extends = 'Reservation'
+        static __properties = ['dropoffLocation', 'dropoffTime', 'pickupLocation', 'pickupTime']
+        static _rdfs_comment = 'A reservation for a rental car.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.'
+        static _rdfs_label = 'RentalCarReservation'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        dropoffLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Where a rental car can be dropped off.",
+				container: $this,
+				propertyName: "dropoffLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        dropoffTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "When a rental car can be dropped off.",
+				container: $this,
+				propertyName: "dropoffTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        pickupLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Where a taxi will pick up a passenger or a rental car can be picked up.",
+				container: $this,
+				propertyName: "pickupLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        pickupTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "When a taxi will pickup a passenger or a rental car can be picked up.",
+				container: $this,
+				propertyName: "pickupTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,76 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ProductGroup extends window.LiveElement.Element.elements.Product {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ProductGroup'
+        static __type = 'rdfs:Class'
+        static __extends = 'Product'
+        static __properties = ['hasVariant', 'productGroupID', 'variesBy']
+        static _rdfs_comment = 'A ProductGroup represents a group of [[Product]]s that vary only in certain well-described ways, such as by [[size]], [[color]], [[material]] etc.  While a ProductGroup itself is not directly offered for sale, the various varying products that it represents can be. The ProductGroup serves as a prototype or template, standing in for all of the products who have an [[isVariantOf]] relationship to it. As such, properties (including additional types) can be applied to the ProductGroup to represent characteristics shared by each of the (possibly very many) variants. Properties that reference a ProductGroup are not included in this mechanism; neither are the following specific properties [[variesBy]], [[hasVariant]], [[url]]. '
+        static _rdfs_label = 'ProductGroup'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        hasVariant($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates a [[Product]] that is a member of this [[ProductGroup]] (or [[ProductModel]]).",
+				container: $this,
+				propertyName: "hasVariant",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Product"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        productGroupID($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates a textual identifier for a ProductGroup.",
+				container: $this,
+				propertyName: "productGroupID",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        variesBy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the property or properties by which the variants in a [[ProductGroup]] vary, e.g. their size, color etc. Schema.org properties can be referenced by their short name e.g. \"color\"; terms defined elsewhere can be referenced with their URIs.",
+				container: $this,
+				propertyName: "variesBy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DefinedTerm",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ReviewNewsArticle extends window.LiveElement.Element.elements.NewsArticle {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ReviewNewsArticle'
+        static __type = 'rdfs:Class'
+        static __extends = 'NewsArticle'
+        static __properties = []
+        static _rdfs_comment = 'A [[NewsArticle]] and [[CriticReview]] providing a professional critic\'s assessment of a service, product, performance, or artistic or literary work.'
+        static _rdfs_label = 'ReviewNewsArticle'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

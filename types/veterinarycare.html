@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class VeterinaryCare extends window.LiveElement.Element.elements.MedicalOrganization {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:VeterinaryCare'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalOrganization'
+        static __properties = []
+        static _rdfs_comment = 'A vet\'s office.'
+        static _rdfs_label = 'VeterinaryCare'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

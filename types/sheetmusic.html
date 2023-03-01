@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class SheetMusic extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:SheetMusic'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = []
+        static _rdfs_comment = 'Printed music, as opposed to performed or recorded music.'
+        static _rdfs_label = 'SheetMusic'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

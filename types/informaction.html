@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class InformAction extends window.LiveElement.Element.elements.CommunicateAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:InformAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'CommunicateAction'
+        static __properties = ['event']
+        static _rdfs_comment = 'The act of notifying someone of information pertinent to them, with no expectation of a response.'
+        static _rdfs_label = 'InformAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        event($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Upcoming or past event associated with this place, organization, or action.",
+				container: $this,
+				propertyName: "event",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Event"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

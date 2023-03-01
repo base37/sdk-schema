@@ -1,0 +1,121 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MusicRelease extends window.LiveElement.Element.elements.MusicPlaylist {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MusicRelease'
+        static __type = 'rdfs:Class'
+        static __extends = 'MusicPlaylist'
+        static __properties = ['catalogNumber', 'creditedTo', 'duration', 'musicReleaseFormat', 'recordLabel', 'releaseOf']
+        static _rdfs_comment = 'A MusicRelease is a specific release of a music album.'
+        static _rdfs_label = 'MusicRelease'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        catalogNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The catalog number for the release.",
+				container: $this,
+				propertyName: "catalogNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        creditedTo($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to \"Stefani Germanotta Band\", but by Lady Gaga.",
+				container: $this,
+				propertyName: "creditedTo",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        duration($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_8601).",
+				container: $this,
+				propertyName: "duration",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Duration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        musicReleaseFormat($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Format of this release (the type of recording media used, ie. compact disc, digital media, LP, etc.).",
+				container: $this,
+				propertyName: "musicReleaseFormat",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicReleaseFormatType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        recordLabel($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The label that issued the release.",
+				container: $this,
+				propertyName: "recordLabel",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        releaseOf($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The album this is a release of.",
+				container: $this,
+				propertyName: "releaseOf",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicAlbum"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class SchoolDistrict extends window.LiveElement.Element.elements.AdministrativeArea {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:SchoolDistrict'
+        static __type = 'rdfs:Class'
+        static __extends = 'AdministrativeArea'
+        static __properties = []
+        static _rdfs_comment = 'A School District is an administrative area for the administration of schools.'
+        static _rdfs_label = 'SchoolDistrict'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

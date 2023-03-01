@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ResumeAction extends window.LiveElement.Element.elements.ControlAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ResumeAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'ControlAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of resuming a device or application which was formerly paused (e.g. resume music playback or resume a timer).'
+        static _rdfs_label = 'ResumeAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

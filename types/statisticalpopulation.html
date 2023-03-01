@@ -1,0 +1,75 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class StatisticalPopulation extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:StatisticalPopulation'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['constrainingProperty', 'numConstraints', 'populationType']
+        static _rdfs_comment = 'A StatisticalPopulation is a set of instances of a certain given type that satisfy some set of constraints. The property [[populationType]] is used to specify the type. Any property that can be used on instances of that type can appear on the statistical population. For example, a [[StatisticalPopulation]] representing all [[Person]]s with a [[homeLocation]] of East Podunk California, would be described by applying the appropriate [[homeLocation]] and [[populationType]] properties to a [[StatisticalPopulation]] item that stands for that set of people. The properties [[numConstraints]] and [[constrainingProperties]] are used to specify which of the populations properties are used to specify the population. Note that the sense of "population" used here is the general sense of a statistical population, and does not imply that the population consists of people. For example, a [[populationType]] of [[Event]] or [[NewsArticle]] could be used. See also [[Observation]], and the [data and datasets](\/docs\/data-and-datasets.html) overview for more details.   '
+        static _rdfs_label = 'StatisticalPopulation'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        constrainingProperty($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates a property used as a constraint to define a [[StatisticalPopulation]] with respect to the set of entities\n  corresponding to an indicated type (via [[populationType]]).",
+				container: $this,
+				propertyName: "constrainingProperty",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numConstraints($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the number of constraints (not counting [[populationType]]) defined for a particular [[StatisticalPopulation]]. This helps applications understand if they have access to a sufficiently complete description of a [[StatisticalPopulation]].",
+				container: $this,
+				propertyName: "numConstraints",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        populationType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the populationType common to all members of a [[StatisticalPopulation]].",
+				container: $this,
+				propertyName: "populationType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Class"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

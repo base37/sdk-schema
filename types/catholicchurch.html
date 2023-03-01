@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CatholicChurch extends window.LiveElement.Element.elements.Church {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CatholicChurch'
+        static __type = 'rdfs:Class'
+        static __extends = 'Church'
+        static __properties = []
+        static _rdfs_comment = 'A Catholic church.'
+        static _rdfs_label = 'CatholicChurch'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

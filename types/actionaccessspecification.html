@@ -1,0 +1,147 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ActionAccessSpecification extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ActionAccessSpecification'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['availabilityEnds', 'availabilityStarts', 'category', 'eligibleRegion', 'expectsAcceptanceOf', 'ineligibleRegion', 'requiresSubscription']
+        static _rdfs_comment = 'A set of requirements that a must be fulfilled in order to perform an Action.'
+        static _rdfs_label = 'ActionAccessSpecification'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        availabilityEnds($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The end of the availability of the product or service included in the offer.",
+				container: $this,
+				propertyName: "availabilityEnds",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Time",
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        availabilityStarts($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The beginning of the availability of the product or service included in the offer.",
+				container: $this,
+				propertyName: "availabilityStarts",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Time",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        category($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.",
+				container: $this,
+				propertyName: "category",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Thing",
+					"PhysicalActivityCategory",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        eligibleRegion($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.\\n\\nSee also [[ineligibleRegion]].\n    ",
+				container: $this,
+				propertyName: "eligibleRegion",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place",
+					"GeoShape",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        expectsAcceptanceOf($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.",
+				container: $this,
+				propertyName: "expectsAcceptanceOf",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Offer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        ineligibleRegion($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\\n\\nSee also [[eligibleRegion]].\n      ",
+				container: $this,
+				propertyName: "ineligibleRegion",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"GeoShape",
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        requiresSubscription($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates if use of the media require a subscription  (either paid or free). Allowed values are ```true``` or ```false``` (note that an earlier version had 'yes', 'no').",
+				container: $this,
+				propertyName: "requiresSubscription",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean",
+					"MediaSubscription"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

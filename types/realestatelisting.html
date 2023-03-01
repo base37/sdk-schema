@@ -1,0 +1,62 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class RealEstateListing extends window.LiveElement.Element.elements.WebPage {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:RealEstateListing'
+        static __type = 'rdfs:Class'
+        static __extends = 'WebPage'
+        static __properties = ['datePosted', 'leaseLength']
+        static _rdfs_comment = 'A [[RealEstateListing]] is a listing that describes one or more real-estate [[Offer]]s (whose [[businessFunction]] is typically to lease out, or to sell).   The [[RealEstateListing]] type itself represents the overall listing, as manifested in some [[WebPage]].   '
+        static _rdfs_label = 'RealEstateListing'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        datePosted($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Publication date of an online listing.",
+				container: $this,
+				propertyName: "datePosted",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        leaseLength($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.",
+				container: $this,
+				propertyName: "leaseLength",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Duration",
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

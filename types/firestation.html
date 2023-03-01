@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class FireStation extends window.LiveElement.Element.elements.CivicStructure {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:FireStation'
+        static __type = 'rdfs:Class'
+        static __extends = 'CivicStructure'
+        static __properties = []
+        static _rdfs_comment = 'A fire station. With firemen.'
+        static _rdfs_label = 'FireStation'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

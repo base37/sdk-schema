@@ -1,0 +1,75 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class EnergyConsumptionDetails extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:EnergyConsumptionDetails'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['energyEfficiencyScaleMax', 'energyEfficiencyScaleMin', 'hasEnergyEfficiencyCategory']
+        static _rdfs_comment = 'EnergyConsumptionDetails represents information related to the energy efficiency of a product that consumes energy. The information that can be provided is based on international regulations such as for example [EU directive 2017\/1369](https:\/\/eur-lex.europa.eu\/eli\/reg\/2017\/1369\/oj) for energy labeling and the [Energy labeling rule](https:\/\/www.ftc.gov\/enforcement\/rules\/rulemaking-regulatory-reform-proceedings\/energy-water-use-labeling-consumer) under the Energy Policy and Conservation Act (EPCA) in the US'
+        static _rdfs_label = 'EnergyConsumptionDetails'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        energyEfficiencyScaleMax($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specifies the most energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to. For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.",
+				container: $this,
+				propertyName: "energyEfficiencyScaleMax",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"EUEnergyEfficiencyEnumeration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        energyEfficiencyScaleMin($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specifies the least energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to. For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.",
+				container: $this,
+				propertyName: "energyEfficiencyScaleMin",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"EUEnergyEfficiencyEnumeration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hasEnergyEfficiencyCategory($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Defines the energy efficiency Category (which could be either a rating out of range of values or a yes\\/no certification) for a product according to an international energy efficiency standard",
+				container: $this,
+				propertyName: "hasEnergyEfficiencyCategory",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"EnergyEfficiencyEnumeration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

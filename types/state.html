@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class State extends window.LiveElement.Element.elements.AdministrativeArea {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:State'
+        static __type = 'rdfs:Class'
+        static __extends = 'AdministrativeArea'
+        static __properties = []
+        static _rdfs_comment = 'A state or province of a country.'
+        static _rdfs_label = 'State'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

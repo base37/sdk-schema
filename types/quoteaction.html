@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class QuoteAction extends window.LiveElement.Element.elements.TradeAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:QuoteAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'TradeAction'
+        static __properties = []
+        static _rdfs_comment = 'An agent quotes\/estimates\/appraises an object\/product\/service with a price at a location\/store.'
+        static _rdfs_label = 'QuoteAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

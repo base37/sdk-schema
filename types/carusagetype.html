@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CarUsageType extends window.LiveElement.Element.elements.Enumeration {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CarUsageType'
+        static __type = 'rdfs:Class'
+        static __extends = 'Enumeration'
+        static __properties = []
+        static _rdfs_comment = 'A value indicating a special usage of a car, e.g. commercial rental, driving school, or as a taxi.'
+        static _rdfs_label = 'CarUsageType'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

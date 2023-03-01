@@ -1,0 +1,76 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ScreeningEvent extends window.LiveElement.Element.elements.Event {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ScreeningEvent'
+        static __type = 'rdfs:Class'
+        static __extends = 'Event'
+        static __properties = ['subtitleLanguage', 'videoFormat', 'workPresented']
+        static _rdfs_comment = 'A screening of a movie or other video.'
+        static _rdfs_label = 'ScreeningEvent'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        subtitleLanguage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Languages in which subtitles\\/captions are available, in [IETF BCP 47 standard format](http:\\/\\/tools.ietf.org\\/html\\/bcp47).",
+				container: $this,
+				propertyName: "subtitleLanguage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Language"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        videoFormat($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).",
+				container: $this,
+				propertyName: "videoFormat",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        workPresented($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The movie presented during this event.",
+				container: $this,
+				propertyName: "workPresented",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Movie"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

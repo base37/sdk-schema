@@ -1,0 +1,233 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class VisualArtwork extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:VisualArtwork'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['artEdition', 'artMedium', 'artform', 'artist', 'artworkSurface', 'colorist', 'depth', 'height', 'inker', 'letterer', 'penciler', 'surface', 'width']
+        static _rdfs_comment = 'A work of art that is primarily visual in character.'
+        static _rdfs_label = 'VisualArtwork'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        artEdition($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of copies when multiple copies of a piece of artwork are produced - e.g. for a limited edition of 20 prints, 'artEdition' refers to the total number of copies (in this example \"20\").",
+				container: $this,
+				propertyName: "artEdition",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        artMedium($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The material used. (e.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.)",
+				container: $this,
+				propertyName: "artMedium",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        artform($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage, Collage, etc.",
+				container: $this,
+				propertyName: "artform",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        artist($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The primary artist for a work\n    \tin a medium other than pencils or digital line art--for example, if the\n    \tprimary artwork is done in watercolors or digital paints.",
+				container: $this,
+				propertyName: "artist",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        artworkSurface($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The supporting materials for the artwork, e.g. Canvas, Paper, Wood, Board, etc.",
+				container: $this,
+				propertyName: "artworkSurface",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        colorist($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The individual who adds color to inked drawings.",
+				container: $this,
+				propertyName: "colorist",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        depth($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The depth of the item.",
+				container: $this,
+				propertyName: "depth",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"Distance"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        height($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The height of the item.",
+				container: $this,
+				propertyName: "height",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"Distance"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        inker($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The individual who traces over the pencil drawings in ink after pencils are complete.",
+				container: $this,
+				propertyName: "inker",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        letterer($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The individual who adds lettering, including speech balloons and sound effects, to artwork.",
+				container: $this,
+				propertyName: "letterer",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        penciler($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The individual who draws the primary narrative artwork.",
+				container: $this,
+				propertyName: "penciler",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        surface($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A material used as a surface in some artwork, e.g. Canvas, Paper, Wood, Board, etc.",
+				container: $this,
+				propertyName: "surface",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        width($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The width of the item.",
+				container: $this,
+				propertyName: "width",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"Distance"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,90 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Review extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Review'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['itemReviewed', 'reviewAspect', 'reviewBody', 'reviewRating']
+        static _rdfs_comment = 'A review of an item - for example, of a restaurant, movie, or store.'
+        static _rdfs_label = 'Review'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        itemReviewed($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The item that is being reviewed\\/rated.",
+				container: $this,
+				propertyName: "itemReviewed",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        reviewAspect($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "This Review or Rating is relevant to this part or facet of the itemReviewed.",
+				container: $this,
+				propertyName: "reviewAspect",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        reviewBody($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The actual body of the review.",
+				container: $this,
+				propertyName: "reviewBody",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        reviewRating($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The rating given in this review. Note that reviews can themselves be rated. The ```reviewRating``` applies to rating given by the review. The [[aggregateRating]] property applies to the review itself, as a creative work.",
+				container: $this,
+				propertyName: "reviewRating",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Rating"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

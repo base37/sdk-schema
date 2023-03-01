@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Poster extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Poster'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = []
+        static _rdfs_comment = 'A large, usually printed placard, bill, or announcement, often illustrated, that is posted to advertise or publicize something.'
+        static _rdfs_label = 'Poster'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

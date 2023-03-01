@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class NoteDigitalDocument extends window.LiveElement.Element.elements.DigitalDocument {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:NoteDigitalDocument'
+        static __type = 'rdfs:Class'
+        static __extends = 'DigitalDocument'
+        static __properties = []
+        static _rdfs_comment = 'A file containing a note, primarily for the author.'
+        static _rdfs_label = 'NoteDigitalDocument'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

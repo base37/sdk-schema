@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalAudience extends window.LiveElement.Element.elements.PeopleAudience {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalAudience'
+        static __type = 'rdfs:Class'
+        static __extends = 'PeopleAudience'
+        static __properties = []
+        static _rdfs_comment = 'Target audiences for medical web pages.'
+        static _rdfs_label = 'MedicalAudience'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

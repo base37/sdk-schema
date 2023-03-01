@@ -1,0 +1,62 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ReceiveAction extends window.LiveElement.Element.elements.TransferAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ReceiveAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'TransferAction'
+        static __properties = ['deliveryMethod', 'sender']
+        static _rdfs_comment = 'The act of physically\/electronically taking delivery of an object that has been transferred from an origin to a destination. Reciprocal of SendAction.\n\nRelated actions:\n\n* [[SendAction]]: The reciprocal of ReceiveAction.\n* [[TakeAction]]: Unlike TakeAction, ReceiveAction does not imply that the ownership has been transfered (e.g. I can receive a package, but it does not mean the package is now mine).'
+        static _rdfs_label = 'ReceiveAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        deliveryMethod($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of instrument. The method of delivery.",
+				container: $this,
+				propertyName: "deliveryMethod",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DeliveryMethod"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sender($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of participant. The participant who is at the sending end of the action.",
+				container: $this,
+				propertyName: "sender",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Audience",
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

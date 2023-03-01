@@ -1,0 +1,75 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class GameServer extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:GameServer'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['game', 'playersOnline', 'serverStatus']
+        static _rdfs_comment = 'Server that provides game interaction in a multiplayer game.'
+        static _rdfs_label = 'GameServer'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        game($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Video game which is played on this server.",
+				container: $this,
+				propertyName: "game",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"VideoGame"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        playersOnline($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Number of players on the server.",
+				container: $this,
+				propertyName: "playersOnline",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        serverStatus($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Status of a game server.",
+				container: $this,
+				propertyName: "serverStatus",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"GameServerStatus"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

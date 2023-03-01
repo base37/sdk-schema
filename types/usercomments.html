@@ -1,0 +1,107 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class UserComments extends window.LiveElement.Element.elements.UserInteraction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:UserComments'
+        static __type = 'rdfs:Class'
+        static __extends = 'UserInteraction'
+        static __properties = ['commentText', 'commentTime', 'creator', 'discusses', 'replyToUrl']
+        static _rdfs_comment = 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].'
+        static _rdfs_label = 'UserComments'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        commentText($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The text of the UserComment.",
+				container: $this,
+				propertyName: "commentText",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        commentTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The time at which the UserComment was made.",
+				container: $this,
+				propertyName: "commentTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        creator($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The creator\\/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
+				container: $this,
+				propertyName: "creator",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        discusses($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specifies the CreativeWork associated with the UserComment.",
+				container: $this,
+				propertyName: "discusses",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        replyToUrl($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The URL at which a reply may be posted to the specified UserComment.",
+				container: $this,
+				propertyName: "replyToUrl",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

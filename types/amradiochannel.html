@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AMRadioChannel extends window.LiveElement.Element.elements.RadioChannel {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AMRadioChannel'
+        static __type = 'rdfs:Class'
+        static __extends = 'RadioChannel'
+        static __properties = []
+        static _rdfs_comment = 'A radio channel that uses AM.'
+        static _rdfs_label = 'AMRadioChannel'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

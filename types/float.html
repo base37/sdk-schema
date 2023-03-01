@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Float extends window.LiveElement.Element.elements.Number {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Float'
+        static __type = 'rdfs:Class'
+        static __extends = 'Number'
+        static __properties = []
+        static _rdfs_comment = 'Data type: Floating number.'
+        static _rdfs_label = 'Float'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

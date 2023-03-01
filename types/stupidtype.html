@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class StupidType extends window.LiveElement.Element.elements.Thing {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:StupidType'
+        static __type = 'rdfs:Class'
+        static __extends = 'Thing'
+        static __properties = ['stupidProperty']
+        static _rdfs_comment = 'A StupidType for testing.'
+        static _rdfs_label = 'StupidType'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        stupidProperty($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "This is a StupidProperty! - for testing only",
+				container: $this,
+				propertyName: "stupidProperty",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

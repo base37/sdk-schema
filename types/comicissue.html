@@ -1,0 +1,120 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ComicIssue extends window.LiveElement.Element.elements.PublicationIssue {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ComicIssue'
+        static __type = 'rdfs:Class'
+        static __extends = 'PublicationIssue'
+        static __properties = ['artist', 'colorist', 'inker', 'letterer', 'penciler', 'variantCover']
+        static _rdfs_comment = 'Individual comic issues are serially published as     	part of a larger series. For the sake of consistency, even one-shot issues     	belong to a series comprised of a single issue. All comic issues can be     	uniquely identified by: the combination of the name and volume number of the     	series to which the issue belongs; the issue number; and the variant     	description of the issue (if any).'
+        static _rdfs_label = 'ComicIssue'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        artist($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The primary artist for a work\n    \tin a medium other than pencils or digital line art--for example, if the\n    \tprimary artwork is done in watercolors or digital paints.",
+				container: $this,
+				propertyName: "artist",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        colorist($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The individual who adds color to inked drawings.",
+				container: $this,
+				propertyName: "colorist",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        inker($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The individual who traces over the pencil drawings in ink after pencils are complete.",
+				container: $this,
+				propertyName: "inker",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        letterer($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The individual who adds lettering, including speech balloons and sound effects, to artwork.",
+				container: $this,
+				propertyName: "letterer",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        penciler($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The individual who draws the primary narrative artwork.",
+				container: $this,
+				propertyName: "penciler",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        variantCover($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A description of the variant cover\n    \tfor the issue, if the issue is a variant printing. For example, \"Bryan Hitch\n    \tVariant Cover\" or \"2nd Printing Variant\".",
+				container: $this,
+				propertyName: "variantCover",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

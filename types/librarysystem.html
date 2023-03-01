@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class LibrarySystem extends window.LiveElement.Element.elements.Organization {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:LibrarySystem'
+        static __type = 'rdfs:Class'
+        static __extends = 'Organization'
+        static __properties = []
+        static _rdfs_comment = 'A [[LibrarySystem]] is a collaborative system amongst several libraries.'
+        static _rdfs_label = 'LibrarySystem'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

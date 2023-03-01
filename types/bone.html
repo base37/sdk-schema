@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Bone extends window.LiveElement.Element.elements.AnatomicalStructure {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Bone'
+        static __type = 'rdfs:Class'
+        static __extends = 'AnatomicalStructure'
+        static __properties = []
+        static _rdfs_comment = 'Rigid connective tissue that comprises up the skeletal structure of the human body.'
+        static _rdfs_label = 'Bone'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

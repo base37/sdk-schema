@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PawnShop extends window.LiveElement.Element.elements.Store {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PawnShop'
+        static __type = 'rdfs:Class'
+        static __extends = 'Store'
+        static __properties = []
+        static _rdfs_comment = 'A shop that will buy, or lend money against the security of, personal possessions.'
+        static _rdfs_label = 'PawnShop'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

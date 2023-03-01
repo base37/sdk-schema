@@ -1,0 +1,121 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ShippingRateSettings extends window.LiveElement.Element.elements.StructuredValue {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ShippingRateSettings'
+        static __type = 'rdfs:Class'
+        static __extends = 'StructuredValue'
+        static __properties = ['doesNotShip', 'freeShippingThreshold', 'isUnlabelledFallback', 'shippingDestination', 'shippingLabel', 'shippingRate']
+        static _rdfs_comment = 'A ShippingRateSettings represents re-usable pieces of shipping information. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished and matched (i.e. identified\/referenced) by their different values for [[shippingLabel]].'
+        static _rdfs_label = 'ShippingRateSettings'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        doesNotShip($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates when shipping to a particular [[shippingDestination]] is not available.",
+				container: $this,
+				propertyName: "doesNotShip",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        freeShippingThreshold($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A monetary value above which (or equal to) the shipping rate becomes free. Intended to be used via an [[OfferShippingDetails]] with [[shippingSettingsLink]] matching this [[ShippingRateSettings]].",
+				container: $this,
+				propertyName: "freeShippingThreshold",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DeliveryChargeSpecification",
+					"MonetaryAmount"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isUnlabelledFallback($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.",
+				container: $this,
+				propertyName: "isUnlabelledFallback",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        shippingDestination($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "indicates (possibly multiple) shipping destinations. These can be defined in several ways e.g. postalCode ranges.",
+				container: $this,
+				propertyName: "shippingDestination",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DefinedRegion"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        shippingLabel($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Label to match an [[OfferShippingDetails]] with a [[ShippingRateSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).",
+				container: $this,
+				propertyName: "shippingLabel",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        shippingRate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The shipping rate is the cost of shipping to the specified destination. Typically, the maxValue and currency values (of the [[MonetaryAmount]]) are most appropriate.",
+				container: $this,
+				propertyName: "shippingRate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MonetaryAmount"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

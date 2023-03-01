@@ -1,0 +1,136 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class SoftwareSourceCode extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:SoftwareSourceCode'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['codeRepository', 'codeSampleType', 'programmingLanguage', 'runtime', 'runtimePlatform', 'sampleType', 'targetProduct']
+        static _rdfs_comment = 'Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.'
+        static _rdfs_label = 'SoftwareSourceCode'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        codeRepository($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Link to the repository where the un-compiled, human readable code and related code is located (SVN, github, CodePlex).",
+				container: $this,
+				propertyName: "codeRepository",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        codeSampleType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.",
+				container: $this,
+				propertyName: "codeSampleType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        programmingLanguage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The computer programming language.",
+				container: $this,
+				propertyName: "programmingLanguage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"ComputerLanguage"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        runtime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Runtime platform or script interpreter dependencies (Example - Java v1, Python2.3, .Net Framework 3.0).",
+				container: $this,
+				propertyName: "runtime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        runtimePlatform($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Runtime platform or script interpreter dependencies (Example - Java v1, Python2.3, .Net Framework 3.0).",
+				container: $this,
+				propertyName: "runtimePlatform",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sampleType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.",
+				container: $this,
+				propertyName: "sampleType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        targetProduct($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Target Operating System \\/ Product to which the code applies.  If applies to several versions, just the product name can be used.",
+				container: $this,
+				propertyName: "targetProduct",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"SoftwareApplication"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

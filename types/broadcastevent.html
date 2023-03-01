@@ -1,0 +1,91 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class BroadcastEvent extends window.LiveElement.Element.elements.PublicationEvent {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:BroadcastEvent'
+        static __type = 'rdfs:Class'
+        static __extends = 'PublicationEvent'
+        static __properties = ['broadcastOfEvent', 'isLiveBroadcast', 'subtitleLanguage', 'videoFormat']
+        static _rdfs_comment = 'An over the air or online broadcast event.'
+        static _rdfs_label = 'BroadcastEvent'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        broadcastOfEvent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The event being broadcast such as a sporting event or awards ceremony.",
+				container: $this,
+				propertyName: "broadcastOfEvent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Event"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isLiveBroadcast($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "True is the broadcast is of a live event.",
+				container: $this,
+				propertyName: "isLiveBroadcast",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        subtitleLanguage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Languages in which subtitles\\/captions are available, in [IETF BCP 47 standard format](http:\\/\\/tools.ietf.org\\/html\\/bcp47).",
+				container: $this,
+				propertyName: "subtitleLanguage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Language"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        videoFormat($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).",
+				container: $this,
+				propertyName: "videoFormat",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

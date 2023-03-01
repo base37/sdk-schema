@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Periodical extends window.LiveElement.Element.elements.CreativeWorkSeries {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Periodical'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWorkSeries'
+        static __properties = []
+        static _rdfs_comment = 'A publication in any medium issued in successive parts bearing numerical or chronological designations and intended, such as a magazine, scholarly journal, or newspaper to continue indefinitely.\n\nSee also [blog post](http:\/\/blog.schema.org\/2014\/09\/schemaorg-support-for-bibliographic_2.html).'
+        static _rdfs_label = 'Periodical'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

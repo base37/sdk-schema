@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ArchiveOrganization extends window.LiveElement.Element.elements.LocalBusiness {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ArchiveOrganization'
+        static __type = 'rdfs:Class'
+        static __extends = 'LocalBusiness'
+        static __properties = ['archiveHeld']
+        static _rdfs_comment = 'An organization with archival holdings. An organization which keeps and preserves archival material and typically makes it accessible to the public.'
+        static _rdfs_label = 'ArchiveOrganization'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        archiveHeld($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Collection, [fonds](https:\\/\\/en.wikipedia.org\\/wiki\\/Fonds), or item held, kept or maintained by an [[ArchiveOrganization]].",
+				container: $this,
+				propertyName: "archiveHeld",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ArchiveComponent"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

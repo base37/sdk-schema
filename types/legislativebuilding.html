@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class LegislativeBuilding extends window.LiveElement.Element.elements.GovernmentBuilding {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:LegislativeBuilding'
+        static __type = 'rdfs:Class'
+        static __extends = 'GovernmentBuilding'
+        static __properties = []
+        static _rdfs_comment = 'A legislative building&#x2014;for example, the state capitol.'
+        static _rdfs_label = 'LegislativeBuilding'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

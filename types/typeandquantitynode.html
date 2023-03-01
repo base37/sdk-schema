@@ -1,0 +1,107 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TypeAndQuantityNode extends window.LiveElement.Element.elements.StructuredValue {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TypeAndQuantityNode'
+        static __type = 'rdfs:Class'
+        static __extends = 'StructuredValue'
+        static __properties = ['amountOfThisGood', 'businessFunction', 'typeOfGood', 'unitCode', 'unitText']
+        static _rdfs_comment = 'A structured value indicating the quantity, unit of measurement, and business function of goods included in a bundle offer.'
+        static _rdfs_label = 'TypeAndQuantityNode'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        amountOfThisGood($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The quantity of the goods included in the offer.",
+				container: $this,
+				propertyName: "amountOfThisGood",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        businessFunction($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http:\\/\\/purl.org\\/goodrelations\\/v1#Sell.",
+				container: $this,
+				propertyName: "businessFunction",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BusinessFunction"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        typeOfGood($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The product that this structured value is referring to.",
+				container: $this,
+				propertyName: "typeOfGood",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Service",
+					"Product"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        unitCode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The unit of measurement given using the UN\\/CEFACT Common Code (3 characters) or a URL. Other codes than the UN\\/CEFACT Common Code may be used with a prefix followed by a colon.",
+				container: $this,
+				propertyName: "unitCode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        unitText($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for\n<a href='unitCode'>unitCode<\\/a>.",
+				container: $this,
+				propertyName: "unitText",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

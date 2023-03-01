@@ -1,0 +1,46 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class WebAPI extends window.LiveElement.Element.elements.Service {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:WebAPI'
+        static __type = 'rdfs:Class'
+        static __extends = 'Service'
+        static __properties = ['documentation']
+        static _rdfs_comment = 'An application programming interface accessible over Web\/Internet technologies.'
+        static _rdfs_label = 'WebAPI'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        documentation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Further documentation describing the Web API in more detail.",
+				container: $this,
+				propertyName: "documentation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

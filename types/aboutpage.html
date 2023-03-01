@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AboutPage extends window.LiveElement.Element.elements.WebPage {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AboutPage'
+        static __type = 'rdfs:Class'
+        static __extends = 'WebPage'
+        static __properties = []
+        static _rdfs_comment = 'Web page type: About page.'
+        static _rdfs_label = 'AboutPage'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

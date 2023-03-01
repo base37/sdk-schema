@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ResearchProject extends window.LiveElement.Element.elements.Project {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ResearchProject'
+        static __type = 'rdfs:Class'
+        static __extends = 'Project'
+        static __properties = []
+        static _rdfs_comment = 'A Research project.'
+        static _rdfs_label = 'ResearchProject'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

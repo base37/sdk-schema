@@ -1,0 +1,105 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Observation extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Observation'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['marginOfError', 'measuredProperty', 'measuredValue', 'observationDate', 'observedNode']
+        static _rdfs_comment = 'Instances of the class [[Observation]] are used to specify observations about an entity (which may or may not be an instance of a [[StatisticalPopulation]]), at a particular time. The principal properties of an [[Observation]] are [[observedNode]], [[measuredProperty]], [[measuredValue]] (or [[median]], etc.) and [[observationDate]] ([[measuredProperty]] properties can, but need not always, be W3C RDF Data Cube "measure properties", as in the [lifeExpectancy example](https:\/\/www.w3.org\/TR\/vocab-data-cube\/#dsd-example)). See also [[StatisticalPopulation]], and the [data and datasets](\/docs\/data-and-datasets.html) overview for more details.   '
+        static _rdfs_label = 'Observation'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        marginOfError($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A marginOfError for an [[Observation]].",
+				container: $this,
+				propertyName: "marginOfError",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        measuredProperty($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The measuredProperty of an [[Observation]], either a schema.org property, a property from other RDF-compatible systems e.g. W3C RDF Data Cube, or schema.org extensions such as [GS1's](https:\\/\\/www.gs1.org\\/voc\\/?show=properties).",
+				container: $this,
+				propertyName: "measuredProperty",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Property"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        measuredValue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The measuredValue of an [[Observation]].",
+				container: $this,
+				propertyName: "measuredValue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DataType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        observationDate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The observationDate of an [[Observation]].",
+				container: $this,
+				propertyName: "observationDate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        observedNode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The observedNode of an [[Observation]], often a [[StatisticalPopulation]].",
+				container: $this,
+				propertyName: "observedNode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"StatisticalPopulation"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

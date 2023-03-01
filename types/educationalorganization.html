@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class EducationalOrganization extends window.LiveElement.Element.elements.CivicStructure {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:EducationalOrganization'
+        static __type = 'rdfs:Class'
+        static __extends = 'CivicStructure'
+        static __properties = ['alumni']
+        static _rdfs_comment = 'An educational organization.'
+        static _rdfs_label = 'EducationalOrganization'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        alumni($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Alumni of an organization.",
+				container: $this,
+				propertyName: "alumni",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

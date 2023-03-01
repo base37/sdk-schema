@@ -1,0 +1,91 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ListItem extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ListItem'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['item', 'nextItem', 'position', 'previousItem']
+        static _rdfs_comment = 'An list item, e.g. a step in a checklist or how-to description.'
+        static _rdfs_label = 'ListItem'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        item($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists')\u2019.",
+				container: $this,
+				propertyName: "item",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        nextItem($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A link to the ListItem that follows the current one.",
+				container: $this,
+				propertyName: "nextItem",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ListItem"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        position($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The position of an item in a series or sequence of items.",
+				container: $this,
+				propertyName: "position",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        previousItem($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A link to the ListItem that preceeds the current one.",
+				container: $this,
+				propertyName: "previousItem",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ListItem"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

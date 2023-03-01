@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TaxiService extends window.LiveElement.Element.elements.Service {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TaxiService'
+        static __type = 'rdfs:Class'
+        static __extends = 'Service'
+        static __properties = []
+        static _rdfs_comment = 'A service for a vehicle for hire with a driver for local travel. Fares are usually calculated based on distance traveled.'
+        static _rdfs_label = 'TaxiService'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

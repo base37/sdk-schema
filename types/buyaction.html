@@ -1,0 +1,77 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class BuyAction extends window.LiveElement.Element.elements.TradeAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:BuyAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'TradeAction'
+        static __properties = ['seller', 'vendor', 'warrantyPromise']
+        static _rdfs_comment = 'The act of giving money to a seller in exchange for goods or services rendered. An agent buys an object, product, or service from a seller for a price. Reciprocal of SellAction.'
+        static _rdfs_label = 'BuyAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        seller($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An entity which offers (sells \\/ leases \\/ lends \\/ loans) the services \\/ goods.  A seller may also be a provider.",
+				container: $this,
+				propertyName: "seller",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        vendor($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "'vendor' is an earlier term for 'seller'.",
+				container: $this,
+				propertyName: "vendor",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        warrantyPromise($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The warranty promise(s) included in the offer.",
+				container: $this,
+				propertyName: "warrantyPromise",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"WarrantyPromise"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

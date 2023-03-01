@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class EmployerAggregateRating extends window.LiveElement.Element.elements.AggregateRating {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:EmployerAggregateRating'
+        static __type = 'rdfs:Class'
+        static __extends = 'AggregateRating'
+        static __properties = []
+        static _rdfs_comment = 'An aggregate rating of an Organization related to its role as an employer.'
+        static _rdfs_label = 'EmployerAggregateRating'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TheaterEvent extends window.LiveElement.Element.elements.Event {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TheaterEvent'
+        static __type = 'rdfs:Class'
+        static __extends = 'Event'
+        static __properties = []
+        static _rdfs_comment = 'Event type: Theater performance.'
+        static _rdfs_label = 'TheaterEvent'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

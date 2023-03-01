@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AdvertiserContentArticle extends window.LiveElement.Element.elements.Article {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AdvertiserContentArticle'
+        static __type = 'rdfs:Class'
+        static __extends = 'Article'
+        static __properties = []
+        static _rdfs_comment = 'An [[Article]] that an external entity has paid to place or to produce to its specifications. Includes [advertorials](https:\/\/en.wikipedia.org\/wiki\/Advertorial), sponsored content, native advertising and other paid content.'
+        static _rdfs_label = 'AdvertiserContentArticle'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

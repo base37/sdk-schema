@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class BookSeries extends window.LiveElement.Element.elements.CreativeWorkSeries {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:BookSeries'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWorkSeries'
+        static __properties = []
+        static _rdfs_comment = 'A series of books. Included books can be indicated with the hasPart property.'
+        static _rdfs_label = 'BookSeries'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

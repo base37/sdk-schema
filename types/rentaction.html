@@ -1,0 +1,61 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class RentAction extends window.LiveElement.Element.elements.TradeAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:RentAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'TradeAction'
+        static __properties = ['landlord', 'realEstateAgent']
+        static _rdfs_comment = 'The act of giving money in return for temporary use, but not ownership, of an object such as a vehicle or property. For example, an agent rents a property from a landlord in exchange for a periodic payment.'
+        static _rdfs_label = 'RentAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        landlord($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of participant. The owner of the real estate property.",
+				container: $this,
+				propertyName: "landlord",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        realEstateAgent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of participant. The real estate agent involved in the action.",
+				container: $this,
+				propertyName: "realEstateAgent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"RealEstateAgent"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

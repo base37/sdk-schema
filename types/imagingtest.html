@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ImagingTest extends window.LiveElement.Element.elements.MedicalTest {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ImagingTest'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalTest'
+        static __properties = ['imagingTechnique']
+        static _rdfs_comment = 'Any medical imaging modality typically used for diagnostic purposes.'
+        static _rdfs_label = 'ImagingTest'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        imagingTechnique($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Imaging technique used.",
+				container: $this,
+				propertyName: "imagingTechnique",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalImagingTechnique"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

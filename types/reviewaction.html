@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ReviewAction extends window.LiveElement.Element.elements.AssessAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ReviewAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'AssessAction'
+        static __properties = ['resultReview']
+        static _rdfs_comment = 'The act of producing a balanced opinion about the object for an audience. An agent reviews an object with participants resulting in a review.'
+        static _rdfs_label = 'ReviewAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        resultReview($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of result. The review that resulted in the performing of the action.",
+				container: $this,
+				propertyName: "resultReview",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Review"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

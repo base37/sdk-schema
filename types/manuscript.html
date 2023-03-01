@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Manuscript extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Manuscript'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = []
+        static _rdfs_comment = 'A book, document, or piece of music written by hand rather than typed or printed.'
+        static _rdfs_label = 'Manuscript'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

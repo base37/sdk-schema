@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class OrganizeAction extends window.LiveElement.Element.elements.Action {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:OrganizeAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'Action'
+        static __properties = []
+        static _rdfs_comment = 'The act of manipulating\/administering\/supervising\/controlling one or more objects.'
+        static _rdfs_label = 'OrganizeAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

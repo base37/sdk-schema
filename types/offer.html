@@ -1,0 +1,717 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Offer extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Offer'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['acceptedPaymentMethod', 'addOn', 'advanceBookingRequirement', 'aggregateRating', 'areaServed', 'availability', 'availabilityEnds', 'availabilityStarts', 'availableAtOrFrom', 'availableDeliveryMethod', 'businessFunction', 'category', 'deliveryLeadTime', 'eligibleCustomerType', 'eligibleDuration', 'eligibleQuantity', 'eligibleRegion', 'eligibleTransactionVolume', 'gtin', 'gtin12', 'gtin13', 'gtin14', 'gtin8', 'includesObject', 'ineligibleRegion', 'inventoryLevel', 'itemCondition', 'itemOffered', 'leaseLength', 'mpn', 'offeredBy', 'price', 'priceCurrency', 'priceSpecification', 'priceValidUntil', 'review', 'reviews', 'seller', 'serialNumber', 'shippingDetails', 'sku', 'validFrom', 'validThrough', 'warranty']
+        static _rdfs_comment = 'An offer to transfer some rights to an item or to provide a service — for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.\n\nNote: As the [[businessFunction]] property, which identifies the form of offer (e.g. sell, lease, repair, dispose), defaults to http:\/\/purl.org\/goodrelations\/v1#Sell; an Offer without a defined businessFunction value can be assumed to be an offer to sell.\n\nFor [GTIN](http:\/\/www.gs1.org\/barcodes\/technical\/idkeys\/gtin)-related fields, see [Check Digit calculator](http:\/\/www.gs1.org\/barcodes\/support\/check_digit_calculator) and [validation guide](http:\/\/www.gs1us.org\/resources\/standards\/gtin-validation-guide) from [GS1](http:\/\/www.gs1.org\/).'
+        static _rdfs_label = 'Offer'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        acceptedPaymentMethod($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The payment method(s) accepted by seller for this offer.",
+				container: $this,
+				propertyName: "acceptedPaymentMethod",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"LoanOrCredit",
+					"PaymentMethod"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        addOn($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An additional offer that can only be obtained in combination with the first base offer (e.g. supplements and extensions that are available for a surcharge).",
+				container: $this,
+				propertyName: "addOn",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Offer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        advanceBookingRequirement($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The amount of time that is required between accepting the offer and the actual usage of the resource or service.",
+				container: $this,
+				propertyName: "advanceBookingRequirement",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        aggregateRating($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The overall rating, based on a collection of reviews or ratings, of the item.",
+				container: $this,
+				propertyName: "aggregateRating",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AggregateRating"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        areaServed($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The geographic area where a service or offered item is provided.",
+				container: $this,
+				propertyName: "areaServed",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place",
+					"AdministrativeArea",
+					"GeoShape",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        availability($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.",
+				container: $this,
+				propertyName: "availability",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ItemAvailability"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        availabilityEnds($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The end of the availability of the product or service included in the offer.",
+				container: $this,
+				propertyName: "availabilityEnds",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Time",
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        availabilityStarts($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The beginning of the availability of the product or service included in the offer.",
+				container: $this,
+				propertyName: "availabilityStarts",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Time",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        availableAtOrFrom($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The place(s) from which the offer can be obtained (e.g. store locations).",
+				container: $this,
+				propertyName: "availableAtOrFrom",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        availableDeliveryMethod($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The delivery method(s) available for this offer.",
+				container: $this,
+				propertyName: "availableDeliveryMethod",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DeliveryMethod"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        businessFunction($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http:\\/\\/purl.org\\/goodrelations\\/v1#Sell.",
+				container: $this,
+				propertyName: "businessFunction",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BusinessFunction"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        category($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.",
+				container: $this,
+				propertyName: "category",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Thing",
+					"PhysicalActivityCategory",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        deliveryLeadTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup, in case the delivery method is on site pickup.",
+				container: $this,
+				propertyName: "deliveryLeadTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        eligibleCustomerType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type(s) of customers for which the given offer is valid.",
+				container: $this,
+				propertyName: "eligibleCustomerType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BusinessEntityType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        eligibleDuration($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The duration for which the given offer is valid.",
+				container: $this,
+				propertyName: "eligibleDuration",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        eligibleQuantity($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.",
+				container: $this,
+				propertyName: "eligibleQuantity",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        eligibleRegion($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.\\n\\nSee also [[ineligibleRegion]].\n    ",
+				container: $this,
+				propertyName: "eligibleRegion",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place",
+					"GeoShape",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        eligibleTransactionVolume($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases to a certain minimal amount.",
+				container: $this,
+				propertyName: "eligibleTransactionVolume",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PriceSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        gtin($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A Global Trade Item Number ([GTIN](https:\\/\\/www.gs1.org\\/standards\\/id-keys\\/gtin)). GTINs identify trade items, including products and services, using numeric identification codes. The [[gtin]] property generalizes the earlier [[gtin8]], [[gtin12]], [[gtin13]], and [[gtin14]] properties. The GS1 [digital link specifications](https:\\/\\/www.gs1.org\\/standards\\/Digital-Link\\/) express GTINs as URLs. A correct [[gtin]] value should be a valid GTIN, which means that it should be an all-numeric string of either 8, 12, 13 or 14 digits, or a \"GS1 Digital Link\" URL based on such a string. The numeric component should also have a [valid GS1 check digit](https:\\/\\/www.gs1.org\\/services\\/check-digit-calculator) and meet the other rules for valid GTINs. See also [GS1's GTIN Summary](http:\\/\\/www.gs1.org\\/barcodes\\/technical\\/idkeys\\/gtin) and [Wikipedia](https:\\/\\/en.wikipedia.org\\/wiki\\/Global_Trade_Item_Number) for more details. Left-padding of the gtin values is not required or encouraged.\n   ",
+				container: $this,
+				propertyName: "gtin",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        gtin12($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http:\\/\\/www.gs1.org\\/barcodes\\/technical\\/idkeys\\/gtin) for more details.",
+				container: $this,
+				propertyName: "gtin12",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        gtin13($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The GTIN-13 code of the product, or the product to which the offer refers. This is equivalent to 13-digit ISBN codes and EAN UCC-13. Former 12-digit UPC codes can be converted into a GTIN-13 code by simply adding a preceding zero. See [GS1 GTIN Summary](http:\\/\\/www.gs1.org\\/barcodes\\/technical\\/idkeys\\/gtin) for more details.",
+				container: $this,
+				propertyName: "gtin13",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        gtin14($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The GTIN-14 code of the product, or the product to which the offer refers. See [GS1 GTIN Summary](http:\\/\\/www.gs1.org\\/barcodes\\/technical\\/idkeys\\/gtin) for more details.",
+				container: $this,
+				propertyName: "gtin14",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        gtin8($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The [GTIN-8](http:\\/\\/apps.gs1.org\\/GDD\\/glossary\\/Pages\\/GTIN-8.aspx) code of the product, or the product to which the offer refers. This code is also known as EAN\\/UCC-8 or 8-digit EAN. See [GS1 GTIN Summary](http:\\/\\/www.gs1.org\\/barcodes\\/technical\\/idkeys\\/gtin) for more details.",
+				container: $this,
+				propertyName: "gtin8",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        includesObject($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "This links to a node or nodes indicating the exact quantity of the products included in  an [[Offer]] or [[ProductCollection]].",
+				container: $this,
+				propertyName: "includesObject",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"TypeAndQuantityNode"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        ineligibleRegion($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\\n\\nSee also [[eligibleRegion]].\n      ",
+				container: $this,
+				propertyName: "ineligibleRegion",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"GeoShape",
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        inventoryLevel($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The current approximate inventory level for the item or items.",
+				container: $this,
+				propertyName: "inventoryLevel",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        itemCondition($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A predefined value from OfferItemCondition or a textual description of the condition of the product or service, or the products or services included in the offer.",
+				container: $this,
+				propertyName: "itemCondition",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"OfferItemCondition"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        itemOffered($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An item being offered (or demanded). The transactional nature of the offer or demand is documented using [[businessFunction]], e.g. sell, lease etc. While several common expected types are listed explicitly in this definition, others can be used. Using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.",
+				container: $this,
+				propertyName: "itemOffered",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork",
+					"Event",
+					"AggregateOffer",
+					"Trip",
+					"Service",
+					"MenuItem",
+					"Product"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        leaseLength($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.",
+				container: $this,
+				propertyName: "leaseLength",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Duration",
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        mpn($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The Manufacturer Part Number (MPN) of the product, or the product to which the offer refers.",
+				container: $this,
+				propertyName: "mpn",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        offeredBy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A pointer to the organization or person making the offer.",
+				container: $this,
+				propertyName: "offeredBy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        price($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\\n\\nUsage guidelines:\\n\\n* Use the [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_4217) e.g. \"USD\"; [Ticker symbol](https:\\/\\/en.wikipedia.org\\/wiki\\/List_of_cryptocurrencies) for cryptocurrencies e.g. \"BTC\"; well known names for [Local Exchange Tradings Systems](https:\\/\\/en.wikipedia.org\\/wiki\\/Local_exchange_trading_system) (LETS) and other currency types e.g. \"Ithaca HOUR\") instead of including [ambiguous symbols](http:\\/\\/en.wikipedia.org\\/wiki\\/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '$' in the value.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.\\n* Note that both [RDFa](http:\\/\\/www.w3.org\\/TR\\/xhtml-rdfa-primer\\/#using-the-content-attribute) and Microdata syntax allow the use of a \"content=\" attribute for publishing simple machine-readable values alongside more human-friendly formatting.\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.\n      ",
+				container: $this,
+				propertyName: "price",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        priceCurrency($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\\n\\nUse standard formats: [ISO 4217 currency format](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_4217) e.g. \"USD\"; [Ticker symbol](https:\\/\\/en.wikipedia.org\\/wiki\\/List_of_cryptocurrencies) for cryptocurrencies e.g. \"BTC\"; well known names for [Local Exchange Tradings Systems](https:\\/\\/en.wikipedia.org\\/wiki\\/Local_exchange_trading_system) (LETS) and other currency types e.g. \"Ithaca HOUR\".",
+				container: $this,
+				propertyName: "priceCurrency",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        priceSpecification($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "One or more detailed price specifications, indicating the unit price and delivery or payment charges.",
+				container: $this,
+				propertyName: "priceSpecification",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PriceSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        priceValidUntil($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date after which the price is no longer available.",
+				container: $this,
+				propertyName: "priceValidUntil",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        review($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A review of the item.",
+				container: $this,
+				propertyName: "review",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Review"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        reviews($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Review of the item.",
+				container: $this,
+				propertyName: "reviews",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Review"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        seller($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An entity which offers (sells \\/ leases \\/ lends \\/ loans) the services \\/ goods.  A seller may also be a provider.",
+				container: $this,
+				propertyName: "seller",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        serialNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.",
+				container: $this,
+				propertyName: "serialNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        shippingDetails($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates information about the shipping policies and options associated with an [[Offer]].",
+				container: $this,
+				propertyName: "shippingDetails",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"OfferShippingDetails"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sku($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The Stock Keeping Unit (SKU), i.e. a merchant-specific identifier for a product or service, or the product to which the offer refers.",
+				container: $this,
+				propertyName: "sku",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        validFrom($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date when the item becomes valid.",
+				container: $this,
+				propertyName: "validFrom",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        validThrough($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.",
+				container: $this,
+				propertyName: "validThrough",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        warranty($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The warranty promise(s) included in the offer.",
+				container: $this,
+				propertyName: "warranty",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"WarrantyPromise"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Continent extends window.LiveElement.Element.elements.Landform {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Continent'
+        static __type = 'rdfs:Class'
+        static __extends = 'Landform'
+        static __properties = []
+        static _rdfs_comment = 'One of the continents (for example, Europe or Africa).'
+        static _rdfs_label = 'Continent'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

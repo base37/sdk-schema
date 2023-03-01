@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Barcode extends window.LiveElement.Element.elements.ImageObject {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Barcode'
+        static __type = 'rdfs:Class'
+        static __extends = 'ImageObject'
+        static __properties = []
+        static _rdfs_comment = 'An image of a visual machine-readable code such as a barcode or QR code.'
+        static _rdfs_label = 'Barcode'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

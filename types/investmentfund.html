@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class InvestmentFund extends window.LiveElement.Element.elements.InvestmentOrDeposit {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:InvestmentFund'
+        static __type = 'rdfs:Class'
+        static __extends = 'InvestmentOrDeposit'
+        static __properties = []
+        static _rdfs_comment = 'A company or fund that gathers capital from a number of investors to create a pool of money that is then re-invested into stocks, bonds and other assets.'
+        static _rdfs_label = 'InvestmentFund'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

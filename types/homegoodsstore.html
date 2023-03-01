@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class HomeGoodsStore extends window.LiveElement.Element.elements.Store {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:HomeGoodsStore'
+        static __type = 'rdfs:Class'
+        static __extends = 'Store'
+        static __properties = []
+        static _rdfs_comment = 'A home goods store.'
+        static _rdfs_label = 'HomeGoodsStore'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

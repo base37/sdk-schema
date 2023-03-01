@@ -1,0 +1,76 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CourseInstance extends window.LiveElement.Element.elements.Event {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CourseInstance'
+        static __type = 'rdfs:Class'
+        static __extends = 'Event'
+        static __properties = ['courseMode', 'courseWorkload', 'instructor']
+        static _rdfs_comment = 'An instance of a [[Course]] which is distinct from other instances because it is offered at a different time or location or through different media or modes of study or to a specific section of students.'
+        static _rdfs_label = 'CourseInstance'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        courseMode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g. \"online\", \"onsite\" or \"blended\"; \"synchronous\" or \"asynchronous\"; \"full-time\" or \"part-time\") or as a URL reference to a term from a controlled vocabulary (e.g. https:\\/\\/ceds.ed.gov\\/element\\/001311#Asynchronous ).",
+				container: $this,
+				propertyName: "courseMode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        courseWorkload($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The amount of work expected of students taking the course, often provided as a figure per week or per month, and may be broken down by type. For example, \"2 hours of lectures, 1 hour of lab work and 3 hours of independent study per week\".",
+				container: $this,
+				propertyName: "courseWorkload",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        instructor($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A person assigned to instruct or provide instructional assistance for the [[CourseInstance]].",
+				container: $this,
+				propertyName: "instructor",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

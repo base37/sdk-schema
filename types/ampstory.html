@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AmpStory extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AmpStory'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = []
+        static _rdfs_comment = 'A creative work with a visual storytelling format intended to be viewed online, particularly on mobile devices.'
+        static _rdfs_label = 'AmpStory'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

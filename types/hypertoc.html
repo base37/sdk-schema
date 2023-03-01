@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class HyperToc extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:HyperToc'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['associatedMedia', 'tocEntry']
+        static _rdfs_comment = 'A HyperToc represents a hypertext table of contents for complex media objects, such as [[VideoObject]], [[AudioObject]]. Items in the table of contents are indicated using the [[tocEntry]] property, and typed [[HyperTocEntry]]. For cases where the same larger work is split into multiple files, [[associatedMedia]] can be used on individual [[HyperTocEntry]] items.'
+        static _rdfs_label = 'HyperToc'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        associatedMedia($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A media object that encodes this CreativeWork. This property is a synonym for encoding.",
+				container: $this,
+				propertyName: "associatedMedia",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MediaObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        tocEntry($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates a [[HyperTocEntry]] in a [[HyperToc]].",
+				container: $this,
+				propertyName: "tocEntry",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"HyperTocEntry"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

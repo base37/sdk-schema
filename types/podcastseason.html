@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PodcastSeason extends window.LiveElement.Element.elements.CreativeWorkSeason {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PodcastSeason'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWorkSeason'
+        static __properties = []
+        static _rdfs_comment = 'A single season of a podcast. Many podcasts do not break down into separate seasons. In that case, PodcastSeries should be used.'
+        static _rdfs_label = 'PodcastSeason'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

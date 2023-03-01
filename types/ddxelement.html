@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DDxElement extends window.LiveElement.Element.elements.MedicalIntangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DDxElement'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalIntangible'
+        static __properties = ['diagnosis', 'distinguishingSign']
+        static _rdfs_comment = 'An alternative, closely-related condition typically considered later in the differential diagnosis process along with the signs that are used to distinguish it.'
+        static _rdfs_label = 'DDxElement'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        diagnosis($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.",
+				container: $this,
+				propertyName: "diagnosis",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalCondition"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        distinguishingSign($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "One of a set of signs and symptoms that can be used to distinguish this diagnosis from others in the differential diagnosis.",
+				container: $this,
+				propertyName: "distinguishingSign",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalSignOrSymptom"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

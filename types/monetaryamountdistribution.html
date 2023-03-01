@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MonetaryAmountDistribution extends window.LiveElement.Element.elements.QuantitativeValueDistribution {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MonetaryAmountDistribution'
+        static __type = 'rdfs:Class'
+        static __extends = 'QuantitativeValueDistribution'
+        static __properties = ['currency']
+        static _rdfs_comment = 'A statistical distribution of monetary amounts.'
+        static _rdfs_label = 'MonetaryAmountDistribution'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        currency($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The currency in which the monetary amount is expressed.\\n\\nUse standard formats: [ISO 4217 currency format](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_4217) e.g. \"USD\"; [Ticker symbol](https:\\/\\/en.wikipedia.org\\/wiki\\/List_of_cryptocurrencies) for cryptocurrencies e.g. \"BTC\"; well known names for [Local Exchange Tradings Systems](https:\\/\\/en.wikipedia.org\\/wiki\\/Local_exchange_trading_system) (LETS) and other currency types e.g. \"Ithaca HOUR\".",
+				container: $this,
+				propertyName: "currency",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

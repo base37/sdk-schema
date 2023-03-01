@@ -1,0 +1,125 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class LodgingReservation extends window.LiveElement.Element.elements.Reservation {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:LodgingReservation'
+        static __type = 'rdfs:Class'
+        static __extends = 'Reservation'
+        static __properties = ['checkinTime', 'checkoutTime', 'lodgingUnitDescription', 'lodgingUnitType', 'numAdults', 'numChildren']
+        static _rdfs_comment = 'A reservation for lodging at a hotel, motel, inn, etc.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.'
+        static _rdfs_label = 'LodgingReservation'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        checkinTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The earliest someone may check into a lodging establishment.",
+				container: $this,
+				propertyName: "checkinTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Time",
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        checkoutTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The latest someone may check out of a lodging establishment.",
+				container: $this,
+				propertyName: "checkoutTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Time"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        lodgingUnitDescription($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A full description of the lodging unit.",
+				container: $this,
+				propertyName: "lodgingUnitDescription",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        lodgingUnitType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Textual description of the unit type (including suite vs. room, size of bed, etc.).",
+				container: $this,
+				propertyName: "lodgingUnitType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QualitativeValue",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numAdults($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of adults staying in the unit.",
+				container: $this,
+				propertyName: "numAdults",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numChildren($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of children staying in the unit.",
+				container: $this,
+				propertyName: "numChildren",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MenuSection extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MenuSection'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['hasMenuItem', 'hasMenuSection']
+        static _rdfs_comment = 'A sub-grouping of food or drink items in a menu. E.g. courses (such as \'Dinner\', \'Breakfast\', etc.), specific type of dishes (such as \'Meat\', \'Vegan\', \'Drinks\', etc.), or some other classification made by the menu provider.'
+        static _rdfs_label = 'MenuSection'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        hasMenuItem($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A food or drink item contained in a menu or menu section.",
+				container: $this,
+				propertyName: "hasMenuItem",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MenuItem"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hasMenuSection($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A subgrouping of the menu (by dishes, course, serving time period, etc.).",
+				container: $this,
+				propertyName: "hasMenuSection",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MenuSection"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TravelAction extends window.LiveElement.Element.elements.MoveAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TravelAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'MoveAction'
+        static __properties = ['distance']
+        static _rdfs_comment = 'The act of traveling from an fromLocation to a destination by a specified mode of transport, optionally with participants.'
+        static _rdfs_label = 'TravelAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        distance($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The distance travelled, e.g. exercising or travelling.",
+				container: $this,
+				propertyName: "distance",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Distance"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

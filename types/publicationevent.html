@@ -1,0 +1,76 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PublicationEvent extends window.LiveElement.Element.elements.Event {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PublicationEvent'
+        static __type = 'rdfs:Class'
+        static __extends = 'Event'
+        static __properties = ['free', 'publishedBy', 'publishedOn']
+        static _rdfs_comment = 'A PublicationEvent corresponds indifferently to the event of publication for a CreativeWork of any type e.g. a broadcast event, an on-demand event, a book\/journal publication via a variety of delivery media.'
+        static _rdfs_label = 'PublicationEvent'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        free($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A flag to signal that the item, event, or place is accessible for free.",
+				container: $this,
+				propertyName: "free",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        publishedBy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An agent associated with the publication event.",
+				container: $this,
+				propertyName: "publishedBy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        publishedOn($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A broadcast service associated with the publication event.",
+				container: $this,
+				propertyName: "publishedOn",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BroadcastService"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

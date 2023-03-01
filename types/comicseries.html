@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ComicSeries extends window.LiveElement.Element.elements.Periodical {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ComicSeries'
+        static __type = 'rdfs:Class'
+        static __extends = 'Periodical'
+        static __properties = []
+        static _rdfs_comment = 'A sequential publication of comic stories under a     	unifying title, for example "The Amazing Spider-Man" or "Groo the     	Wanderer".'
+        static _rdfs_label = 'ComicSeries'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

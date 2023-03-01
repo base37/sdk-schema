@@ -1,0 +1,77 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class BroadcastFrequencySpecification extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:BroadcastFrequencySpecification'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['broadcastFrequencyValue', 'broadcastSignalModulation', 'broadcastSubChannel']
+        static _rdfs_comment = 'The frequency in MHz and the modulation used for a particular BroadcastService.'
+        static _rdfs_label = 'BroadcastFrequencySpecification'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        broadcastFrequencyValue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The frequency in MHz for a particular broadcast.",
+				container: $this,
+				propertyName: "broadcastFrequencyValue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        broadcastSignalModulation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The modulation (e.g. FM, AM, etc) used by a particular broadcast service",
+				container: $this,
+				propertyName: "broadcastSignalModulation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QualitativeValue",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        broadcastSubChannel($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The subchannel used for the broadcast.",
+				container: $this,
+				propertyName: "broadcastSubChannel",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

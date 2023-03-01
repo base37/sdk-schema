@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Reservoir extends window.LiveElement.Element.elements.BodyOfWater {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Reservoir'
+        static __type = 'rdfs:Class'
+        static __extends = 'BodyOfWater'
+        static __properties = []
+        static _rdfs_comment = 'A reservoir of water, typically an artificially created lake, like the Lake Kariba reservoir.'
+        static _rdfs_label = 'Reservoir'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

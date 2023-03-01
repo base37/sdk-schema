@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class WebApplication extends window.LiveElement.Element.elements.SoftwareApplication {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:WebApplication'
+        static __type = 'rdfs:Class'
+        static __extends = 'SoftwareApplication'
+        static __properties = ['browserRequirements']
+        static _rdfs_comment = 'Web applications.'
+        static _rdfs_label = 'WebApplication'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        browserRequirements($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specifies browser requirements in human-readable text. For example, 'requires HTML5 support'.",
+				container: $this,
+				propertyName: "browserRequirements",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

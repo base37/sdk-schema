@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Volcano extends window.LiveElement.Element.elements.Landform {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Volcano'
+        static __type = 'rdfs:Class'
+        static __extends = 'Landform'
+        static __properties = []
+        static _rdfs_comment = 'A volcano, like Fuji san.'
+        static _rdfs_label = 'Volcano'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

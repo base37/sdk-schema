@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class WinAction extends window.LiveElement.Element.elements.AchieveAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:WinAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'AchieveAction'
+        static __properties = ['loser']
+        static _rdfs_comment = 'The act of achieving victory in a competitive activity.'
+        static _rdfs_label = 'WinAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        loser($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of participant. The loser of the action.",
+				container: $this,
+				propertyName: "loser",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

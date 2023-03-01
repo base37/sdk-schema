@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MediaReview extends window.LiveElement.Element.elements.Review {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MediaReview'
+        static __type = 'rdfs:Class'
+        static __extends = 'Review'
+        static __properties = ['mediaAuthenticityCategory']
+        static _rdfs_comment = '(editorial work in progress, this definition is incomplete and unreviewed)     A [[MediaReview]] is a more specialized form of Review dedicated to the evaluation of media content online, typically in the context of fact-checking and misinformation.     For more general reviews of media in the broader sense, use [[UserReview]], [[CriticReview]] or other [[Review]] types.'
+        static _rdfs_label = 'MediaReview'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        mediaAuthenticityCategory($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates a MediaManipulationRatingEnumeration classification of a media object (in the context of how it was published or shared).",
+				container: $this,
+				propertyName: "mediaAuthenticityCategory",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MediaManipulationRatingEnumeration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

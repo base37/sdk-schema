@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PlanAction extends window.LiveElement.Element.elements.OrganizeAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PlanAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'OrganizeAction'
+        static __properties = ['scheduledTime']
+        static _rdfs_comment = 'The act of planning the execution of an event\/task\/action\/reservation\/plan to a future date.'
+        static _rdfs_label = 'PlanAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        scheduledTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The time the object is scheduled to.",
+				container: $this,
+				propertyName: "scheduledTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

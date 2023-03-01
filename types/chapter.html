@@ -1,0 +1,77 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Chapter extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Chapter'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['pageEnd', 'pageStart', 'pagination']
+        static _rdfs_comment = 'One of the sections into which a book is divided. A chapter usually has a section number or a name.'
+        static _rdfs_label = 'Chapter'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        pageEnd($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The page on which the work ends; for example \"138\" or \"xvi\".",
+				container: $this,
+				propertyName: "pageEnd",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        pageStart($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The page on which the work starts; for example \"135\" or \"xiii\".",
+				container: $this,
+				propertyName: "pageStart",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        pagination($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Any description of pages that is not separated into pageStart and pageEnd; for example, \"1-6, 9, 55\" or \"10-12, 46-49\".",
+				container: $this,
+				propertyName: "pagination",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

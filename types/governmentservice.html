@@ -1,0 +1,61 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class GovernmentService extends window.LiveElement.Element.elements.Service {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:GovernmentService'
+        static __type = 'rdfs:Class'
+        static __extends = 'Service'
+        static __properties = ['jurisdiction', 'serviceOperator']
+        static _rdfs_comment = 'A service provided by a government organization, e.g. food stamps, veterans benefits, etc.'
+        static _rdfs_label = 'GovernmentService'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        jurisdiction($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.",
+				container: $this,
+				propertyName: "jurisdiction",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AdministrativeArea",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        serviceOperator($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The operating organization, if different from the provider.  This enables the representation of services that are provided by an organization, but operated by another organization like a subcontractor.",
+				container: $this,
+				propertyName: "serviceOperator",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

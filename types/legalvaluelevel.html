@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class LegalValueLevel extends window.LiveElement.Element.elements.Enumeration {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:LegalValueLevel'
+        static __type = 'rdfs:Class'
+        static __extends = 'Enumeration'
+        static __properties = []
+        static _rdfs_comment = 'A list of possible levels for the legal validity of a legislation.'
+        static _rdfs_label = 'LegalValueLevel'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

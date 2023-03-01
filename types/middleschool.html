@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MiddleSchool extends window.LiveElement.Element.elements.EducationalOrganization {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MiddleSchool'
+        static __type = 'rdfs:Class'
+        static __extends = 'EducationalOrganization'
+        static __properties = []
+        static _rdfs_comment = 'A middle school (typically for children aged around 11-14, although this varies somewhat).'
+        static _rdfs_label = 'MiddleSchool'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

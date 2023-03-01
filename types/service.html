@@ -1,0 +1,407 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Service extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Service'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['aggregateRating', 'areaServed', 'audience', 'availableChannel', 'award', 'brand', 'broker', 'category', 'hasOfferCatalog', 'hoursAvailable', 'isRelatedTo', 'isSimilarTo', 'logo', 'offers', 'produces', 'provider', 'providerMobility', 'review', 'serviceArea', 'serviceAudience', 'serviceOutput', 'serviceType', 'slogan', 'termsOfService']
+        static _rdfs_comment = 'A service provided by an organization, e.g. delivery service, print services, etc.'
+        static _rdfs_label = 'Service'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        aggregateRating($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The overall rating, based on a collection of reviews or ratings, of the item.",
+				container: $this,
+				propertyName: "aggregateRating",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AggregateRating"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        areaServed($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The geographic area where a service or offered item is provided.",
+				container: $this,
+				propertyName: "areaServed",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place",
+					"AdministrativeArea",
+					"GeoShape",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        audience($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An intended audience, i.e. a group for whom something was created.",
+				container: $this,
+				propertyName: "audience",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Audience"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        availableChannel($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A means of accessing the service (e.g. a phone bank, a web site, a location, etc.).",
+				container: $this,
+				propertyName: "availableChannel",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ServiceChannel"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        award($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An award won by or for this item.",
+				container: $this,
+				propertyName: "award",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        brand($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.",
+				container: $this,
+				propertyName: "brand",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Brand"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        broker($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.",
+				container: $this,
+				propertyName: "broker",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        category($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.",
+				container: $this,
+				propertyName: "category",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Thing",
+					"PhysicalActivityCategory",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hasOfferCatalog($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates an OfferCatalog listing for this Organization, Person, or Service.",
+				container: $this,
+				propertyName: "hasOfferCatalog",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"OfferCatalog"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hoursAvailable($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The hours during which this service or contact is available.",
+				container: $this,
+				propertyName: "hoursAvailable",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"OpeningHoursSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isRelatedTo($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A pointer to another, somehow related product (or multiple products).",
+				container: $this,
+				propertyName: "isRelatedTo",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Product",
+					"Service"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isSimilarTo($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A pointer to another, functionally similar product (or multiple products).",
+				container: $this,
+				propertyName: "isSimilarTo",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Product",
+					"Service"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        logo($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An associated logo.",
+				container: $this,
+				propertyName: "logo",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ImageObject",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        offers($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.\n      ",
+				container: $this,
+				propertyName: "offers",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Demand",
+					"Offer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        produces($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The tangible thing generated by the service, e.g. a passport, permit, etc.",
+				container: $this,
+				propertyName: "produces",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        provider($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
+				container: $this,
+				propertyName: "provider",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        providerMobility($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the mobility of a provided service (e.g. 'static', 'dynamic').",
+				container: $this,
+				propertyName: "providerMobility",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        review($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A review of the item.",
+				container: $this,
+				propertyName: "review",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Review"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        serviceArea($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The geographic area where the service is provided.",
+				container: $this,
+				propertyName: "serviceArea",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place",
+					"AdministrativeArea",
+					"GeoShape"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        serviceAudience($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The audience eligible for this service.",
+				container: $this,
+				propertyName: "serviceAudience",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Audience"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        serviceOutput($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The tangible thing generated by the service, e.g. a passport, permit, etc.",
+				container: $this,
+				propertyName: "serviceOutput",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        serviceType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type of service being offered, e.g. veterans' benefits, emergency relief, etc.",
+				container: $this,
+				propertyName: "serviceType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"GovernmentBenefitsType",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        slogan($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A slogan or motto associated with the item.",
+				container: $this,
+				propertyName: "slogan",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        termsOfService($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Human-readable terms of service documentation.",
+				container: $this,
+				propertyName: "termsOfService",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

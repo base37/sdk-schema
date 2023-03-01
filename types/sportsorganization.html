@@ -1,0 +1,46 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class SportsOrganization extends window.LiveElement.Element.elements.Organization {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:SportsOrganization'
+        static __type = 'rdfs:Class'
+        static __extends = 'Organization'
+        static __properties = ['sport']
+        static _rdfs_comment = 'Represents the collection of all sports organizations, including sports teams, governing bodies, and sports associations.'
+        static _rdfs_label = 'SportsOrganization'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        sport($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A type of sport (e.g. Baseball).",
+				container: $this,
+				propertyName: "sport",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

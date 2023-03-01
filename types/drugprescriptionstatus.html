@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DrugPrescriptionStatus extends window.LiveElement.Element.elements.MedicalEnumeration {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DrugPrescriptionStatus'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalEnumeration'
+        static __properties = []
+        static _rdfs_comment = 'Indicates whether this drug is available by prescription or over-the-counter.'
+        static _rdfs_label = 'DrugPrescriptionStatus'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

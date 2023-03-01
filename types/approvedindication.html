@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ApprovedIndication extends window.LiveElement.Element.elements.MedicalIndication {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ApprovedIndication'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalIndication'
+        static __properties = []
+        static _rdfs_comment = 'An indication for a medical therapy that has been formally specified or approved by a regulatory body that regulates use of the therapy; for example, the US FDA approves indications for most drugs in the US.'
+        static _rdfs_label = 'ApprovedIndication'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

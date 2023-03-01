@@ -1,0 +1,105 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class HealthPlanCostSharingSpecification extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:HealthPlanCostSharingSpecification'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['healthPlanCoinsuranceOption', 'healthPlanCoinsuranceRate', 'healthPlanCopay', 'healthPlanCopayOption', 'healthPlanPharmacyCategory']
+        static _rdfs_comment = 'A description of costs to the patient under a given network or formulary.'
+        static _rdfs_label = 'HealthPlanCostSharingSpecification'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        healthPlanCoinsuranceOption($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Whether the coinsurance applies before or after deductible, etc. TODO: Is this a closed set?",
+				container: $this,
+				propertyName: "healthPlanCoinsuranceOption",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        healthPlanCoinsuranceRate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Whether The rate of coinsurance expressed as a number between 0.0 and 1.0.",
+				container: $this,
+				propertyName: "healthPlanCoinsuranceRate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        healthPlanCopay($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Whether The copay amount.",
+				container: $this,
+				propertyName: "healthPlanCopay",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PriceSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        healthPlanCopayOption($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Whether the copay is before or after deductible, etc. TODO: Is this a closed set?",
+				container: $this,
+				propertyName: "healthPlanCopayOption",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        healthPlanPharmacyCategory($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The category or type of pharmacy associated with this cost sharing.",
+				container: $this,
+				propertyName: "healthPlanPharmacyCategory",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

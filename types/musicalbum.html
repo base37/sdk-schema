@@ -1,0 +1,91 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MusicAlbum extends window.LiveElement.Element.elements.MusicPlaylist {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MusicAlbum'
+        static __type = 'rdfs:Class'
+        static __extends = 'MusicPlaylist'
+        static __properties = ['albumProductionType', 'albumRelease', 'albumReleaseType', 'byArtist']
+        static _rdfs_comment = 'A collection of music tracks.'
+        static _rdfs_label = 'MusicAlbum'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        albumProductionType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Classification of the album by it's type of content: soundtrack, live album, studio album, etc.",
+				container: $this,
+				propertyName: "albumProductionType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicAlbumProductionType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        albumRelease($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A release of this album.",
+				container: $this,
+				propertyName: "albumRelease",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicRelease"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        albumReleaseType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The kind of release which this album is: single, EP or album.",
+				container: $this,
+				propertyName: "albumReleaseType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicAlbumReleaseType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        byArtist($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The artist that performed this album or recording.",
+				container: $this,
+				propertyName: "byArtist",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicGroup",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

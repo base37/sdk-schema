@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DanceGroup extends window.LiveElement.Element.elements.PerformingGroup {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DanceGroup'
+        static __type = 'rdfs:Class'
+        static __extends = 'PerformingGroup'
+        static __properties = []
+        static _rdfs_comment = 'A dance group&#x2014;for example, the Alvin Ailey Dance Theater or Riverdance.'
+        static _rdfs_label = 'DanceGroup'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

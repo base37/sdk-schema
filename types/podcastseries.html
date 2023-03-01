@@ -1,0 +1,46 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PodcastSeries extends window.LiveElement.Element.elements.CreativeWorkSeries {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PodcastSeries'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWorkSeries'
+        static __properties = ['webFeed']
+        static _rdfs_comment = 'A podcast is an episodic series of digital audio or video files which a user can download and listen to.'
+        static _rdfs_label = 'PodcastSeries'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        webFeed($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The URL for a feed, e.g. associated with a podcast series, blog, or series of date-stamped updates. This is usually RSS or Atom.",
+				container: $this,
+				propertyName: "webFeed",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DataFeed",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

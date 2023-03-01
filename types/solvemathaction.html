@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class SolveMathAction extends window.LiveElement.Element.elements.Action {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:SolveMathAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'Action'
+        static __properties = ['eduQuestionType']
+        static _rdfs_comment = 'The action that takes in a math expression and directs users to a page potentially capable of solving\/simplifying that expression.'
+        static _rdfs_label = 'SolveMathAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        eduQuestionType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: \"Multiple choice\", \"Open ended\", \"Flashcard\".",
+				container: $this,
+				propertyName: "eduQuestionType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

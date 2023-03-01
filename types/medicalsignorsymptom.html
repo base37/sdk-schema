@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalSignOrSymptom extends window.LiveElement.Element.elements.MedicalCondition {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalSignOrSymptom'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalCondition'
+        static __properties = ['possibleTreatment']
+        static _rdfs_comment = 'Any feature associated or not with a medical condition. In medicine a symptom is generally subjective while a sign is objective.'
+        static _rdfs_label = 'MedicalSignOrSymptom'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        possibleTreatment($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A possible treatment to address this condition, sign or symptom.",
+				container: $this,
+				propertyName: "possibleTreatment",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalTherapy"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

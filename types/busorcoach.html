@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class BusOrCoach extends window.LiveElement.Element.elements.Vehicle {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:BusOrCoach'
+        static __type = 'rdfs:Class'
+        static __extends = 'Vehicle'
+        static __properties = ['acrissCode', 'roofLoad']
+        static _rdfs_comment = 'A bus (also omnibus or autobus) is a road vehicle designed to carry passengers. Coaches are luxury busses, usually in service for long distance travel.'
+        static _rdfs_label = 'BusOrCoach'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        acrissCode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association of Car Rental Industry Systems and Standards.",
+				container: $this,
+				propertyName: "acrissCode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        roofLoad($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The permitted total weight of cargo and installations (e.g. a roof rack) on top of the vehicle.\\n\\nTypical unit code(s): KGM for kilogram, LBR for pound\\n\\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]]\\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.",
+				container: $this,
+				propertyName: "roofLoad",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

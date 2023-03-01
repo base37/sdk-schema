@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class SomeProducts extends window.LiveElement.Element.elements.Product {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:SomeProducts'
+        static __type = 'rdfs:Class'
+        static __extends = 'Product'
+        static __properties = ['inventoryLevel']
+        static _rdfs_comment = 'A placeholder for multiple similar products of the same kind.'
+        static _rdfs_label = 'SomeProducts'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        inventoryLevel($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The current approximate inventory level for the item or items.",
+				container: $this,
+				propertyName: "inventoryLevel",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

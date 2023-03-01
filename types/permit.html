@@ -1,0 +1,136 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Permit extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Permit'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['issuedBy', 'issuedThrough', 'permitAudience', 'validFor', 'validFrom', 'validIn', 'validUntil']
+        static _rdfs_comment = 'A permit issued by an organization, e.g. a parking pass.'
+        static _rdfs_label = 'Permit'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        issuedBy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The organization issuing the ticket or permit.",
+				container: $this,
+				propertyName: "issuedBy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        issuedThrough($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The service through with the permit was granted.",
+				container: $this,
+				propertyName: "issuedThrough",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Service"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        permitAudience($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The target audience for this permit.",
+				container: $this,
+				propertyName: "permitAudience",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Audience"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        validFor($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The duration of validity of a permit or similar thing.",
+				container: $this,
+				propertyName: "validFor",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Duration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        validFrom($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date when the item becomes valid.",
+				container: $this,
+				propertyName: "validFrom",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        validIn($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The geographic area where a permit or similar thing is valid.",
+				container: $this,
+				propertyName: "validIn",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AdministrativeArea"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        validUntil($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date when the item is no longer valid.",
+				container: $this,
+				propertyName: "validUntil",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

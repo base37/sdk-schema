@@ -1,0 +1,107 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class OrderItem extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:OrderItem'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['orderDelivery', 'orderItemNumber', 'orderItemStatus', 'orderQuantity', 'orderedItem']
+        static _rdfs_comment = 'An order item is a line of an order. It includes the quantity and shipping details of a bought offer.'
+        static _rdfs_label = 'OrderItem'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        orderDelivery($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The delivery of the parcel related to this order or order item.",
+				container: $this,
+				propertyName: "orderDelivery",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ParcelDelivery"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        orderItemNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The identifier of the order item.",
+				container: $this,
+				propertyName: "orderItemNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        orderItemStatus($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The current status of the order item.",
+				container: $this,
+				propertyName: "orderItemStatus",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"OrderStatus"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        orderQuantity($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of the item ordered. If the property is not set, assume the quantity is one.",
+				container: $this,
+				propertyName: "orderQuantity",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        orderedItem($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The item ordered.",
+				container: $this,
+				propertyName: "orderedItem",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Product",
+					"OrderItem",
+					"Service"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

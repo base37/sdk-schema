@@ -1,0 +1,91 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Brand extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Brand'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['aggregateRating', 'logo', 'review', 'slogan']
+        static _rdfs_comment = 'A brand is a name used by an organization or business person for labeling a product, product group, or similar.'
+        static _rdfs_label = 'Brand'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        aggregateRating($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The overall rating, based on a collection of reviews or ratings, of the item.",
+				container: $this,
+				propertyName: "aggregateRating",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AggregateRating"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        logo($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An associated logo.",
+				container: $this,
+				propertyName: "logo",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ImageObject",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        review($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A review of the item.",
+				container: $this,
+				propertyName: "review",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Review"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        slogan($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A slogan or motto associated with the item.",
+				container: $this,
+				propertyName: "slogan",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

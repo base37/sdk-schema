@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class EmployerReview extends window.LiveElement.Element.elements.Review {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:EmployerReview'
+        static __type = 'rdfs:Class'
+        static __extends = 'Review'
+        static __properties = []
+        static _rdfs_comment = 'An [[EmployerReview]] is a review of an [[Organization]] regarding its role as an employer, written by a current or former employee of that organization.'
+        static _rdfs_label = 'EmployerReview'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

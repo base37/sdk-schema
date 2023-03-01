@@ -1,0 +1,76 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class InteractionCounter extends window.LiveElement.Element.elements.StructuredValue {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:InteractionCounter'
+        static __type = 'rdfs:Class'
+        static __extends = 'StructuredValue'
+        static __properties = ['interactionService', 'interactionType', 'userInteractionCount']
+        static _rdfs_comment = 'A summary of how users have interacted with this CreativeWork. In most cases, authors will use a subtype to specify the specific type of interaction.'
+        static _rdfs_label = 'InteractionCounter'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        interactionService($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The WebSite or SoftwareApplication where the interactions took place.",
+				container: $this,
+				propertyName: "interactionService",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"SoftwareApplication",
+					"WebSite"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        interactionType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The Action representing the type of interaction. For up votes, +1s, etc. use [[LikeAction]]. For down votes use [[DislikeAction]]. Otherwise, use the most specific Action.",
+				container: $this,
+				propertyName: "interactionType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Action"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        userInteractionCount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of interactions for the CreativeWork using the WebSite or SoftwareApplication.",
+				container: $this,
+				propertyName: "userInteractionCount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

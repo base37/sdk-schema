@@ -1,0 +1,214 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class FloorPlan extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:FloorPlan'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['amenityFeature', 'floorSize', 'isPlanForApartment', 'layoutImage', 'numberOfAccommodationUnits', 'numberOfAvailableAccommodationUnits', 'numberOfBathroomsTotal', 'numberOfBedrooms', 'numberOfFullBathrooms', 'numberOfPartialBathrooms', 'numberOfRooms', 'petsAllowed']
+        static _rdfs_comment = 'A FloorPlan is an explicit representation of a collection of similar accommodations, allowing the provision of common information (room counts, sizes, layout diagrams) and offers for rental or sale. In typical use, some [[ApartmentComplex]] has an [[accommodationFloorPlan]] which is a [[FloorPlan]].  A FloorPlan is always in the context of a particular place, either a larger [[ApartmentComplex]] or a single [[Apartment]]. The visual\/spatial aspects of a floor plan (i.e. room layout, [see wikipedia](https:\/\/en.wikipedia.org\/wiki\/Floor_plan)) can be indicated using [[image]]. '
+        static _rdfs_label = 'FloorPlan'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        amenityFeature($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.",
+				container: $this,
+				propertyName: "amenityFeature",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"LocationFeatureSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        floorSize($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The size of the accommodation, e.g. in square meter or squarefoot.\nTypical unit code(s): MTK for square meter, FTK for square foot, or YDK for square yard ",
+				container: $this,
+				propertyName: "floorSize",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isPlanForApartment($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates some accommodation that this floor plan describes.",
+				container: $this,
+				propertyName: "isPlanForApartment",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Accommodation"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        layoutImage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A schematic image showing the floorplan layout.",
+				container: $this,
+				propertyName: "layoutImage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ImageObject",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfAccommodationUnits($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the total (available plus unavailable) number of accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAvailableAccommodationUnits]].",
+				container: $this,
+				propertyName: "numberOfAccommodationUnits",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfAvailableAccommodationUnits($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the number of available accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAccommodationUnits]].",
+				container: $this,
+				propertyName: "numberOfAvailableAccommodationUnits",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfBathroomsTotal($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The total integer number of bathrooms in a some [[Accommodation]], following real estate conventions as [documented in RESO](https:\\/\\/ddwiki.reso.org\\/display\\/DDW17\\/BathroomsTotalInteger+Field): \"The simple sum of the number of bathrooms. For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.\". See also [[numberOfRooms]].",
+				container: $this,
+				propertyName: "numberOfBathroomsTotal",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfBedrooms($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].",
+				container: $this,
+				propertyName: "numberOfBedrooms",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfFullBathrooms($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Number of full bathrooms - The total number of full and \u00be bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsFull field in RESO](https:\\/\\/ddwiki.reso.org\\/display\\/DDW17\\/BathroomsFull+Field).",
+				container: $this,
+				propertyName: "numberOfFullBathrooms",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfPartialBathrooms($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Number of partial bathrooms - The total number of half and \u00bc bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsPartial field in RESO](https:\\/\\/ddwiki.reso.org\\/display\\/DDW17\\/BathroomsPartial+Field). ",
+				container: $this,
+				propertyName: "numberOfPartialBathrooms",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfRooms($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.\nTypical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.",
+				container: $this,
+				propertyName: "numberOfRooms",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        petsAllowed($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.",
+				container: $this,
+				propertyName: "petsAllowed",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

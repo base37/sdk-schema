@@ -1,0 +1,197 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class BroadcastService extends window.LiveElement.Element.elements.Service {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:BroadcastService'
+        static __type = 'rdfs:Class'
+        static __extends = 'Service'
+        static __properties = ['area', 'broadcastAffiliateOf', 'broadcastDisplayName', 'broadcastFrequency', 'broadcastTimezone', 'broadcaster', 'callSign', 'hasBroadcastChannel', 'inLanguage', 'parentService', 'videoFormat']
+        static _rdfs_comment = 'A delivery service through which content is provided via broadcast over the air or online.'
+        static _rdfs_label = 'BroadcastService'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        area($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The area within which users can expect to reach the broadcast service.",
+				container: $this,
+				propertyName: "area",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        broadcastAffiliateOf($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The media network(s) whose content is broadcast on this station.",
+				container: $this,
+				propertyName: "broadcastAffiliateOf",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        broadcastDisplayName($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The name displayed in the channel guide. For many US affiliates, it is the network name.",
+				container: $this,
+				propertyName: "broadcastDisplayName",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        broadcastFrequency($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The frequency used for over-the-air broadcasts. Numeric values or simple ranges e.g. 87-99. In addition a shortcut idiom is supported for frequences of AM and FM radio channels, e.g. \"87 FM\".",
+				container: $this,
+				propertyName: "broadcastFrequency",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"BroadcastFrequencySpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        broadcastTimezone($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The timezone in [ISO 8601 format](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_8601) for which the service bases its broadcasts",
+				container: $this,
+				propertyName: "broadcastTimezone",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        broadcaster($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The organization owning or operating the broadcast service.",
+				container: $this,
+				propertyName: "broadcaster",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        callSign($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A [callsign](https:\\/\\/en.wikipedia.org\\/wiki\\/Call_sign), as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles.",
+				container: $this,
+				propertyName: "callSign",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hasBroadcastChannel($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A broadcast channel of a broadcast service.",
+				container: $this,
+				propertyName: "hasBroadcastChannel",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BroadcastChannel"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        inLanguage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http:\\/\\/tools.ietf.org\\/html\\/bcp47). See also [[availableLanguage]].",
+				container: $this,
+				propertyName: "inLanguage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Language"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        parentService($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A broadcast service to which the broadcast service may belong to such as regional variations of a national channel.",
+				container: $this,
+				propertyName: "parentService",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BroadcastService"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        videoFormat($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type of screening or video broadcast used (e.g. IMAX, 3D, SD, HD, etc.).",
+				container: $this,
+				propertyName: "videoFormat",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

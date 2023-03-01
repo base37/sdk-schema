@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CollegeOrUniversity extends window.LiveElement.Element.elements.EducationalOrganization {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CollegeOrUniversity'
+        static __type = 'rdfs:Class'
+        static __extends = 'EducationalOrganization'
+        static __properties = []
+        static _rdfs_comment = 'A college, university, or other third-level educational institution.'
+        static _rdfs_label = 'CollegeOrUniversity'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

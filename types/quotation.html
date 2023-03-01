@@ -1,0 +1,46 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Quotation extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Quotation'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['spokenByCharacter']
+        static _rdfs_comment = 'A quotation. Often but not necessarily from some written work, attributable to a real world author and - if associated with a fictional character - to any fictional Person. Use [[isBasedOn]] to link to source\/origin. The [[recordedIn]] property can be used to reference a Quotation from an [[Event]].'
+        static _rdfs_label = 'Quotation'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        spokenByCharacter($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The (e.g. fictional) character, Person or Organization to whom the quotation is attributed within the containing CreativeWork.",
+				container: $this,
+				propertyName: "spokenByCharacter",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

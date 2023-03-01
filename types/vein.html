@@ -1,0 +1,76 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Vein extends window.LiveElement.Element.elements.Vessel {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Vein'
+        static __type = 'rdfs:Class'
+        static __extends = 'Vessel'
+        static __properties = ['drainsTo', 'regionDrained', 'tributary']
+        static _rdfs_comment = 'A type of blood vessel that specifically carries blood to the heart.'
+        static _rdfs_label = 'Vein'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        drainsTo($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The vasculature that the vein drains into.",
+				container: $this,
+				propertyName: "drainsTo",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Vessel"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        regionDrained($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.",
+				container: $this,
+				propertyName: "regionDrained",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AnatomicalStructure",
+					"AnatomicalSystem"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        tributary($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The anatomical or organ system that the vein flows into; a larger structure that the vein connects to.",
+				container: $this,
+				propertyName: "tributary",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AnatomicalStructure"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

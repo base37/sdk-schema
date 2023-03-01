@@ -1,0 +1,154 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Article extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Article'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['articleBody', 'articleSection', 'backstory', 'pageEnd', 'pageStart', 'pagination', 'speakable', 'wordCount']
+        static _rdfs_comment = 'An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.\n\nSee also [blog post](http:\/\/blog.schema.org\/2014\/09\/schemaorg-support-for-bibliographic_2.html).'
+        static _rdfs_label = 'Article'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        articleBody($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The actual body of the article.",
+				container: $this,
+				propertyName: "articleBody",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        articleSection($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.",
+				container: $this,
+				propertyName: "articleSection",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        backstory($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "For an [[Article]], typically a [[NewsArticle]], the backstory property provides a textual summary giving a brief explanation of why and how an article was created. In a journalistic setting this could include information about reporting process, methods, interviews, data sources, etc.",
+				container: $this,
+				propertyName: "backstory",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        pageEnd($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The page on which the work ends; for example \"138\" or \"xvi\".",
+				container: $this,
+				propertyName: "pageEnd",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        pageStart($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The page on which the work starts; for example \"135\" or \"xiii\".",
+				container: $this,
+				propertyName: "pageStart",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        pagination($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Any description of pages that is not separated into pageStart and pageEnd; for example, \"1-6, 9, 55\" or \"10-12, 46-49\".",
+				container: $this,
+				propertyName: "pagination",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        speakable($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates sections of a Web page that are particularly 'speakable' in the sense of being highlighted as being especially appropriate for text-to-speech conversion. Other sections of a page may also be usefully spoken in particular circumstances; the 'speakable' property serves to indicate the parts most likely to be generally useful for speech.\n\nThe *speakable* property can be repeated an arbitrary number of times, with three kinds of possible 'content-locator' values:\n\n1.) *id-value* URL references - uses *id-value* of an element in the page being annotated. The simplest use of *speakable* has (potentially relative) URL values, referencing identified sections of the document concerned.\n\n2.) CSS Selectors - addresses content in the annotated page, eg. via class attribute. Use the [[cssSelector]] property.\n\n3.)  XPaths - addresses content via XPaths (assuming an XML view of the content). Use the [[xpath]] property.\n\n\nFor more sophisticated markup of speakable sections beyond simple ID references, either CSS selectors or XPath expressions to pick out document section(s) as speakable. For this\nwe define a supporting type, [[SpeakableSpecification]]  which is defined to be a possible value of the *speakable* property.\n         ",
+				container: $this,
+				propertyName: "speakable",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"SpeakableSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        wordCount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of words in the text of the Article.",
+				container: $this,
+				propertyName: "wordCount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

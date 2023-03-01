@@ -1,0 +1,122 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class BroadcastChannel extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:BroadcastChannel'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['broadcastChannelId', 'broadcastFrequency', 'broadcastServiceTier', 'genre', 'inBroadcastLineup', 'providesBroadcastService']
+        static _rdfs_comment = 'A unique instance of a BroadcastService on a CableOrSatelliteService lineup.'
+        static _rdfs_label = 'BroadcastChannel'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        broadcastChannelId($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.",
+				container: $this,
+				propertyName: "broadcastChannelId",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        broadcastFrequency($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The frequency used for over-the-air broadcasts. Numeric values or simple ranges e.g. 87-99. In addition a shortcut idiom is supported for frequences of AM and FM radio channels, e.g. \"87 FM\".",
+				container: $this,
+				propertyName: "broadcastFrequency",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"BroadcastFrequencySpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        broadcastServiceTier($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type of service required to have access to the channel (e.g. Standard or Premium).",
+				container: $this,
+				propertyName: "broadcastServiceTier",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        genre($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Genre of the creative work, broadcast channel or group.",
+				container: $this,
+				propertyName: "genre",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        inBroadcastLineup($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The CableOrSatelliteService offering the channel.",
+				container: $this,
+				propertyName: "inBroadcastLineup",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CableOrSatelliteService"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        providesBroadcastService($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The BroadcastService offered on this channel.",
+				container: $this,
+				propertyName: "providesBroadcastService",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BroadcastService"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Airline extends window.LiveElement.Element.elements.Organization {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Airline'
+        static __type = 'rdfs:Class'
+        static __extends = 'Organization'
+        static __properties = ['boardingPolicy', 'iataCode']
+        static _rdfs_comment = 'An organization that provides flights for passengers.'
+        static _rdfs_label = 'Airline'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        boardingPolicy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type of boarding policy used by the airline (e.g. zone-based or group-based).",
+				container: $this,
+				propertyName: "boardingPolicy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BoardingPolicyType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        iataCode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "IATA identifier for an airline or airport.",
+				container: $this,
+				propertyName: "iataCode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

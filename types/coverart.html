@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CoverArt extends window.LiveElement.Element.elements.VisualArtwork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CoverArt'
+        static __type = 'rdfs:Class'
+        static __extends = 'VisualArtwork'
+        static __properties = []
+        static _rdfs_comment = 'The artwork on the outer surface of a CreativeWork.'
+        static _rdfs_label = 'CoverArt'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

@@ -1,0 +1,75 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class HealthPlanNetwork extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:HealthPlanNetwork'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['healthPlanCostSharing', 'healthPlanNetworkId', 'healthPlanNetworkTier']
+        static _rdfs_comment = 'A US-style health insurance plan network. '
+        static _rdfs_label = 'HealthPlanNetwork'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        healthPlanCostSharing($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Whether The costs to the patient for services under this network or formulary.",
+				container: $this,
+				propertyName: "healthPlanCostSharing",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        healthPlanNetworkId($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Name or unique ID of network. (Networks are often reused across different insurance plans).",
+				container: $this,
+				propertyName: "healthPlanNetworkId",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        healthPlanNetworkTier($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The tier(s) for this network.",
+				container: $this,
+				propertyName: "healthPlanNetworkTier",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

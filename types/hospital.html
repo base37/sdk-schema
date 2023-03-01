@@ -1,0 +1,78 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Hospital extends window.LiveElement.Element.elements.EmergencyService {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Hospital'
+        static __type = 'rdfs:Class'
+        static __extends = 'EmergencyService'
+        static __properties = ['availableService', 'healthcareReportingData', 'medicalSpecialty']
+        static _rdfs_comment = 'A hospital.'
+        static _rdfs_label = 'Hospital'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        availableService($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A medical service available from this provider.",
+				container: $this,
+				propertyName: "availableService",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalTest",
+					"MedicalTherapy",
+					"MedicalProcedure"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        healthcareReportingData($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates data describing a hospital, e.g. a CDC [[CDCPMDRecord]] or as some kind of [[Dataset]].",
+				container: $this,
+				propertyName: "healthcareReportingData",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CDCPMDRecord",
+					"Dataset"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        medicalSpecialty($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A medical specialty of the provider.",
+				container: $this,
+				propertyName: "medicalSpecialty",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalSpecialty"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

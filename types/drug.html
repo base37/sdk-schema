@@ -1,0 +1,499 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Drug extends window.LiveElement.Element.elements.Substance {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Drug'
+        static __type = 'rdfs:Class'
+        static __extends = 'Substance'
+        static __properties = ['activeIngredient', 'administrationRoute', 'alcoholWarning', 'availableStrength', 'breastfeedingWarning', 'clincalPharmacology', 'clinicalPharmacology', 'dosageForm', 'doseSchedule', 'drugClass', 'drugUnit', 'foodWarning', 'includedInHealthInsurancePlan', 'interactingDrug', 'isAvailableGenerically', 'isProprietary', 'labelDetails', 'legalStatus', 'manufacturer', 'maximumIntake', 'mechanismOfAction', 'nonProprietaryName', 'overdosage', 'pregnancyCategory', 'pregnancyWarning', 'prescribingInfo', 'prescriptionStatus', 'proprietaryName', 'relatedDrug', 'rxcui', 'warning']
+        static _rdfs_comment = 'A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism. Here the term drug is used interchangeably with the term medicine although clinical knowledge make a clear difference between them.'
+        static _rdfs_label = 'Drug'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        activeIngredient($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An active ingredient, typically chemical compounds and\\/or biologic substances.",
+				container: $this,
+				propertyName: "activeIngredient",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        administrationRoute($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A route by which this drug may be administered, e.g. 'oral'.",
+				container: $this,
+				propertyName: "administrationRoute",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        alcoholWarning($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.",
+				container: $this,
+				propertyName: "alcoholWarning",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        availableStrength($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An available dosage strength for the drug.",
+				container: $this,
+				propertyName: "availableStrength",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DrugStrength"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        breastfeedingWarning($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Any precaution, guidance, contraindication, etc. related to this drug's use by breastfeeding mothers.",
+				container: $this,
+				propertyName: "breastfeedingWarning",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        clincalPharmacology($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).",
+				container: $this,
+				propertyName: "clincalPharmacology",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        clinicalPharmacology($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Description of the absorption and elimination of drugs, including their concentration (pharmacokinetics, pK) and biological effects (pharmacodynamics, pD).",
+				container: $this,
+				propertyName: "clinicalPharmacology",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        dosageForm($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A dosage form in which this drug\\/supplement is available, e.g. 'tablet', 'suspension', 'injection'.",
+				container: $this,
+				propertyName: "dosageForm",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        doseSchedule($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A dosing schedule for the drug for a given population, either observed, recommended, or maximum dose based on the type used.",
+				container: $this,
+				propertyName: "doseSchedule",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DoseSchedule"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        drugClass($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The class of drug this belongs to (e.g., statins).",
+				container: $this,
+				propertyName: "drugClass",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DrugClass"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        drugUnit($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The unit in which the drug is measured, e.g. '5 mg tablet'.",
+				container: $this,
+				propertyName: "drugUnit",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        foodWarning($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Any precaution, guidance, contraindication, etc. related to consumption of specific foods while taking this drug.",
+				container: $this,
+				propertyName: "foodWarning",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        includedInHealthInsurancePlan($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The insurance plans that cover this drug.",
+				container: $this,
+				propertyName: "includedInHealthInsurancePlan",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"HealthInsurancePlan"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        interactingDrug($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Another drug that is known to interact with this drug in a way that impacts the effect of this drug or causes a risk to the patient. Note: disease interactions are typically captured as contraindications.",
+				container: $this,
+				propertyName: "interactingDrug",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Drug"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isAvailableGenerically($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "True if the drug is available in a generic form (regardless of name).",
+				container: $this,
+				propertyName: "isAvailableGenerically",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isProprietary($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "True if this item's name is a proprietary\\/brand name (vs. generic name).",
+				container: $this,
+				propertyName: "isProprietary",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        labelDetails($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Link to the drug's label details.",
+				container: $this,
+				propertyName: "labelDetails",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        legalStatus($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The drug or supplement's legal status, including any controlled substance schedules that apply.",
+				container: $this,
+				propertyName: "legalStatus",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DrugLegalStatus",
+					"MedicalEnumeration",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        manufacturer($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The manufacturer of the product.",
+				container: $this,
+				propertyName: "manufacturer",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        maximumIntake($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Recommended intake of this supplement for a given population as defined by a specific recommending authority.",
+				container: $this,
+				propertyName: "maximumIntake",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MaximumDoseSchedule"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        mechanismOfAction($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.",
+				container: $this,
+				propertyName: "mechanismOfAction",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        nonProprietaryName($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The generic name of this drug or supplement.",
+				container: $this,
+				propertyName: "nonProprietaryName",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        overdosage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Any information related to overdose on a drug, including signs or symptoms, treatments, contact information for emergency response.",
+				container: $this,
+				propertyName: "overdosage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        pregnancyCategory($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Pregnancy category of this drug.",
+				container: $this,
+				propertyName: "pregnancyCategory",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DrugPregnancyCategory"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        pregnancyWarning($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Any precaution, guidance, contraindication, etc. related to this drug's use during pregnancy.",
+				container: $this,
+				propertyName: "pregnancyWarning",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        prescribingInfo($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Link to prescribing information for the drug.",
+				container: $this,
+				propertyName: "prescribingInfo",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        prescriptionStatus($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the status of drug prescription eg. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.",
+				container: $this,
+				propertyName: "prescriptionStatus",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DrugPrescriptionStatus",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        proprietaryName($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Proprietary name given to the diet plan, typically by its originator or creator.",
+				container: $this,
+				propertyName: "proprietaryName",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        relatedDrug($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Any other drug related to this one, for example commonly-prescribed alternatives.",
+				container: $this,
+				propertyName: "relatedDrug",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Drug"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        rxcui($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The RxCUI drug identifier from RXNORM.",
+				container: $this,
+				propertyName: "rxcui",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        warning($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Any FDA or other warnings about the drug (text or URL).",
+				container: $this,
+				propertyName: "warning",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

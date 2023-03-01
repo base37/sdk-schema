@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class InsertAction extends window.LiveElement.Element.elements.AddAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:InsertAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'AddAction'
+        static __properties = ['toLocation']
+        static _rdfs_comment = 'The act of adding at a specific location in an ordered collection.'
+        static _rdfs_label = 'InsertAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        toLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of location. The final location of the object or the agent after the action.",
+				container: $this,
+				propertyName: "toLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class HowToStep extends window.LiveElement.Element.elements.ListItem {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:HowToStep'
+        static __type = 'rdfs:Class'
+        static __extends = 'ListItem'
+        static __properties = []
+        static _rdfs_comment = 'A step in the instructions for how to achieve a result. It is an ordered list with HowToDirection and\/or HowToTip items.'
+        static _rdfs_label = 'HowToStep'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

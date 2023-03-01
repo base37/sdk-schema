@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class RVPark extends window.LiveElement.Element.elements.CivicStructure {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:RVPark'
+        static __type = 'rdfs:Class'
+        static __extends = 'CivicStructure'
+        static __properties = []
+        static _rdfs_comment = 'A place offering space for "Recreational Vehicles", Caravans, mobile homes and the like.'
+        static _rdfs_label = 'RVPark'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

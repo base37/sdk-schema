@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PerformanceRole extends window.LiveElement.Element.elements.Role {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PerformanceRole'
+        static __type = 'rdfs:Class'
+        static __extends = 'Role'
+        static __properties = ['characterName']
+        static _rdfs_comment = 'A PerformanceRole is a Role that some entity places with regard to a theatrical performance, e.g. in a Movie, TVSeries etc.'
+        static _rdfs_label = 'PerformanceRole'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        characterName($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The name of a character played in some acting or performing role, i.e. in a PerformanceRole.",
+				container: $this,
+				propertyName: "characterName",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

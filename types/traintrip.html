@@ -1,0 +1,120 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TrainTrip extends window.LiveElement.Element.elements.Trip {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TrainTrip'
+        static __type = 'rdfs:Class'
+        static __extends = 'Trip'
+        static __properties = ['arrivalPlatform', 'arrivalStation', 'departurePlatform', 'departureStation', 'trainName', 'trainNumber']
+        static _rdfs_comment = 'A trip on a commercial train line.'
+        static _rdfs_label = 'TrainTrip'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        arrivalPlatform($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The platform where the train arrives.",
+				container: $this,
+				propertyName: "arrivalPlatform",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        arrivalStation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The station where the train trip ends.",
+				container: $this,
+				propertyName: "arrivalStation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"TrainStation"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        departurePlatform($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The platform from which the train departs.",
+				container: $this,
+				propertyName: "departurePlatform",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        departureStation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The station from which the train departs.",
+				container: $this,
+				propertyName: "departureStation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"TrainStation"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        trainName($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The name of the train (e.g. The Orient Express).",
+				container: $this,
+				propertyName: "trainName",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        trainNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The unique identifier for the train.",
+				container: $this,
+				propertyName: "trainNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

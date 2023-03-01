@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TaxiStand extends window.LiveElement.Element.elements.CivicStructure {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TaxiStand'
+        static __type = 'rdfs:Class'
+        static __extends = 'CivicStructure'
+        static __properties = []
+        static _rdfs_comment = 'A taxi stand.'
+        static _rdfs_label = 'TaxiStand'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

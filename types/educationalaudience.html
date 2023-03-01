@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class EducationalAudience extends window.LiveElement.Element.elements.Audience {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:EducationalAudience'
+        static __type = 'rdfs:Class'
+        static __extends = 'Audience'
+        static __properties = ['educationalRole']
+        static _rdfs_comment = 'An EducationalAudience.'
+        static _rdfs_label = 'EducationalAudience'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        educationalRole($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An educationalRole of an EducationalAudience.",
+				container: $this,
+				propertyName: "educationalRole",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

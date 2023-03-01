@@ -1,0 +1,93 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DataFeedItem extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DataFeedItem'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['dateCreated', 'dateDeleted', 'dateModified', 'item']
+        static _rdfs_comment = 'A single item within a larger data feed.'
+        static _rdfs_label = 'DataFeedItem'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        dateCreated($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date on which the CreativeWork was created or the item was added to a DataFeed.",
+				container: $this,
+				propertyName: "dateCreated",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        dateDeleted($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The datetime the item was removed from the DataFeed.",
+				container: $this,
+				propertyName: "dateDeleted",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Date",
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        dateModified($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+				container: $this,
+				propertyName: "dateModified",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        item($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists')\u2019.",
+				container: $this,
+				propertyName: "item",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

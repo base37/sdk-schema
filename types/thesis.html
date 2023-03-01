@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Thesis extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Thesis'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['inSupportOf']
+        static _rdfs_comment = 'A thesis or dissertation document submitted in support of candidature for an academic degree or professional qualification.'
+        static _rdfs_label = 'Thesis'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        inSupportOf($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Qualification, candidature, degree, application that Thesis supports.",
+				container: $this,
+				propertyName: "inSupportOf",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

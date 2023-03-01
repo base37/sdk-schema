@@ -1,0 +1,196 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PropertyValueSpecification extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PropertyValueSpecification'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['defaultValue', 'maxValue', 'minValue', 'multipleValues', 'readonlyValue', 'stepValue', 'valueMaxLength', 'valueMinLength', 'valueName', 'valuePattern', 'valueRequired']
+        static _rdfs_comment = 'A Property value specification.'
+        static _rdfs_label = 'PropertyValueSpecification'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        defaultValue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The default value of the input.  For properties that expect a literal, the default is a literal value, for properties that expect an object, it's an ID reference to one of the current values.",
+				container: $this,
+				propertyName: "defaultValue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        maxValue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The upper value of some characteristic or property.",
+				container: $this,
+				propertyName: "maxValue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        minValue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The lower value of some characteristic or property.",
+				container: $this,
+				propertyName: "minValue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        multipleValues($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Whether multiple values are allowed for the property.  Default is false.",
+				container: $this,
+				propertyName: "multipleValues",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        readonlyValue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Whether or not a property is mutable.  Default is false. Specifying this for a property that also has a value makes it act similar to a \"hidden\" input in an HTML form.",
+				container: $this,
+				propertyName: "readonlyValue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        stepValue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The stepValue attribute indicates the granularity that is expected (and required) of the value in a PropertyValueSpecification.",
+				container: $this,
+				propertyName: "stepValue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        valueMaxLength($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specifies the allowed range for number of characters in a literal value.",
+				container: $this,
+				propertyName: "valueMaxLength",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        valueMinLength($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specifies the minimum allowed range for number of characters in a literal value.",
+				container: $this,
+				propertyName: "valueMinLength",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        valueName($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the name of the PropertyValueSpecification to be used in URL templates and form encoding in a manner analogous to HTML's input@name.",
+				container: $this,
+				propertyName: "valueName",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        valuePattern($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specifies a regular expression for testing literal values according to the HTML spec.",
+				container: $this,
+				propertyName: "valuePattern",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        valueRequired($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Whether the property must be filled in to complete the action.  Default is false.",
+				container: $this,
+				propertyName: "valueRequired",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

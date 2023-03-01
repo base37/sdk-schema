@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Canal extends window.LiveElement.Element.elements.BodyOfWater {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Canal'
+        static __type = 'rdfs:Class'
+        static __extends = 'BodyOfWater'
+        static __properties = []
+        static _rdfs_comment = 'A canal, like the Panama Canal.'
+        static _rdfs_label = 'Canal'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

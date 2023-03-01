@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalSpecialty extends window.LiveElement.Element.elements.MedicalEnumeration {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalSpecialty'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalEnumeration'
+        static __properties = []
+        static _rdfs_comment = 'Any specific branch of medical science or practice. Medical specialities include clinical specialties that pertain to particular organ systems and their respective disease states, as well as allied health specialties. Enumerated type.'
+        static _rdfs_label = 'MedicalSpecialty'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

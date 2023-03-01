@@ -1,0 +1,202 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Action extends window.LiveElement.Element.elements.Thing {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Action'
+        static __type = 'rdfs:Class'
+        static __extends = 'Thing'
+        static __properties = ['actionStatus', 'agent', 'endTime', 'error', 'instrument', 'location', 'object', 'participant', 'result', 'startTime', 'target']
+        static _rdfs_comment = 'An action performed by a direct agent and indirect participants upon a direct object. Optionally happens at a location with the help of an inanimate instrument. The execution of the action may produce a result. Specific action sub-type documentation specifies the exact expectation of each argument\/role.\n\nSee also [blog post](http:\/\/blog.schema.org\/2014\/04\/announcing-schemaorg-actions.html) and [Actions overview document](https:\/\/schema.org\/docs\/actions.html).'
+        static _rdfs_label = 'Action'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        actionStatus($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the current disposition of the Action.",
+				container: $this,
+				propertyName: "actionStatus",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ActionStatusType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        agent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.",
+				container: $this,
+				propertyName: "agent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        endTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\\n\\nNote that Event uses startDate\\/endDate instead of startTime\\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+				container: $this,
+				propertyName: "endTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Time"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        error($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "For failed actions, more information on the cause of the failure.",
+				container: $this,
+				propertyName: "error",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        instrument($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The object that helped the agent perform the action. e.g. John wrote a book with *a pen*.",
+				container: $this,
+				propertyName: "instrument",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        location($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The location of, for example, where an event is happening, where an organization is located, or where an action takes place.",
+				container: $this,
+				propertyName: "location",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PostalAddress",
+					"Text",
+					"VirtualLocation",
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        object($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The object upon which the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn't). e.g. John read *a book*.",
+				container: $this,
+				propertyName: "object",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        participant($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*.",
+				container: $this,
+				propertyName: "participant",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        result($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The result produced in the action. e.g. John wrote *a book*.",
+				container: $this,
+				propertyName: "result",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        startTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\\n\\nNote that Event uses startDate\\/endDate instead of startTime\\/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+				container: $this,
+				propertyName: "startTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Time"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        target($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates a target EntryPoint for an Action.",
+				container: $this,
+				propertyName: "target",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"EntryPoint"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

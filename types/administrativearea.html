@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AdministrativeArea extends window.LiveElement.Element.elements.Place {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AdministrativeArea'
+        static __type = 'rdfs:Class'
+        static __extends = 'Place'
+        static __properties = []
+        static _rdfs_comment = 'A geographical region, typically under the jurisdiction of a particular government.'
+        static _rdfs_label = 'AdministrativeArea'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

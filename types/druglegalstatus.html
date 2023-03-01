@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DrugLegalStatus extends window.LiveElement.Element.elements.MedicalIntangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DrugLegalStatus'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalIntangible'
+        static __properties = ['applicableLocation']
+        static _rdfs_comment = 'The legal availability status of a medical drug.'
+        static _rdfs_label = 'DrugLegalStatus'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        applicableLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The location in which the status applies.",
+				container: $this,
+				propertyName: "applicableLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AdministrativeArea"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

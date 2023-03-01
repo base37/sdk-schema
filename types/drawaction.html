@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DrawAction extends window.LiveElement.Element.elements.CreateAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DrawAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreateAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of producing a visual\/graphical representation of an object, typically with a pen\/pencil and paper as instruments.'
+        static _rdfs_label = 'DrawAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

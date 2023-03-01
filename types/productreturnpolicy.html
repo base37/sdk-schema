@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ProductReturnPolicy extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ProductReturnPolicy'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['productReturnDays', 'productReturnLink']
+        static _rdfs_comment = 'A ProductReturnPolicy provides information about product return policies associated with an [[Organization]] or [[Product]].'
+        static _rdfs_label = 'ProductReturnPolicy'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        productReturnDays($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The productReturnDays property indicates the number of days (from purchase) within which relevant product return policy is applicable.",
+				container: $this,
+				propertyName: "productReturnDays",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        productReturnLink($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates a Web page or service by URL, for product return.",
+				container: $this,
+				propertyName: "productReturnLink",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

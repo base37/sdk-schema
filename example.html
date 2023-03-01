@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Base37 SDK Schema test page</title>
+  <style>
+      
+  </style>
+</head>
+<body>
+  <noscript>Base37 SDK Schema requires javascript enabled</noscript>
+  
+  <element-thing id="test" alternatename="The thing" description="the description" additionalType="myAdditionalType">Thing</element-thing>
+  <br />
+  <input id="test-input" placeholder="update the description" />
+
+  <script src="https://cdn.jsdelivr.net/gh/cloudouble/element@2.0.0/element.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cloudouble/schema@1.0.5/schema.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cloudouble/schema@1.0.5/renders/microdata/microdata.min.js"></script>
+  <script>
+  window.LiveElement.Element.load(
+    ['Schema'].concat(window.LiveElement.Schema.CoreTypes).concat(window.LiveElement.Schema.DataTypes), 
+    'https://cdn.jsdelivr.net/gh/cloudouble/schema@1.0.5', 'types'
+  ).then(() => {
+    window.test = document.getElementById('test')
+    window.testInput = document.getElementById('test-input')
+    window.LiveElement.Element.render(window.test, undefined, false, `
+    [itemprop] {
+      display: block;
+    }
+    slot {
+      font-weight: bold;
+    }
+    `)
+    
+    window.test.addEventListener('schema-input', event => {
+      console.log('test input: ', window.test.__input)
+      console.log('test value ', window.test.__value)
+      console.log('test validation ', window.test.__validation)
+    })
+    
+    window.testInput.addEventListener('input', event => {
+      window.test.description = window.testInput.value
+    })
+    
+    console.log(`Loaded! \n\nCustom tags available are: \n${Object.keys(window.LiveElement.Element.classes).join(', ')}`)
+  })
+  </script>
+</body>
+</html>

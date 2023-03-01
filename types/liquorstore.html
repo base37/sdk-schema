@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class LiquorStore extends window.LiveElement.Element.elements.Store {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:LiquorStore'
+        static __type = 'rdfs:Class'
+        static __extends = 'Store'
+        static __properties = []
+        static _rdfs_comment = 'A shop that sells alcoholic drinks such as wine, beer, whisky and other spirits.'
+        static _rdfs_label = 'LiquorStore'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

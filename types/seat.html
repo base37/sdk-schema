@@ -1,0 +1,91 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Seat extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Seat'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['seatNumber', 'seatRow', 'seatSection', 'seatingType']
+        static _rdfs_comment = 'Used to describe a seat, such as a reserved seat in an event reservation.'
+        static _rdfs_label = 'Seat'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        seatNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The location of the reserved seat (e.g., 27).",
+				container: $this,
+				propertyName: "seatNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        seatRow($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The row location of the reserved seat (e.g., B).",
+				container: $this,
+				propertyName: "seatRow",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        seatSection($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The section location of the reserved seat (e.g. Orchestra).",
+				container: $this,
+				propertyName: "seatSection",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        seatingType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type\\/class of the seat.",
+				container: $this,
+				propertyName: "seatingType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QualitativeValue",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

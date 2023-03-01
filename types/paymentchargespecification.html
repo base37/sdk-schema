@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PaymentChargeSpecification extends window.LiveElement.Element.elements.PriceSpecification {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PaymentChargeSpecification'
+        static __type = 'rdfs:Class'
+        static __extends = 'PriceSpecification'
+        static __properties = ['appliesToDeliveryMethod', 'appliesToPaymentMethod']
+        static _rdfs_comment = 'The costs of settling the payment using a particular payment method.'
+        static _rdfs_label = 'PaymentChargeSpecification'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        appliesToDeliveryMethod($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The delivery method(s) to which the delivery charge or payment charge specification applies.",
+				container: $this,
+				propertyName: "appliesToDeliveryMethod",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DeliveryMethod"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        appliesToPaymentMethod($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The payment method(s) to which the payment charge specification applies.",
+				container: $this,
+				propertyName: "appliesToPaymentMethod",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PaymentMethod"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

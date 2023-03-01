@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ArriveAction extends window.LiveElement.Element.elements.MoveAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ArriveAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'MoveAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of arriving at a place. An agent arrives at a destination from a fromLocation, optionally with participants.'
+        static _rdfs_label = 'ArriveAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

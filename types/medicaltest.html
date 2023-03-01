@@ -1,0 +1,106 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalTest extends window.LiveElement.Element.elements.MedicalEntity {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalTest'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalEntity'
+        static __properties = ['affectedBy', 'normalRange', 'signDetected', 'usedToDiagnose', 'usesDevice']
+        static _rdfs_comment = 'Any medical test, typically performed for diagnostic purposes.'
+        static _rdfs_label = 'MedicalTest'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        affectedBy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Drugs that affect the test's results.",
+				container: $this,
+				propertyName: "affectedBy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Drug"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        normalRange($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Range of acceptable values for a typical patient, when applicable.",
+				container: $this,
+				propertyName: "normalRange",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalEnumeration",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        signDetected($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sign detected by the test.",
+				container: $this,
+				propertyName: "signDetected",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalSign"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        usedToDiagnose($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A condition the test is used to diagnose.",
+				container: $this,
+				propertyName: "usedToDiagnose",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalCondition"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        usesDevice($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Device used to perform the test.",
+				container: $this,
+				propertyName: "usesDevice",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalDevice"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DepartAction extends window.LiveElement.Element.elements.MoveAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DepartAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'MoveAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of  departing from a place. An agent departs from an fromLocation for a destination, optionally with participants.'
+        static _rdfs_label = 'DepartAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

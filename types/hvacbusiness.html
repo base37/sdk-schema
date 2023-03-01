@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class HVACBusiness extends window.LiveElement.Element.elements.HomeAndConstructionBusiness {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:HVACBusiness'
+        static __type = 'rdfs:Class'
+        static __extends = 'HomeAndConstructionBusiness'
+        static __properties = []
+        static _rdfs_comment = 'A business that provide Heating, Ventilation and Air Conditioning services.'
+        static _rdfs_label = 'HVACBusiness'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

@@ -1,0 +1,78 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ItemList extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ItemList'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['itemListElement', 'itemListOrder', 'numberOfItems']
+        static _rdfs_comment = 'A list of items of any sort&#x2014;for example, Top 10 Movies About Weathermen, or Top 100 Party Songs. Not to be confused with HTML lists, which are often used only for formatting.'
+        static _rdfs_label = 'ItemList'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        itemListElement($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "For itemListElement values, you can use simple strings (e.g. \"Peter\", \"Paul\", \"Mary\"), existing entities, or use ListItem.\\n\\nText values are best if the elements in the list are plain strings. Existing entities are best for a simple, unordered list of existing things in your data. ListItem is used with ordered lists when you want to provide additional context about the element in that list or when the same item might be in different places in different lists.\\n\\nNote: The order of elements in your mark-up is not sufficient for indicating the order or elements.  Use ListItem with a 'position' property in such cases.",
+				container: $this,
+				propertyName: "itemListElement",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ListItem",
+					"Text",
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        itemListOrder($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Type of ordering (e.g. Ascending, Descending, Unordered).",
+				container: $this,
+				propertyName: "itemListOrder",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"ItemListOrderType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfItems($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of items in an ItemList. Note that some descriptions might not fully describe all items in a list (e.g., multi-page pagination); in such cases, the numberOfItems would be for the entire list.",
+				container: $this,
+				propertyName: "numberOfItems",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

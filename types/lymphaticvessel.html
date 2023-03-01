@@ -1,0 +1,76 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class LymphaticVessel extends window.LiveElement.Element.elements.Vessel {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:LymphaticVessel'
+        static __type = 'rdfs:Class'
+        static __extends = 'Vessel'
+        static __properties = ['originatesFrom', 'regionDrained', 'runsTo']
+        static _rdfs_comment = 'A type of blood vessel that specifically carries lymph fluid unidirectionally toward the heart.'
+        static _rdfs_label = 'LymphaticVessel'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        originatesFrom($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The vasculature the lymphatic structure originates, or afferents, from.",
+				container: $this,
+				propertyName: "originatesFrom",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Vessel"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        regionDrained($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.",
+				container: $this,
+				propertyName: "regionDrained",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AnatomicalStructure",
+					"AnatomicalSystem"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        runsTo($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The vasculature the lymphatic structure runs, or efferents, to.",
+				container: $this,
+				propertyName: "runsTo",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Vessel"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

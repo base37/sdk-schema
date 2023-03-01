@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class BoatTrip extends window.LiveElement.Element.elements.Trip {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:BoatTrip'
+        static __type = 'rdfs:Class'
+        static __extends = 'Trip'
+        static __properties = ['arrivalBoatTerminal', 'departureBoatTerminal']
+        static _rdfs_comment = 'A trip on a commercial ferry line.'
+        static _rdfs_label = 'BoatTrip'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        arrivalBoatTerminal($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The terminal or port from which the boat arrives.",
+				container: $this,
+				propertyName: "arrivalBoatTerminal",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BoatTerminal"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        departureBoatTerminal($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The terminal or port from which the boat departs.",
+				container: $this,
+				propertyName: "departureBoatTerminal",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BoatTerminal"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

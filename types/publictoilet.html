@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PublicToilet extends window.LiveElement.Element.elements.CivicStructure {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PublicToilet'
+        static __type = 'rdfs:Class'
+        static __extends = 'CivicStructure'
+        static __properties = []
+        static _rdfs_comment = 'A public toilet is a room or small building containing one or more toilets (and possibly also urinals) which is available for use by the general public, or by customers or employees of certain businesses.'
+        static _rdfs_label = 'PublicToilet'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

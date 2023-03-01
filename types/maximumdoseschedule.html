@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MaximumDoseSchedule extends window.LiveElement.Element.elements.DoseSchedule {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MaximumDoseSchedule'
+        static __type = 'rdfs:Class'
+        static __extends = 'DoseSchedule'
+        static __properties = []
+        static _rdfs_comment = 'The maximum dosing schedule considered safe for a drug or supplement as recommended by an authority or by the drug\/supplement\'s manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.'
+        static _rdfs_label = 'MaximumDoseSchedule'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

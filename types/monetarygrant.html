@@ -1,0 +1,62 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MonetaryGrant extends window.LiveElement.Element.elements.Grant {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MonetaryGrant'
+        static __type = 'rdfs:Class'
+        static __extends = 'Grant'
+        static __properties = ['amount', 'funder']
+        static _rdfs_comment = 'A monetary grant.'
+        static _rdfs_label = 'MonetaryGrant'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        amount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The amount of money.",
+				container: $this,
+				propertyName: "amount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"MonetaryAmount"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        funder($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+				container: $this,
+				propertyName: "funder",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

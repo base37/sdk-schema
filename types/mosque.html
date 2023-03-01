@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Mosque extends window.LiveElement.Element.elements.PlaceOfWorship {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Mosque'
+        static __type = 'rdfs:Class'
+        static __extends = 'PlaceOfWorship'
+        static __properties = []
+        static _rdfs_comment = 'A mosque.'
+        static _rdfs_label = 'Mosque'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

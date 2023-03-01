@@ -1,0 +1,75 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AggregateRating extends window.LiveElement.Element.elements.Rating {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AggregateRating'
+        static __type = 'rdfs:Class'
+        static __extends = 'Rating'
+        static __properties = ['itemReviewed', 'ratingCount', 'reviewCount']
+        static _rdfs_comment = 'The average rating based on multiple ratings or reviews.'
+        static _rdfs_label = 'AggregateRating'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        itemReviewed($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The item that is being reviewed\\/rated.",
+				container: $this,
+				propertyName: "itemReviewed",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        ratingCount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The count of total number of ratings.",
+				container: $this,
+				propertyName: "ratingCount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        reviewCount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The count of total number of reviews.",
+				container: $this,
+				propertyName: "reviewCount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

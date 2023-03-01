@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TelevisionChannel extends window.LiveElement.Element.elements.BroadcastChannel {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TelevisionChannel'
+        static __type = 'rdfs:Class'
+        static __extends = 'BroadcastChannel'
+        static __properties = []
+        static _rdfs_comment = 'A unique instance of a television BroadcastService on a CableOrSatelliteService lineup.'
+        static _rdfs_label = 'TelevisionChannel'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

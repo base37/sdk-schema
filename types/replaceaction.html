@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ReplaceAction extends window.LiveElement.Element.elements.UpdateAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ReplaceAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'UpdateAction'
+        static __properties = ['replacee', 'replacer']
+        static _rdfs_comment = 'The act of editing a recipient by replacing an old object with a new object.'
+        static _rdfs_label = 'ReplaceAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        replacee($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of object. The object that is being replaced.",
+				container: $this,
+				propertyName: "replacee",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        replacer($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of object. The object that replaces.",
+				container: $this,
+				propertyName: "replacer",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

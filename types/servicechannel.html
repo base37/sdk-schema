@@ -1,0 +1,151 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ServiceChannel extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ServiceChannel'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['availableLanguage', 'processingTime', 'providesService', 'serviceLocation', 'servicePhone', 'servicePostalAddress', 'serviceSmsNumber', 'serviceUrl']
+        static _rdfs_comment = 'A means for accessing a service, e.g. a government office location, web site, or phone number.'
+        static _rdfs_label = 'ServiceChannel'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        availableLanguage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http:\\/\\/tools.ietf.org\\/html\\/bcp47). See also [[inLanguage]]",
+				container: $this,
+				propertyName: "availableLanguage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Language",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        processingTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Estimated processing time for the service using this channel.",
+				container: $this,
+				propertyName: "processingTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Duration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        providesService($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The service provided by this channel.",
+				container: $this,
+				propertyName: "providesService",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Service"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        serviceLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The location (e.g. civic structure, local business, etc.) where a person can go to access the service.",
+				container: $this,
+				propertyName: "serviceLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        servicePhone($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The phone number to use to access the service.",
+				container: $this,
+				propertyName: "servicePhone",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ContactPoint"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        servicePostalAddress($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The address for accessing the service by mail.",
+				container: $this,
+				propertyName: "servicePostalAddress",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PostalAddress"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        serviceSmsNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number to access the service by text message.",
+				container: $this,
+				propertyName: "serviceSmsNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ContactPoint"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        serviceUrl($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The website to access the service.",
+				container: $this,
+				propertyName: "serviceUrl",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

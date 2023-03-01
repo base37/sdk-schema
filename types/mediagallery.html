@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MediaGallery extends window.LiveElement.Element.elements.CollectionPage {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MediaGallery'
+        static __type = 'rdfs:Class'
+        static __extends = 'CollectionPage'
+        static __properties = []
+        static _rdfs_comment = 'Web page type: Media gallery page. A mixed-media page that can contains media such as images, videos, and other multimedia.'
+        static _rdfs_label = 'MediaGallery'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

@@ -1,0 +1,78 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Suite extends window.LiveElement.Element.elements.Accommodation {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Suite'
+        static __type = 'rdfs:Class'
+        static __extends = 'Accommodation'
+        static __properties = ['bed', 'numberOfRooms', 'occupancy']
+        static _rdfs_comment = 'A suite in a hotel or other public accommodation, denotes a class of luxury accommodations, the key feature of which is multiple rooms (Source: Wikipedia, the free encyclopedia, see <a href="http:\/\/en.wikipedia.org\/wiki\/Suite_(hotel)">http:\/\/en.wikipedia.org\/wiki\/Suite_(hotel)<\/a>). <br \/><br \/> See also the <a href="\/docs\/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations<\/a>. '
+        static _rdfs_label = 'Suite'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        bed($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type of bed or beds included in the accommodation. For the single case of just one bed of a certain type, you use bed directly with a text.\n      If you want to indicate the quantity of a certain kind of bed, use an instance of BedDetails. For more detailed information, use the amenityFeature property.",
+				container: $this,
+				propertyName: "bed",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BedType",
+					"BedDetails",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfRooms($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.\nTypical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.",
+				container: $this,
+				propertyName: "numberOfRooms",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        occupancy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The allowed total occupancy for the accommodation in persons (including infants etc). For individual accommodations, this is not necessarily the legal maximum but defines the permitted usage as per the contractual agreement (e.g. a double room used by a single person).\nTypical unit code(s): C62 for person",
+				container: $this,
+				propertyName: "occupancy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

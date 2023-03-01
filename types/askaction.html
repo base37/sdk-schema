@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AskAction extends window.LiveElement.Element.elements.CommunicateAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AskAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'CommunicateAction'
+        static __properties = ['question']
+        static _rdfs_comment = 'The act of posing a question \/ favor to someone.\n\nRelated actions:\n\n* [[ReplyAction]]: Appears generally as a response to AskAction.'
+        static _rdfs_label = 'AskAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        question($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of object. A question.",
+				container: $this,
+				propertyName: "question",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Question"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

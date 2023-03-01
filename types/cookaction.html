@@ -1,0 +1,76 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CookAction extends window.LiveElement.Element.elements.CreateAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CookAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreateAction'
+        static __properties = ['foodEstablishment', 'foodEvent', 'recipe']
+        static _rdfs_comment = 'The act of producing\/preparing food.'
+        static _rdfs_label = 'CookAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        foodEstablishment($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of location. The specific food establishment where the action occurred.",
+				container: $this,
+				propertyName: "foodEstablishment",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"FoodEstablishment",
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        foodEvent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of location. The specific food event where the action occurred.",
+				container: $this,
+				propertyName: "foodEvent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"FoodEvent"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        recipe($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of instrument. The recipe\\/instructions used to perform the action.",
+				container: $this,
+				propertyName: "recipe",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Recipe"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

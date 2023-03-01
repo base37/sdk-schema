@@ -1,0 +1,46 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MathSolver extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MathSolver'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['mathExpression']
+        static _rdfs_comment = 'A math solver which is capable of solving a subset of mathematical problems.'
+        static _rdfs_label = 'MathSolver'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        mathExpression($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A mathematical expression (e.g. 'x^2-3x=0') that may be solved for a specific variable, simplified, or transformed. This can take many formats, e.g. LaTeX, Ascii-Math, or math as you would write with a keyboard.",
+				container: $this,
+				propertyName: "mathExpression",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"SolveMathAction"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

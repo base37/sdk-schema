@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CheckAction extends window.LiveElement.Element.elements.FindAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CheckAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'FindAction'
+        static __properties = []
+        static _rdfs_comment = 'An agent inspects, determines, investigates, inquires, or examines an object\'s accuracy, quality, condition, or state.'
+        static _rdfs_label = 'CheckAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

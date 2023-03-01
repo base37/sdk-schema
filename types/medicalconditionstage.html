@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalConditionStage extends window.LiveElement.Element.elements.MedicalIntangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalConditionStage'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalIntangible'
+        static __properties = ['stageAsNumber', 'subStageSuffix']
+        static _rdfs_comment = 'A stage of a medical condition, such as \'Stage IIIa\'.'
+        static _rdfs_label = 'MedicalConditionStage'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        stageAsNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The stage represented as a number, e.g. 3.",
+				container: $this,
+				propertyName: "stageAsNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        subStageSuffix($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The substage, e.g. 'a' for Stage IIIa.",
+				container: $this,
+				propertyName: "subStageSuffix",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

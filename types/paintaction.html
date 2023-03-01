@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PaintAction extends window.LiveElement.Element.elements.CreateAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PaintAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreateAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of producing a painting, typically with paint and canvas as instruments.'
+        static _rdfs_label = 'PaintAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

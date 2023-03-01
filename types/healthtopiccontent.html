@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class HealthTopicContent extends window.LiveElement.Element.elements.WebContent {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:HealthTopicContent'
+        static __type = 'rdfs:Class'
+        static __extends = 'WebContent'
+        static __properties = ['hasHealthAspect']
+        static _rdfs_comment = '[[HealthTopicContent]] is [[WebContent]] that is about some aspect of a health topic, e.g. a condition, its symptoms or treatments. Such content may be comprised of several parts or sections and use different types of media. Multiple instances of [[WebContent]] (and hence [[HealthTopicContent]]) can be related using [[hasPart]] \/ [[isPartOf]] where there is some kind of content hierarchy, and their content described with [[about]] and [[mentions]] e.g. building upon the existing [[MedicalCondition]] vocabulary.   '
+        static _rdfs_label = 'HealthTopicContent'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        hasHealthAspect($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the aspect or aspects specifically addressed in some [[HealthTopicContent]]. For example, that the content is an overview, or that it talks about treatment, self-care, treatments or their side-effects.",
+				container: $this,
+				propertyName: "hasHealthAspect",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"HealthAspectEnumeration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

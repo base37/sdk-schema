@@ -1,0 +1,107 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ApartmentComplex extends window.LiveElement.Element.elements.Residence {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ApartmentComplex'
+        static __type = 'rdfs:Class'
+        static __extends = 'Residence'
+        static __properties = ['numberOfAccommodationUnits', 'numberOfAvailableAccommodationUnits', 'numberOfBedrooms', 'petsAllowed', 'tourBookingPage']
+        static _rdfs_comment = 'Residence type: Apartment complex.'
+        static _rdfs_label = 'ApartmentComplex'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        numberOfAccommodationUnits($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the total (available plus unavailable) number of accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAvailableAccommodationUnits]].",
+				container: $this,
+				propertyName: "numberOfAccommodationUnits",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfAvailableAccommodationUnits($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the number of available accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAccommodationUnits]].",
+				container: $this,
+				propertyName: "numberOfAvailableAccommodationUnits",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfBedrooms($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].",
+				container: $this,
+				propertyName: "numberOfBedrooms",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        petsAllowed($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.",
+				container: $this,
+				propertyName: "petsAllowed",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        tourBookingPage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as other kinds of tours as appropriate.",
+				container: $this,
+				propertyName: "tourBookingPage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

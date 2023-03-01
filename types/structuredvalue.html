@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class StructuredValue extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:StructuredValue'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = []
+        static _rdfs_comment = 'Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.'
+        static _rdfs_label = 'StructuredValue'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

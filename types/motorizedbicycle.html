@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MotorizedBicycle extends window.LiveElement.Element.elements.Vehicle {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MotorizedBicycle'
+        static __type = 'rdfs:Class'
+        static __extends = 'Vehicle'
+        static __properties = []
+        static _rdfs_comment = 'A motorized bicycle is a bicycle with an attached motor used to power the vehicle, or to assist with pedaling.'
+        static _rdfs_label = 'MotorizedBicycle'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

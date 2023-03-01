@@ -1,0 +1,122 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MusicGroup extends window.LiveElement.Element.elements.PerformingGroup {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MusicGroup'
+        static __type = 'rdfs:Class'
+        static __extends = 'PerformingGroup'
+        static __properties = ['album', 'albums', 'genre', 'musicGroupMember', 'track', 'tracks']
+        static _rdfs_comment = 'A musical group, such as a band, an orchestra, or a choir. Can also be a solo musician.'
+        static _rdfs_label = 'MusicGroup'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        album($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A music album.",
+				container: $this,
+				propertyName: "album",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicAlbum"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        albums($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A collection of music albums.",
+				container: $this,
+				propertyName: "albums",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicAlbum"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        genre($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Genre of the creative work, broadcast channel or group.",
+				container: $this,
+				propertyName: "genre",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        musicGroupMember($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A member of a music group&#x2014;for example, John, Paul, George, or Ringo.",
+				container: $this,
+				propertyName: "musicGroupMember",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        track($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A music recording (track)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.",
+				container: $this,
+				propertyName: "track",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicRecording",
+					"ItemList"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        tracks($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A music recording (track)&#x2014;usually a single song.",
+				container: $this,
+				propertyName: "tracks",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicRecording"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

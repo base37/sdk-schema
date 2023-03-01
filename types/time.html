@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Time extends window.LiveElement.Element.elements.DataType {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Time'
+        static __type = 'schema:DataType'
+        static __extends = 'DataType'
+        static __properties = []
+        static _rdfs_comment = 'A point in time recurring on multiple days in the form hh:mm:ss[Z|(+|-)hh:mm] (see [XML schema for details](http:\/\/www.w3.org\/TR\/xmlschema-2\/#time)).'
+        static _rdfs_label = 'Time'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

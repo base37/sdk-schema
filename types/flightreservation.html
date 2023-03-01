@@ -1,0 +1,91 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class FlightReservation extends window.LiveElement.Element.elements.Reservation {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:FlightReservation'
+        static __type = 'rdfs:Class'
+        static __extends = 'Reservation'
+        static __properties = ['boardingGroup', 'passengerPriorityStatus', 'passengerSequenceNumber', 'securityScreening']
+        static _rdfs_comment = 'A reservation for air travel.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].'
+        static _rdfs_label = 'FlightReservation'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        boardingGroup($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The airline-specific indicator of boarding order \\/ preference.",
+				container: $this,
+				propertyName: "boardingGroup",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        passengerPriorityStatus($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The priority status assigned to a passenger for security or boarding (e.g. FastTrack or Priority).",
+				container: $this,
+				propertyName: "passengerPriorityStatus",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"QualitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        passengerSequenceNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The passenger's sequence number as assigned by the airline.",
+				container: $this,
+				propertyName: "passengerSequenceNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        securityScreening($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type of security screening the passenger is subject to.",
+				container: $this,
+				propertyName: "securityScreening",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

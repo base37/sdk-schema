@@ -1,0 +1,198 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CreativeWorkSeason extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CreativeWorkSeason'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['actor', 'director', 'endDate', 'episode', 'episodes', 'numberOfEpisodes', 'partOfSeries', 'productionCompany', 'seasonNumber', 'startDate', 'trailer']
+        static _rdfs_comment = 'A media season e.g. tv, radio, video game etc.'
+        static _rdfs_label = 'CreativeWorkSeason'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        actor($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.",
+				container: $this,
+				propertyName: "actor",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        director($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A director of e.g. tv, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.",
+				container: $this,
+				propertyName: "director",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        endDate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The end date and time of the item (in [ISO 8601 date format](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_8601)).",
+				container: $this,
+				propertyName: "endDate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        episode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An episode of a tv, radio or game media within a series or season.",
+				container: $this,
+				propertyName: "episode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Episode"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        episodes($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An episode of a TV\\/radio series or season.",
+				container: $this,
+				propertyName: "episodes",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Episode"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfEpisodes($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of episodes in this season or series.",
+				container: $this,
+				propertyName: "numberOfEpisodes",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        partOfSeries($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The series to which this episode or season belongs.",
+				container: $this,
+				propertyName: "partOfSeries",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWorkSeries"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        productionCompany($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The production company or studio responsible for the item e.g. series, video game, episode etc.",
+				container: $this,
+				propertyName: "productionCompany",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        seasonNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Position of the season within an ordered group of seasons.",
+				container: $this,
+				propertyName: "seasonNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        startDate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The start date and time of the item (in [ISO 8601 date format](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_8601)).",
+				container: $this,
+				propertyName: "startDate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        trailer($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The trailer of a movie or tv\\/radio series, season, episode, etc.",
+				container: $this,
+				propertyName: "trailer",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"VideoObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

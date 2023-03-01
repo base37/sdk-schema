@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Airport extends window.LiveElement.Element.elements.CivicStructure {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Airport'
+        static __type = 'rdfs:Class'
+        static __extends = 'CivicStructure'
+        static __properties = ['iataCode', 'icaoCode']
+        static _rdfs_comment = 'An airport.'
+        static _rdfs_label = 'Airport'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        iataCode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "IATA identifier for an airline or airport.",
+				container: $this,
+				propertyName: "iataCode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        icaoCode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "ICAO identifier for an airport.",
+				container: $this,
+				propertyName: "icaoCode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

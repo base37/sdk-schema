@@ -1,0 +1,93 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AggregateOffer extends window.LiveElement.Element.elements.Offer {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AggregateOffer'
+        static __type = 'rdfs:Class'
+        static __extends = 'Offer'
+        static __properties = ['highPrice', 'lowPrice', 'offerCount', 'offers']
+        static _rdfs_comment = 'When a single product is associated with multiple offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used.\n\nNote: AggregateOffers are normally expected to associate multiple offers that all share the same defined [[businessFunction]] value, or default to http:\/\/purl.org\/goodrelations\/v1#Sell if businessFunction is not explicitly defined.'
+        static _rdfs_label = 'AggregateOffer'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        highPrice($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The highest price of all offers available.\\n\\nUsage guidelines:\\n\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
+				container: $this,
+				propertyName: "highPrice",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        lowPrice($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The lowest price of all offers available.\\n\\nUsage guidelines:\\n\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
+				container: $this,
+				propertyName: "lowPrice",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        offerCount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of offers for the product.",
+				container: $this,
+				propertyName: "offerCount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        offers($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.\n      ",
+				container: $this,
+				propertyName: "offers",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Demand",
+					"Offer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

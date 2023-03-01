@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AccountingService extends window.LiveElement.Element.elements.FinancialService {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AccountingService'
+        static __type = 'rdfs:Class'
+        static __extends = 'FinancialService'
+        static __properties = []
+        static _rdfs_comment = 'Accountancy business.\n\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\(s).       '
+        static _rdfs_label = 'AccountingService'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

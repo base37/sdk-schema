@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AddAction extends window.LiveElement.Element.elements.UpdateAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AddAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'UpdateAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of editing by adding an object to a collection.'
+        static _rdfs_label = 'AddAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

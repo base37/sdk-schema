@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class SearchAction extends window.LiveElement.Element.elements.Action {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:SearchAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'Action'
+        static __properties = ['query']
+        static _rdfs_comment = 'The act of searching for an object.\n\nRelated actions:\n\n* [[FindAction]]: SearchAction generally leads to a FindAction, but not necessarily.'
+        static _rdfs_label = 'SearchAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        query($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of instrument. The query used on this action.",
+				container: $this,
+				propertyName: "query",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

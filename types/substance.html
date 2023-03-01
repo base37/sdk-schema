@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Substance extends window.LiveElement.Element.elements.MedicalEntity {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Substance'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalEntity'
+        static __properties = ['activeIngredient', 'maximumIntake']
+        static _rdfs_comment = 'Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.'
+        static _rdfs_label = 'Substance'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        activeIngredient($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An active ingredient, typically chemical compounds and\\/or biologic substances.",
+				container: $this,
+				propertyName: "activeIngredient",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        maximumIntake($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Recommended intake of this supplement for a given population as defined by a specific recommending authority.",
+				container: $this,
+				propertyName: "maximumIntake",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MaximumDoseSchedule"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

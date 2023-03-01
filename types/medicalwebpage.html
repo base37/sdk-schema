@@ -1,0 +1,61 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalWebPage extends window.LiveElement.Element.elements.WebPage {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalWebPage'
+        static __type = 'rdfs:Class'
+        static __extends = 'WebPage'
+        static __properties = ['aspect', 'medicalAudience']
+        static _rdfs_comment = 'A web page that provides medical information.'
+        static _rdfs_label = 'MedicalWebPage'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        aspect($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An aspect of medical practice that is considered on the page, such as 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology', etc.",
+				container: $this,
+				propertyName: "aspect",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        medicalAudience($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Medical audience for page.",
+				container: $this,
+				propertyName: "medicalAudience",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalAudienceType",
+					"MedicalAudience"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

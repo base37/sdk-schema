@@ -1,0 +1,47 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Class extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Class'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['supersededBy']
+        static _rdfs_comment = 'A class, also often called a \'Type\'; equivalent to rdfs:Class.'
+        static _rdfs_label = 'Class'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        supersededBy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Relates a term (i.e. a property, class or enumeration) to one that supersedes it.",
+				container: $this,
+				propertyName: "supersededBy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Enumeration",
+					"Property",
+					"Class"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

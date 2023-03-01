@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MoveAction extends window.LiveElement.Element.elements.Action {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MoveAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'Action'
+        static __properties = ['fromLocation', 'toLocation']
+        static _rdfs_comment = 'The act of an agent relocating to a place.\n\nRelated actions:\n\n* [[TransferAction]]: Unlike TransferAction, the subject of the move is a living Person or Organization rather than an inanimate object.'
+        static _rdfs_label = 'MoveAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        fromLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of location. The original location of the object or the agent before the action.",
+				container: $this,
+				propertyName: "fromLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        toLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of location. The final location of the object or the agent after the action.",
+				container: $this,
+				propertyName: "toLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

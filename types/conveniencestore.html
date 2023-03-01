@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ConvenienceStore extends window.LiveElement.Element.elements.Store {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ConvenienceStore'
+        static __type = 'rdfs:Class'
+        static __extends = 'Store'
+        static __properties = []
+        static _rdfs_comment = 'A convenience store.'
+        static _rdfs_label = 'ConvenienceStore'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

@@ -1,0 +1,62 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TouristAttraction extends window.LiveElement.Element.elements.Place {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TouristAttraction'
+        static __type = 'rdfs:Class'
+        static __extends = 'Place'
+        static __properties = ['availableLanguage', 'touristType']
+        static _rdfs_comment = 'A tourist attraction.  In principle any Thing can be a [[TouristAttraction]], from a [[Mountain]] and [[LandmarksOrHistoricalBuildings]] to a [[LocalBusiness]].  This Type can be used on its own to describe a general [[TouristAttraction]], or be used as an [[additionalType]] to add tourist attraction properties to any other type.  (See examples below)'
+        static _rdfs_label = 'TouristAttraction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        availableLanguage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http:\\/\\/tools.ietf.org\\/html\\/bcp47). See also [[inLanguage]]",
+				container: $this,
+				propertyName: "availableLanguage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Language",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        touristType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Attraction suitable for type(s) of tourist. eg. Children, visitors from a particular country, etc. ",
+				container: $this,
+				propertyName: "touristType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Audience"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

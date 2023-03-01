@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class SpeakableSpecification extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:SpeakableSpecification'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['cssSelector', 'xpath']
+        static _rdfs_comment = 'A SpeakableSpecification indicates (typically via [[xpath]] or [[cssSelector]]) sections of a document that are highlighted as particularly [[speakable]]. Instances of this type are expected to be used primarily as values of the [[speakable]] property.'
+        static _rdfs_label = 'SpeakableSpecification'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        cssSelector($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single conceptual \"Web page element\".",
+				container: $this,
+				propertyName: "cssSelector",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CssSelectorType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        xpath($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An XPath, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single conceptual \"Web page element\".",
+				container: $this,
+				propertyName: "xpath",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"XPathType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

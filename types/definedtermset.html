@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DefinedTermSet extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DefinedTermSet'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['hasDefinedTerm']
+        static _rdfs_comment = 'A set of defined terms for example a set of categories or a classification scheme, a glossary, dictionary or enumeration.'
+        static _rdfs_label = 'DefinedTermSet'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        hasDefinedTerm($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A Defined Term contained in this term set.",
+				container: $this,
+				propertyName: "hasDefinedTerm",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DefinedTerm"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

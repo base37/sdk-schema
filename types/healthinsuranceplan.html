@@ -1,0 +1,166 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class HealthInsurancePlan extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:HealthInsurancePlan'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['benefitsSummaryUrl', 'contactPoint', 'healthPlanDrugOption', 'healthPlanDrugTier', 'healthPlanId', 'healthPlanMarketingUrl', 'includesHealthPlanFormulary', 'includesHealthPlanNetwork', 'usesHealthPlanIdStandard']
+        static _rdfs_comment = 'A US-style health insurance plan, including PPOs, EPOs, and HMOs. '
+        static _rdfs_label = 'HealthInsurancePlan'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        benefitsSummaryUrl($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The URL that goes directly to the summary of benefits and coverage for the specific standard plan or plan variation.",
+				container: $this,
+				propertyName: "benefitsSummaryUrl",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        contactPoint($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A contact point for a person or organization.",
+				container: $this,
+				propertyName: "contactPoint",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ContactPoint"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        healthPlanDrugOption($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "TODO.",
+				container: $this,
+				propertyName: "healthPlanDrugOption",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        healthPlanDrugTier($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The tier(s) of drugs offered by this formulary or insurance plan.",
+				container: $this,
+				propertyName: "healthPlanDrugTier",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        healthPlanId($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique, even across different markets.)",
+				container: $this,
+				propertyName: "healthPlanId",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        healthPlanMarketingUrl($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The URL that goes directly to the plan brochure for the specific standard plan or plan variation.",
+				container: $this,
+				propertyName: "healthPlanMarketingUrl",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        includesHealthPlanFormulary($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Formularies covered by this plan.",
+				container: $this,
+				propertyName: "includesHealthPlanFormulary",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"HealthPlanFormulary"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        includesHealthPlanNetwork($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Networks covered by this plan.",
+				container: $this,
+				propertyName: "includesHealthPlanNetwork",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"HealthPlanNetwork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        usesHealthPlanIdStandard($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The standard for interpreting thePlan ID. The preferred is \"HIOS\". See the Centers for Medicare & Medicaid Services for more details.",
+				container: $this,
+				propertyName: "usesHealthPlanIdStandard",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

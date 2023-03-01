@@ -1,0 +1,150 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AnatomicalStructure extends window.LiveElement.Element.elements.MedicalEntity {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AnatomicalStructure'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalEntity'
+        static __properties = ['associatedPathophysiology', 'bodyLocation', 'connectedTo', 'diagram', 'partOfSystem', 'relatedCondition', 'relatedTherapy', 'subStructure']
+        static _rdfs_comment = 'Any part of the human body, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical structures.'
+        static _rdfs_label = 'AnatomicalStructure'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        associatedPathophysiology($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.",
+				container: $this,
+				propertyName: "associatedPathophysiology",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        bodyLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Location in the body of the anatomical structure.",
+				container: $this,
+				propertyName: "bodyLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        connectedTo($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Other anatomical structures to which this structure is connected.",
+				container: $this,
+				propertyName: "connectedTo",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AnatomicalStructure"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        diagram($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An image containing a diagram that illustrates the structure and\\/or its component substructures and\\/or connections with other structures.",
+				container: $this,
+				propertyName: "diagram",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ImageObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        partOfSystem($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The anatomical or organ system that this structure is part of.",
+				container: $this,
+				propertyName: "partOfSystem",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AnatomicalSystem"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        relatedCondition($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A medical condition associated with this anatomy.",
+				container: $this,
+				propertyName: "relatedCondition",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalCondition"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        relatedTherapy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A medical therapy related to this anatomy.",
+				container: $this,
+				propertyName: "relatedTherapy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalTherapy"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        subStructure($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Component (sub-)structure(s) that comprise this anatomical structure.",
+				container: $this,
+				propertyName: "subStructure",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AnatomicalStructure"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

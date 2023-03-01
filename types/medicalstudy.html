@@ -1,0 +1,108 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalStudy extends window.LiveElement.Element.elements.MedicalEntity {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalStudy'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalEntity'
+        static __properties = ['healthCondition', 'sponsor', 'status', 'studyLocation', 'studySubject']
+        static _rdfs_comment = 'A medical study is an umbrella type covering all kinds of research studies relating to human medicine or health, including observational studies and interventional trials and registries, randomized, controlled or not. When the specific type of study is known, use one of the extensions of this type, such as MedicalTrial or MedicalObservationalStudy. Also, note that this type should be used to mark up data that describes the study itself; to tag an article that publishes the results of a study, use MedicalScholarlyArticle. Note: use the code property of MedicalEntity to store study IDs, e.g. clinicaltrials.gov ID.'
+        static _rdfs_label = 'MedicalStudy'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        healthCondition($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specifying the health condition(s) of a patient, medical study, or other target audience.",
+				container: $this,
+				propertyName: "healthCondition",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalCondition"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sponsor($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.",
+				container: $this,
+				propertyName: "sponsor",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        status($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The status of the study (enumerated).",
+				container: $this,
+				propertyName: "status",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"EventStatusType",
+					"MedicalStudyStatus"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        studyLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The location in which the study is taking\\/took place.",
+				container: $this,
+				propertyName: "studyLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AdministrativeArea"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        studySubject($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.",
+				container: $this,
+				propertyName: "studySubject",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalEntity"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

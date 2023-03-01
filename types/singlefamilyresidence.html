@@ -1,0 +1,61 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class SingleFamilyResidence extends window.LiveElement.Element.elements.House {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:SingleFamilyResidence'
+        static __type = 'rdfs:Class'
+        static __extends = 'House'
+        static __properties = ['numberOfRooms', 'occupancy']
+        static _rdfs_comment = 'Residence type: Single-family home.'
+        static _rdfs_label = 'SingleFamilyResidence'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        numberOfRooms($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.\nTypical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.",
+				container: $this,
+				propertyName: "numberOfRooms",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        occupancy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The allowed total occupancy for the accommodation in persons (including infants etc). For individual accommodations, this is not necessarily the legal maximum but defines the permitted usage as per the contractual agreement (e.g. a double room used by a single person).\nTypical unit code(s): C62 for person",
+				container: $this,
+				propertyName: "occupancy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

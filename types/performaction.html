@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PerformAction extends window.LiveElement.Element.elements.PlayAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PerformAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'PlayAction'
+        static __properties = ['entertainmentBusiness']
+        static _rdfs_comment = 'The act of participating in performance arts.'
+        static _rdfs_label = 'PerformAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        entertainmentBusiness($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of location. The entertainment business where the action occurred.",
+				container: $this,
+				propertyName: "entertainmentBusiness",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"EntertainmentBusiness"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

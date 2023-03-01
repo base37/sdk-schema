@@ -1,0 +1,198 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class VideoGame extends window.LiveElement.Element.elements.SoftwareApplication {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:VideoGame'
+        static __type = 'rdfs:Class'
+        static __extends = 'SoftwareApplication'
+        static __properties = ['actor', 'actors', 'cheatCode', 'director', 'directors', 'gamePlatform', 'gameServer', 'gameTip', 'musicBy', 'playMode', 'trailer']
+        static _rdfs_comment = 'A video game is an electronic game that involves human interaction with a user interface to generate visual feedback on a video device.'
+        static _rdfs_label = 'VideoGame'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        actor($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.",
+				container: $this,
+				propertyName: "actor",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        actors($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.",
+				container: $this,
+				propertyName: "actors",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        cheatCode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Cheat codes to the game.",
+				container: $this,
+				propertyName: "cheatCode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        director($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A director of e.g. tv, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip.",
+				container: $this,
+				propertyName: "director",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        directors($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.",
+				container: $this,
+				propertyName: "directors",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        gamePlatform($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The electronic systems used to play <a href=\"http:\\/\\/en.wikipedia.org\\/wiki\\/Category:Video_game_platforms\">video games<\\/a>.",
+				container: $this,
+				propertyName: "gamePlatform",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL",
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        gameServer($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The server on which  it is possible to play the game.",
+				container: $this,
+				propertyName: "gameServer",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"GameServer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        gameTip($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Links to tips, tactics, etc.",
+				container: $this,
+				propertyName: "gameTip",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        musicBy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The composer of the soundtrack.",
+				container: $this,
+				propertyName: "musicBy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"MusicGroup"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        playMode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.",
+				container: $this,
+				propertyName: "playMode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"GamePlayMode"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        trailer($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The trailer of a movie or tv\\/radio series, season, episode, etc.",
+				container: $this,
+				propertyName: "trailer",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"VideoObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

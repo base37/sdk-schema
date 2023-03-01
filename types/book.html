@@ -1,0 +1,120 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Book extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Book'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['abridged', 'bookEdition', 'bookFormat', 'illustrator', 'isbn', 'numberOfPages']
+        static _rdfs_comment = 'A book.'
+        static _rdfs_label = 'Book'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        abridged($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates whether the book is an abridged edition.",
+				container: $this,
+				propertyName: "abridged",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        bookEdition($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The edition of the book.",
+				container: $this,
+				propertyName: "bookEdition",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        bookFormat($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The format of the book.",
+				container: $this,
+				propertyName: "bookFormat",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BookFormatType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        illustrator($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The illustrator of the book.",
+				container: $this,
+				propertyName: "illustrator",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isbn($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The ISBN of the book.",
+				container: $this,
+				propertyName: "isbn",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfPages($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of pages in the book.",
+				container: $this,
+				propertyName: "numberOfPages",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalSymptom extends window.LiveElement.Element.elements.MedicalSignOrSymptom {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalSymptom'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalSignOrSymptom'
+        static __properties = []
+        static _rdfs_comment = 'Any complaint sensed and expressed by the patient (therefore defined as subjective)  like stomachache, lower-back pain, or fatigue.'
+        static _rdfs_label = 'MedicalSymptom'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

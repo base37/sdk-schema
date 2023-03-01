@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Ligament extends window.LiveElement.Element.elements.AnatomicalStructure {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Ligament'
+        static __type = 'rdfs:Class'
+        static __extends = 'AnatomicalStructure'
+        static __properties = []
+        static _rdfs_comment = 'A short band of tough, flexible, fibrous connective tissue that functions to connect multiple bones, cartilages, and structurally support joints.'
+        static _rdfs_label = 'Ligament'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

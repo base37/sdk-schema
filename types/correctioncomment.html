@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CorrectionComment extends window.LiveElement.Element.elements.Comment {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CorrectionComment'
+        static __type = 'rdfs:Class'
+        static __extends = 'Comment'
+        static __properties = []
+        static _rdfs_comment = 'A [[comment]] that corrects [[CreativeWork]].'
+        static _rdfs_label = 'CorrectionComment'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

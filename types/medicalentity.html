@@ -1,0 +1,137 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalEntity extends window.LiveElement.Element.elements.Thing {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalEntity'
+        static __type = 'rdfs:Class'
+        static __extends = 'Thing'
+        static __properties = ['code', 'guideline', 'legalStatus', 'medicineSystem', 'recognizingAuthority', 'relevantSpecialty', 'study']
+        static _rdfs_comment = 'The most generic type of entity related to health and the practice of medicine.'
+        static _rdfs_label = 'MedicalEntity'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        code($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.",
+				container: $this,
+				propertyName: "code",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalCode"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        guideline($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A medical guideline related to this entity.",
+				container: $this,
+				propertyName: "guideline",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalGuideline"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        legalStatus($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The drug or supplement's legal status, including any controlled substance schedules that apply.",
+				container: $this,
+				propertyName: "legalStatus",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DrugLegalStatus",
+					"MedicalEnumeration",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        medicineSystem($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.",
+				container: $this,
+				propertyName: "medicineSystem",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicineSystem"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        recognizingAuthority($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.",
+				container: $this,
+				propertyName: "recognizingAuthority",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        relevantSpecialty($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "If applicable, a medical specialty in which this entity is relevant.",
+				container: $this,
+				propertyName: "relevantSpecialty",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalSpecialty"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        study($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A medical study or trial related to this entity.",
+				container: $this,
+				propertyName: "study",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalStudy"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

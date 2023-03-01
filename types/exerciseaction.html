@@ -1,0 +1,225 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ExerciseAction extends window.LiveElement.Element.elements.PlayAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ExerciseAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'PlayAction'
+        static __properties = ['course', 'diet', 'distance', 'exerciseCourse', 'exercisePlan', 'exerciseRelatedDiet', 'exerciseType', 'fromLocation', 'opponent', 'sportsActivityLocation', 'sportsEvent', 'sportsTeam', 'toLocation']
+        static _rdfs_comment = 'The act of participating in exertive activity for the purposes of improving health and fitness.'
+        static _rdfs_label = 'ExerciseAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        course($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of location. The course where this action was taken.",
+				container: $this,
+				propertyName: "course",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        diet($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of instrument. The diet used in this action.",
+				container: $this,
+				propertyName: "diet",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Diet"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        distance($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The distance travelled, e.g. exercising or travelling.",
+				container: $this,
+				propertyName: "distance",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Distance"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        exerciseCourse($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of location. The course where this action was taken.",
+				container: $this,
+				propertyName: "exerciseCourse",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        exercisePlan($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of instrument. The exercise plan used on this action.",
+				container: $this,
+				propertyName: "exercisePlan",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ExercisePlan"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        exerciseRelatedDiet($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of instrument. The diet used in this action.",
+				container: $this,
+				propertyName: "exerciseRelatedDiet",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Diet"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        exerciseType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Type(s) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.",
+				container: $this,
+				propertyName: "exerciseType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        fromLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of location. The original location of the object or the agent before the action.",
+				container: $this,
+				propertyName: "fromLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        opponent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of participant. The opponent on this action.",
+				container: $this,
+				propertyName: "opponent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sportsActivityLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of location. The sports activity location where this action occurred.",
+				container: $this,
+				propertyName: "sportsActivityLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"SportsActivityLocation"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sportsEvent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of location. The sports event where this action occurred.",
+				container: $this,
+				propertyName: "sportsEvent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"SportsEvent"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sportsTeam($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of participant. The sports team that participated on this action.",
+				container: $this,
+				propertyName: "sportsTeam",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"SportsTeam"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        toLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of location. The final location of the object or the agent after the action.",
+				container: $this,
+				propertyName: "toLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

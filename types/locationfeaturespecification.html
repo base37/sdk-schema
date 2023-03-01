@@ -1,0 +1,77 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class LocationFeatureSpecification extends window.LiveElement.Element.elements.PropertyValue {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:LocationFeatureSpecification'
+        static __type = 'rdfs:Class'
+        static __extends = 'PropertyValue'
+        static __properties = ['hoursAvailable', 'validFrom', 'validThrough']
+        static _rdfs_comment = 'Specifies a location feature by providing a structured value representing a feature of an accommodation as a property-value pair of varying degrees of formality.'
+        static _rdfs_label = 'LocationFeatureSpecification'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        hoursAvailable($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The hours during which this service or contact is available.",
+				container: $this,
+				propertyName: "hoursAvailable",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"OpeningHoursSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        validFrom($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date when the item becomes valid.",
+				container: $this,
+				propertyName: "validFrom",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        validThrough($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.",
+				container: $this,
+				propertyName: "validThrough",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

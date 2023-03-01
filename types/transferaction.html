@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TransferAction extends window.LiveElement.Element.elements.Action {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TransferAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'Action'
+        static __properties = ['fromLocation', 'toLocation']
+        static _rdfs_comment = 'The act of transferring\/moving (abstract or concrete) animate or inanimate objects from one place to another.'
+        static _rdfs_label = 'TransferAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        fromLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of location. The original location of the object or the agent before the action.",
+				container: $this,
+				propertyName: "fromLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        toLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of location. The final location of the object or the agent after the action.",
+				container: $this,
+				propertyName: "toLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

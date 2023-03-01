@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Duration extends window.LiveElement.Element.elements.Quantity {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Duration'
+        static __type = 'rdfs:Class'
+        static __extends = 'Quantity'
+        static __properties = []
+        static _rdfs_comment = 'Quantity: Duration (use [ISO 8601 duration format](http:\/\/en.wikipedia.org\/wiki\/ISO_8601)).'
+        static _rdfs_label = 'Duration'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

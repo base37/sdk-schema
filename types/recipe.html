@@ -1,0 +1,183 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Recipe extends window.LiveElement.Element.elements.HowTo {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Recipe'
+        static __type = 'rdfs:Class'
+        static __extends = 'HowTo'
+        static __properties = ['cookTime', 'cookingMethod', 'ingredients', 'nutrition', 'recipeCategory', 'recipeCuisine', 'recipeIngredient', 'recipeInstructions', 'recipeYield', 'suitableForDiet']
+        static _rdfs_comment = 'A recipe. For dietary restrictions covered by the recipe, a few common restrictions are enumerated via [[suitableForDiet]]. The [[keywords]] property can also be used to add more detail.'
+        static _rdfs_label = 'Recipe'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        cookTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The time it takes to actually cook the dish, in [ISO 8601 duration format](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_8601).",
+				container: $this,
+				propertyName: "cookTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Duration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        cookingMethod($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The method of cooking, such as Frying, Steaming, ...",
+				container: $this,
+				propertyName: "cookingMethod",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        ingredients($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A single ingredient used in the recipe, e.g. sugar, flour or garlic.",
+				container: $this,
+				propertyName: "ingredients",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        nutrition($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Nutrition information about the recipe or menu item.",
+				container: $this,
+				propertyName: "nutrition",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"NutritionInformation"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        recipeCategory($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The category of the recipe\u2014for example, appetizer, entree, etc.",
+				container: $this,
+				propertyName: "recipeCategory",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        recipeCuisine($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The cuisine of the recipe (for example, French or Ethiopian).",
+				container: $this,
+				propertyName: "recipeCuisine",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        recipeIngredient($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A single ingredient used in the recipe, e.g. sugar, flour or garlic.",
+				container: $this,
+				propertyName: "recipeIngredient",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        recipeInstructions($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A step in making the recipe, in the form of a single item (document, video, etc.) or an ordered list with HowToStep and\\/or HowToSection items.",
+				container: $this,
+				propertyName: "recipeInstructions",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork",
+					"Text",
+					"ItemList"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        recipeYield($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The quantity produced by the recipe (for example, number of people served, number of servings, etc).",
+				container: $this,
+				propertyName: "recipeYield",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        suitableForDiet($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates a dietary restriction or guideline for which this recipe or menu item is suitable, e.g. diabetic, halal etc.",
+				container: $this,
+				propertyName: "suitableForDiet",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"RestrictedDiet"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

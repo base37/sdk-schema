@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class OrganizationRole extends window.LiveElement.Element.elements.Role {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:OrganizationRole'
+        static __type = 'rdfs:Class'
+        static __extends = 'Role'
+        static __properties = ['numberedPosition']
+        static _rdfs_comment = 'A subclass of Role used to describe roles within organizations.'
+        static _rdfs_label = 'OrganizationRole'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        numberedPosition($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A number associated with a role in an organization, for example, the number on an athlete's jersey.",
+				container: $this,
+				propertyName: "numberedPosition",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

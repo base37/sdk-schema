@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PoliceStation extends window.LiveElement.Element.elements.EmergencyService {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PoliceStation'
+        static __type = 'rdfs:Class'
+        static __extends = 'EmergencyService'
+        static __properties = []
+        static _rdfs_comment = 'A police station.'
+        static _rdfs_label = 'PoliceStation'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

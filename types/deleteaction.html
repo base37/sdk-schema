@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DeleteAction extends window.LiveElement.Element.elements.UpdateAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DeleteAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'UpdateAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of editing a recipient by removing one of its objects.'
+        static _rdfs_label = 'DeleteAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

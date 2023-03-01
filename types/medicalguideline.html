@@ -1,0 +1,90 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalGuideline extends window.LiveElement.Element.elements.MedicalEntity {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalGuideline'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalEntity'
+        static __properties = ['evidenceLevel', 'evidenceOrigin', 'guidelineDate', 'guidelineSubject']
+        static _rdfs_comment = 'Any recommendation made by a standard society (e.g. ACC\/AHA) or consensus statement that denotes how to diagnose and treat a particular condition. Note: this type should be used to tag the actual guideline recommendation; if the guideline recommendation occurs in a larger scholarly article, use MedicalScholarlyArticle to tag the overall article, not this type. Note also: the organization making the recommendation should be captured in the recognizingAuthority base property of MedicalEntity.'
+        static _rdfs_label = 'MedicalGuideline'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        evidenceLevel($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Strength of evidence of the data used to formulate the guideline (enumerated).",
+				container: $this,
+				propertyName: "evidenceLevel",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalEvidenceLevel"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        evidenceOrigin($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Source of the data used to formulate the guidance, e.g. RCT, consensus opinion, etc.",
+				container: $this,
+				propertyName: "evidenceOrigin",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        guidelineDate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Date on which this guideline's recommendation was made.",
+				container: $this,
+				propertyName: "guidelineDate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        guidelineSubject($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The medical conditions, treatments, etc. that are the subject of the guideline.",
+				container: $this,
+				propertyName: "guidelineSubject",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalEntity"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

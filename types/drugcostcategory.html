@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DrugCostCategory extends window.LiveElement.Element.elements.MedicalEnumeration {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DrugCostCategory'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalEnumeration'
+        static __properties = []
+        static _rdfs_comment = 'Enumerated categories of medical drug costs.'
+        static _rdfs_label = 'DrugCostCategory'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

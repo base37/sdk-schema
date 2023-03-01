@@ -1,0 +1,77 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CreativeWorkSeries extends window.LiveElement.Element.elements.Series {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CreativeWorkSeries'
+        static __type = 'rdfs:Class'
+        static __extends = 'Series'
+        static __properties = ['endDate', 'issn', 'startDate']
+        static _rdfs_comment = 'A CreativeWorkSeries in schema.org is a group of related items, typically but not necessarily of the same kind. CreativeWorkSeries are usually organized into some order, often chronological. Unlike [[ItemList]] which is a general purpose data structure for lists of things, the emphasis with CreativeWorkSeries is on published materials (written e.g. books and periodicals, or media such as tv, radio and games).\n\nSpecific subtypes are available for describing [[TVSeries]], [[RadioSeries]], [[MovieSeries]], [[BookSeries]], [[Periodical]] and [[VideoGameSeries]]. In each case, the [[hasPart]] \/ [[isPartOf]] properties can be used to relate the CreativeWorkSeries to its parts. The general CreativeWorkSeries type serves largely just to organize these more specific and practical subtypes.\n\nIt is common for properties applicable to an item from the series to be usefully applied to the containing group. Schema.org attempts to anticipate some of these cases, but publishers should be free to apply properties of the series parts to the series as a whole wherever they seem appropriate. 	  '
+        static _rdfs_label = 'CreativeWorkSeries'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        endDate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The end date and time of the item (in [ISO 8601 date format](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_8601)).",
+				container: $this,
+				propertyName: "endDate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        issn($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.",
+				container: $this,
+				propertyName: "issn",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        startDate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The start date and time of the item (in [ISO 8601 date format](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_8601)).",
+				container: $this,
+				propertyName: "startDate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

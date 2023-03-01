@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class SurgicalProcedure extends window.LiveElement.Element.elements.MedicalProcedure {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:SurgicalProcedure'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalProcedure'
+        static __properties = []
+        static _rdfs_comment = 'A medical procedure involving an incision with instruments; performed for diagnose, or therapeutic purposes.'
+        static _rdfs_label = 'SurgicalProcedure'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

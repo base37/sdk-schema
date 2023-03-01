@@ -1,0 +1,92 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PaymentCard extends window.LiveElement.Element.elements.PaymentMethod {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PaymentCard'
+        static __type = 'rdfs:Class'
+        static __extends = 'PaymentMethod'
+        static __properties = ['cashBack', 'contactlessPayment', 'floorLimit', 'monthlyMinimumRepaymentAmount']
+        static _rdfs_comment = 'A payment method using a credit, debit, store or other card to associate the payment with an account.'
+        static _rdfs_label = 'PaymentCard'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        cashBack($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A cardholder benefit that pays the cardholder a small percentage of their net expenditures.",
+				container: $this,
+				propertyName: "cashBack",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        contactlessPayment($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A secure method for consumers to purchase products or services via debit, credit or smartcards by using RFID or NFC technology.",
+				container: $this,
+				propertyName: "contactlessPayment",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        floorLimit($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A floor limit is the amount of money above which credit card transactions must be authorized.",
+				container: $this,
+				propertyName: "floorLimit",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MonetaryAmount"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        monthlyMinimumRepaymentAmount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The minimum payment is the lowest amount of money that one is required to pay on a credit card statement each month.",
+				container: $this,
+				propertyName: "monthlyMinimumRepaymentAmount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"MonetaryAmount"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

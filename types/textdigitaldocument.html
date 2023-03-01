@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TextDigitalDocument extends window.LiveElement.Element.elements.DigitalDocument {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TextDigitalDocument'
+        static __type = 'rdfs:Class'
+        static __extends = 'DigitalDocument'
+        static __properties = []
+        static _rdfs_comment = 'A file composed primarily of text.'
+        static _rdfs_label = 'TextDigitalDocument'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

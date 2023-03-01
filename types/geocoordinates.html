@@ -1,0 +1,125 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class GeoCoordinates extends window.LiveElement.Element.elements.StructuredValue {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:GeoCoordinates'
+        static __type = 'rdfs:Class'
+        static __extends = 'StructuredValue'
+        static __properties = ['address', 'addressCountry', 'elevation', 'latitude', 'longitude', 'postalCode']
+        static _rdfs_comment = 'The geographic coordinates of a place or event.'
+        static _rdfs_label = 'GeoCoordinates'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        address($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Physical address of the item.",
+				container: $this,
+				propertyName: "address",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"PostalAddress"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        addressCountry($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The country. For example, USA. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_3166-1).",
+				container: $this,
+				propertyName: "addressCountry",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Country",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        elevation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The elevation of a location ([WGS 84](https:\\/\\/en.wikipedia.org\\/wiki\\/World_Geodetic_System)). Values may be of the form 'NUMBER UNIT_OF_MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone should be assumed to be a value in meters.",
+				container: $this,
+				propertyName: "elevation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        latitude($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The latitude of a location. For example ```37.42242``` ([WGS 84](https:\\/\\/en.wikipedia.org\\/wiki\\/World_Geodetic_System)).",
+				container: $this,
+				propertyName: "latitude",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        longitude($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The longitude of a location. For example ```-122.08585``` ([WGS 84](https:\\/\\/en.wikipedia.org\\/wiki\\/World_Geodetic_System)).",
+				container: $this,
+				propertyName: "longitude",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        postalCode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The postal code. For example, 94043.",
+				container: $this,
+				propertyName: "postalCode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

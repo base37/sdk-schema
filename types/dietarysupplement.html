@@ -1,0 +1,197 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DietarySupplement extends window.LiveElement.Element.elements.Substance {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DietarySupplement'
+        static __type = 'rdfs:Class'
+        static __extends = 'Substance'
+        static __properties = ['activeIngredient', 'isProprietary', 'legalStatus', 'manufacturer', 'maximumIntake', 'mechanismOfAction', 'nonProprietaryName', 'proprietaryName', 'recommendedIntake', 'safetyConsideration', 'targetPopulation']
+        static _rdfs_comment = 'A product taken by mouth that contains a dietary ingredient intended to supplement the diet. Dietary ingredients may include vitamins, minerals, herbs or other botanicals, amino acids, and substances such as enzymes, organ tissues, glandulars and metabolites.'
+        static _rdfs_label = 'DietarySupplement'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        activeIngredient($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An active ingredient, typically chemical compounds and\\/or biologic substances.",
+				container: $this,
+				propertyName: "activeIngredient",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isProprietary($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "True if this item's name is a proprietary\\/brand name (vs. generic name).",
+				container: $this,
+				propertyName: "isProprietary",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        legalStatus($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The drug or supplement's legal status, including any controlled substance schedules that apply.",
+				container: $this,
+				propertyName: "legalStatus",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DrugLegalStatus",
+					"MedicalEnumeration",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        manufacturer($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The manufacturer of the product.",
+				container: $this,
+				propertyName: "manufacturer",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        maximumIntake($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Recommended intake of this supplement for a given population as defined by a specific recommending authority.",
+				container: $this,
+				propertyName: "maximumIntake",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MaximumDoseSchedule"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        mechanismOfAction($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.",
+				container: $this,
+				propertyName: "mechanismOfAction",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        nonProprietaryName($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The generic name of this drug or supplement.",
+				container: $this,
+				propertyName: "nonProprietaryName",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        proprietaryName($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Proprietary name given to the diet plan, typically by its originator or creator.",
+				container: $this,
+				propertyName: "proprietaryName",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        recommendedIntake($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Recommended intake of this supplement for a given population as defined by a specific recommending authority.",
+				container: $this,
+				propertyName: "recommendedIntake",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"RecommendedDoseSchedule"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        safetyConsideration($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions, and documented efficacy of the supplement.",
+				container: $this,
+				propertyName: "safetyConsideration",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        targetPopulation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.",
+				container: $this,
+				propertyName: "targetPopulation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

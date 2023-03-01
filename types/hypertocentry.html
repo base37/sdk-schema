@@ -1,0 +1,75 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class HyperTocEntry extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:HyperTocEntry'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['associatedMedia', 'tocContinuation', 'utterances']
+        static _rdfs_comment = 'A HyperToEntry is an item within a [[HyperToc]], which represents a hypertext table of contents for complex media objects, such as [[VideoObject]], [[AudioObject]]. The media object itself is indicated using [[associatedMedia]]. Each section of interest within that content can be described with a [[HyperTocEntry]], with associated [[startOffset]] and [[endOffset]]. When several entries are all from the same file, [[associatedMedia]] is used on the overarching [[HyperTocEntry]]; if the content has been split into multiple files, they can be referenced using [[associatedMedia]] on each [[HyperTocEntry]].'
+        static _rdfs_label = 'HyperTocEntry'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        associatedMedia($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A media object that encodes this CreativeWork. This property is a synonym for encoding.",
+				container: $this,
+				propertyName: "associatedMedia",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MediaObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        tocContinuation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A [[HyperTocEntry]] can have a [[tocContinuation]] indicated, which is another [[HyperTocEntry]] that would be the default next item to play or render.",
+				container: $this,
+				propertyName: "tocContinuation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"HyperTocEntry"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        utterances($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Text of an utterances (spoken words, lyrics etc.) that occurs at a certain section of a media object, represented as a [[HyperTocEntry]].",
+				container: $this,
+				propertyName: "utterances",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,48 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class GiveAction extends window.LiveElement.Element.elements.TransferAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:GiveAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'TransferAction'
+        static __properties = ['recipient']
+        static _rdfs_comment = 'The act of transferring ownership of an object to a destination. Reciprocal of TakeAction.\n\nRelated actions:\n\n* [[TakeAction]]: Reciprocal of GiveAction.\n* [[SendAction]]: Unlike SendAction, GiveAction implies that ownership is being transferred (e.g. I may send my laptop to you, but that doesn\'t mean I\'m giving it to you).'
+        static _rdfs_label = 'GiveAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        recipient($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of participant. The participant who is at the receiving end of the action.",
+				container: $this,
+				propertyName: "recipient",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Audience",
+					"ContactPoint",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

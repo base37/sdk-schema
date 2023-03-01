@@ -1,0 +1,97 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DeliveryChargeSpecification extends window.LiveElement.Element.elements.PriceSpecification {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DeliveryChargeSpecification'
+        static __type = 'rdfs:Class'
+        static __extends = 'PriceSpecification'
+        static __properties = ['appliesToDeliveryMethod', 'areaServed', 'eligibleRegion', 'ineligibleRegion']
+        static _rdfs_comment = 'The price for the delivery of an offer using a particular delivery method.'
+        static _rdfs_label = 'DeliveryChargeSpecification'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        appliesToDeliveryMethod($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The delivery method(s) to which the delivery charge or payment charge specification applies.",
+				container: $this,
+				propertyName: "appliesToDeliveryMethod",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DeliveryMethod"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        areaServed($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The geographic area where a service or offered item is provided.",
+				container: $this,
+				propertyName: "areaServed",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place",
+					"AdministrativeArea",
+					"GeoShape",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        eligibleRegion($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.\\n\\nSee also [[ineligibleRegion]].\n    ",
+				container: $this,
+				propertyName: "eligibleRegion",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place",
+					"GeoShape",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        ineligibleRegion($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\\n\\nSee also [[eligibleRegion]].\n      ",
+				container: $this,
+				propertyName: "ineligibleRegion",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"GeoShape",
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

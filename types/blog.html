@@ -1,0 +1,75 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Blog extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Blog'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['blogPost', 'blogPosts', 'issn']
+        static _rdfs_comment = 'A blog.'
+        static _rdfs_label = 'Blog'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        blogPost($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A posting that is part of this blog.",
+				container: $this,
+				propertyName: "blogPost",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BlogPosting"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        blogPosts($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The postings that are part of this blog.",
+				container: $this,
+				propertyName: "blogPosts",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BlogPosting"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        issn($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.",
+				container: $this,
+				propertyName: "issn",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

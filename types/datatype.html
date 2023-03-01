@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DataType extends window.LiveElement.Element.elements.Class {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DataType'
+        static __type = 'rdfs:Class'
+        static __extends = 'Class'
+        static __properties = []
+        static _rdfs_comment = 'The basic data types such as Integers, Strings, etc.'
+        static _rdfs_label = 'DataType'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

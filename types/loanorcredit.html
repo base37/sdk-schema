@@ -1,0 +1,168 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class LoanOrCredit extends window.LiveElement.Element.elements.FinancialProduct {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:LoanOrCredit'
+        static __type = 'rdfs:Class'
+        static __extends = 'FinancialProduct'
+        static __properties = ['amount', 'currency', 'gracePeriod', 'loanRepaymentForm', 'loanTerm', 'loanType', 'recourseLoan', 'renegotiableLoan', 'requiredCollateral']
+        static _rdfs_comment = 'A financial product for the loaning of an amount of money, or line of credit, under agreed terms and charges.'
+        static _rdfs_label = 'LoanOrCredit'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        amount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The amount of money.",
+				container: $this,
+				propertyName: "amount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"MonetaryAmount"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        currency($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The currency in which the monetary amount is expressed.\\n\\nUse standard formats: [ISO 4217 currency format](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_4217) e.g. \"USD\"; [Ticker symbol](https:\\/\\/en.wikipedia.org\\/wiki\\/List_of_cryptocurrencies) for cryptocurrencies e.g. \"BTC\"; well known names for [Local Exchange Tradings Systems](https:\\/\\/en.wikipedia.org\\/wiki\\/Local_exchange_trading_system) (LETS) and other currency types e.g. \"Ithaca HOUR\".",
+				container: $this,
+				propertyName: "currency",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        gracePeriod($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The period of time after any due date that the borrower has to fulfil its obligations before a default (failure to pay) is deemed to have occurred.",
+				container: $this,
+				propertyName: "gracePeriod",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Duration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        loanRepaymentForm($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A form of paying back money previously borrowed from a lender. Repayment usually takes the form of periodic payments that normally include part principal plus interest in each payment.",
+				container: $this,
+				propertyName: "loanRepaymentForm",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"RepaymentSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        loanTerm($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The duration of the loan or credit agreement.",
+				container: $this,
+				propertyName: "loanTerm",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        loanType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type of a loan or credit.",
+				container: $this,
+				propertyName: "loanType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        recourseLoan($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The only way you get the money back in the event of default is the security. Recourse is where you still have the opportunity to go back to the borrower for the rest of the money.",
+				container: $this,
+				propertyName: "recourseLoan",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        renegotiableLoan($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Whether the terms for payment of interest can be renegotiated during the life of the loan.",
+				container: $this,
+				propertyName: "renegotiableLoan",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        requiredCollateral($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Assets required to secure loan or credit repayments. It may take form of third party pledge, goods, financial instruments (cash, securities, etc.)",
+				container: $this,
+				propertyName: "requiredCollateral",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,93 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PublicationVolume extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PublicationVolume'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['pageEnd', 'pageStart', 'pagination', 'volumeNumber']
+        static _rdfs_comment = 'A part of a successively published publication such as a periodical or multi-volume work, often numbered. It may represent a time span, such as a year.\n\nSee also [blog post](http:\/\/blog.schema.org\/2014\/09\/schemaorg-support-for-bibliographic_2.html).'
+        static _rdfs_label = 'PublicationVolume'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        pageEnd($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The page on which the work ends; for example \"138\" or \"xvi\".",
+				container: $this,
+				propertyName: "pageEnd",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        pageStart($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The page on which the work starts; for example \"135\" or \"xiii\".",
+				container: $this,
+				propertyName: "pageStart",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        pagination($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Any description of pages that is not separated into pageStart and pageEnd; for example, \"1-6, 9, 55\" or \"10-12, 46-49\".",
+				container: $this,
+				propertyName: "pagination",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        volumeNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Identifies the volume of publication or multi-part work; for example, \"iii\" or \"2\".",
+				container: $this,
+				propertyName: "volumeNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

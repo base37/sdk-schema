@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class LoseAction extends window.LiveElement.Element.elements.AchieveAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:LoseAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'AchieveAction'
+        static __properties = ['winner']
+        static _rdfs_comment = 'The act of being defeated in a competitive activity.'
+        static _rdfs_label = 'LoseAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        winner($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of participant. The winner of the action.",
+				container: $this,
+				propertyName: "winner",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

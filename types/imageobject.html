@@ -1,0 +1,92 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ImageObject extends window.LiveElement.Element.elements.MediaObject {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ImageObject'
+        static __type = 'rdfs:Class'
+        static __extends = 'MediaObject'
+        static __properties = ['caption', 'exifData', 'representativeOfPage', 'thumbnail']
+        static _rdfs_comment = 'An image file.'
+        static _rdfs_label = 'ImageObject'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        caption($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].",
+				container: $this,
+				propertyName: "caption",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"MediaObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        exifData($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "exif data for this object.",
+				container: $this,
+				propertyName: "exifData",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PropertyValue",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        representativeOfPage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates whether this image is representative of the content of the page.",
+				container: $this,
+				propertyName: "representativeOfPage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        thumbnail($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Thumbnail image for an image or video.",
+				container: $this,
+				propertyName: "thumbnail",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ImageObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

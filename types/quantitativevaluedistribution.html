@@ -1,0 +1,120 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class QuantitativeValueDistribution extends window.LiveElement.Element.elements.StructuredValue {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:QuantitativeValueDistribution'
+        static __type = 'rdfs:Class'
+        static __extends = 'StructuredValue'
+        static __properties = ['duration', 'median', 'percentile10', 'percentile25', 'percentile75', 'percentile90']
+        static _rdfs_comment = 'A statistical distribution of values.'
+        static _rdfs_label = 'QuantitativeValueDistribution'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        duration($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_8601).",
+				container: $this,
+				propertyName: "duration",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Duration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        median($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The median value.",
+				container: $this,
+				propertyName: "median",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        percentile10($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The 10th percentile value.",
+				container: $this,
+				propertyName: "percentile10",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        percentile25($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The 25th percentile value.",
+				container: $this,
+				propertyName: "percentile25",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        percentile75($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The 75th percentile value.",
+				container: $this,
+				propertyName: "percentile75",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        percentile90($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The 90th percentile value.",
+				container: $this,
+				propertyName: "percentile90",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

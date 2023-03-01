@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalRiskEstimator extends window.LiveElement.Element.elements.MedicalEntity {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalRiskEstimator'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalEntity'
+        static __properties = ['estimatesRiskOf', 'includedRiskFactor']
+        static _rdfs_comment = 'Any rule set or interactive tool for estimating the risk of developing a complication or condition.'
+        static _rdfs_label = 'MedicalRiskEstimator'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        estimatesRiskOf($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The condition, complication, or symptom whose risk is being estimated.",
+				container: $this,
+				propertyName: "estimatesRiskOf",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalEntity"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        includedRiskFactor($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A modifiable or non-modifiable risk factor included in the calculation, e.g. age, coexisting condition.",
+				container: $this,
+				propertyName: "includedRiskFactor",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalRiskFactor"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

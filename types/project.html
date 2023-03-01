@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Project extends window.LiveElement.Element.elements.Organization {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Project'
+        static __type = 'rdfs:Class'
+        static __extends = 'Organization'
+        static __properties = []
+        static _rdfs_comment = 'An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim. Use properties from [[Organization]], [[subOrganization]]\/[[parentOrganization]] to indicate project sub-structures.     '
+        static _rdfs_label = 'Project'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

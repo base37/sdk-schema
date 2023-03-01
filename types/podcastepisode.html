@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PodcastEpisode extends window.LiveElement.Element.elements.Episode {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PodcastEpisode'
+        static __type = 'rdfs:Class'
+        static __extends = 'Episode'
+        static __properties = []
+        static _rdfs_comment = 'A single episode of a podcast series.'
+        static _rdfs_label = 'PodcastEpisode'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

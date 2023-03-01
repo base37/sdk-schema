@@ -1,0 +1,61 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CategoryCode extends window.LiveElement.Element.elements.DefinedTerm {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CategoryCode'
+        static __type = 'rdfs:Class'
+        static __extends = 'DefinedTerm'
+        static __properties = ['codeValue', 'inCodeSet']
+        static _rdfs_comment = 'A Category Code.'
+        static _rdfs_label = 'CategoryCode'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        codeValue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A short textual code that uniquely identifies the value.",
+				container: $this,
+				propertyName: "codeValue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        inCodeSet($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A [[CategoryCodeSet]] that contains this category code.",
+				container: $this,
+				propertyName: "inCodeSet",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CategoryCodeSet",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

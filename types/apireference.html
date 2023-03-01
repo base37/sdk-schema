@@ -1,0 +1,105 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class APIReference extends window.LiveElement.Element.elements.TechArticle {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:APIReference'
+        static __type = 'rdfs:Class'
+        static __extends = 'TechArticle'
+        static __properties = ['assembly', 'assemblyVersion', 'executableLibraryName', 'programmingModel', 'targetPlatform']
+        static _rdfs_comment = 'Reference documentation for application programming interfaces (APIs).'
+        static _rdfs_label = 'APIReference'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        assembly($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Library file name e.g., mscorlib.dll, system.web.dll.",
+				container: $this,
+				propertyName: "assembly",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        assemblyVersion($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Associated product\\/technology version. e.g., .NET Framework 4.5.",
+				container: $this,
+				propertyName: "assemblyVersion",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        executableLibraryName($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Library file name e.g., mscorlib.dll, system.web.dll.",
+				container: $this,
+				propertyName: "executableLibraryName",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        programmingModel($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates whether API is managed or unmanaged.",
+				container: $this,
+				propertyName: "programmingModel",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        targetPlatform($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Type of app development: phone, Metro style, desktop, XBox, etc.",
+				container: $this,
+				propertyName: "targetPlatform",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

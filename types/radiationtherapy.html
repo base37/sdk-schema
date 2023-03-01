@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class RadiationTherapy extends window.LiveElement.Element.elements.MedicalTherapy {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:RadiationTherapy'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalTherapy'
+        static __properties = []
+        static _rdfs_comment = 'A process of care using radiation aimed at improving a health condition.'
+        static _rdfs_label = 'RadiationTherapy'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

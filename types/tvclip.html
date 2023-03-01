@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TVClip extends window.LiveElement.Element.elements.Clip {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TVClip'
+        static __type = 'rdfs:Class'
+        static __extends = 'Clip'
+        static __properties = ['partOfTVSeries']
+        static _rdfs_comment = 'A short TV program or a segment\/part of a TV program.'
+        static _rdfs_label = 'TVClip'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        partOfTVSeries($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The TV series to which this episode or season belongs.",
+				container: $this,
+				propertyName: "partOfTVSeries",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"TVSeries"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

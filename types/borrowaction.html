@@ -1,0 +1,46 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class BorrowAction extends window.LiveElement.Element.elements.TransferAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:BorrowAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'TransferAction'
+        static __properties = ['lender']
+        static _rdfs_comment = 'The act of obtaining an object under an agreement to return it at a later date. Reciprocal of LendAction.\n\nRelated actions:\n\n* [[LendAction]]: Reciprocal of BorrowAction.'
+        static _rdfs_label = 'BorrowAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        lender($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of participant. The person that lends the object being borrowed.",
+				container: $this,
+				propertyName: "lender",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,46 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Answer extends window.LiveElement.Element.elements.Comment {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Answer'
+        static __type = 'rdfs:Class'
+        static __extends = 'Comment'
+        static __properties = ['answerExplanation']
+        static _rdfs_comment = 'An answer offered to a question; perhaps correct, perhaps opinionated or wrong.'
+        static _rdfs_label = 'Answer'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        answerExplanation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A step-by-step or full explanation about Answer. Can outline how this Answer was achieved or contain more broad clarification or statement about it. ",
+				container: $this,
+				propertyName: "answerExplanation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Comment",
+					"WebContent"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

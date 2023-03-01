@@ -1,0 +1,46 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class HowToSupply extends window.LiveElement.Element.elements.HowToItem {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:HowToSupply'
+        static __type = 'rdfs:Class'
+        static __extends = 'HowToItem'
+        static __properties = ['estimatedCost']
+        static _rdfs_comment = 'A supply consumed when performing the instructions for how to achieve a result.'
+        static _rdfs_label = 'HowToSupply'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        estimatedCost($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The estimated cost of the supply or supplies consumed when performing instructions.",
+				container: $this,
+				propertyName: "estimatedCost",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"MonetaryAmount"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

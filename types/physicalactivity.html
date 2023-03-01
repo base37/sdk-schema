@@ -1,0 +1,95 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PhysicalActivity extends window.LiveElement.Element.elements.LifestyleModification {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PhysicalActivity'
+        static __type = 'rdfs:Class'
+        static __extends = 'LifestyleModification'
+        static __properties = ['associatedAnatomy', 'category', 'epidemiology', 'pathophysiology']
+        static _rdfs_comment = 'Any bodily activity that enhances or maintains physical fitness and overall health and wellness. Includes activity that is part of daily living and routine, structured exercise, and exercise prescribed as part of a medical treatment or recovery plan.'
+        static _rdfs_label = 'PhysicalActivity'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        associatedAnatomy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The anatomy of the underlying organ system or structures associated with this entity.",
+				container: $this,
+				propertyName: "associatedAnatomy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AnatomicalSystem",
+					"SuperficialAnatomy",
+					"AnatomicalStructure"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        category($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.",
+				container: $this,
+				propertyName: "category",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Thing",
+					"PhysicalActivityCategory",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        epidemiology($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The characteristics of associated patients, such as age, gender, race etc.",
+				container: $this,
+				propertyName: "epidemiology",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        pathophysiology($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.",
+				container: $this,
+				propertyName: "pathophysiology",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

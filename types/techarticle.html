@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TechArticle extends window.LiveElement.Element.elements.Article {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TechArticle'
+        static __type = 'rdfs:Class'
+        static __extends = 'Article'
+        static __properties = ['dependencies', 'proficiencyLevel']
+        static _rdfs_comment = 'A technical article - Example: How-to (task) topics, step-by-step, procedural troubleshooting, specifications, etc.'
+        static _rdfs_label = 'TechArticle'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        dependencies($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Prerequisites needed to fulfill steps in article.",
+				container: $this,
+				propertyName: "dependencies",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        proficiencyLevel($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Proficiency needed for this content; expected values: 'Beginner', 'Expert'.",
+				container: $this,
+				propertyName: "proficiencyLevel",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

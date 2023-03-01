@@ -1,0 +1,79 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class EducationEvent extends window.LiveElement.Element.elements.Event {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:EducationEvent'
+        static __type = 'rdfs:Class'
+        static __extends = 'Event'
+        static __properties = ['assesses', 'educationalLevel', 'teaches']
+        static _rdfs_comment = 'Event type: Education event.'
+        static _rdfs_label = 'EducationEvent'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        assesses($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The item being described is intended to assess the competency or learning outcome defined by the referenced term.",
+				container: $this,
+				propertyName: "assesses",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DefinedTerm",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        educationalLevel($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
+				container: $this,
+				propertyName: "educationalLevel",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text",
+					"DefinedTerm"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        teaches($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.",
+				container: $this,
+				propertyName: "teaches",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DefinedTerm",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

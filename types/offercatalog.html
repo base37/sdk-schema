@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class OfferCatalog extends window.LiveElement.Element.elements.ItemList {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:OfferCatalog'
+        static __type = 'rdfs:Class'
+        static __extends = 'ItemList'
+        static __properties = []
+        static _rdfs_comment = 'An OfferCatalog is an ItemList that contains related Offers and\/or further OfferCatalogs that are offeredBy the same provider.'
+        static _rdfs_label = 'OfferCatalog'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

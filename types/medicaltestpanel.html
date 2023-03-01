@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalTestPanel extends window.LiveElement.Element.elements.MedicalTest {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalTestPanel'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalTest'
+        static __properties = ['subTest']
+        static _rdfs_comment = 'Any collection of tests commonly ordered together.'
+        static _rdfs_label = 'MedicalTestPanel'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        subTest($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A component test of the panel.",
+				container: $this,
+				propertyName: "subTest",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalTest"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

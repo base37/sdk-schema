@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TieAction extends window.LiveElement.Element.elements.AchieveAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TieAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'AchieveAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of reaching a draw in a competitive activity.'
+        static _rdfs_label = 'TieAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

@@ -1,0 +1,91 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PronounceableText extends window.LiveElement.Element.elements.Text {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PronounceableText'
+        static __type = 'rdfs:Class'
+        static __extends = 'Text'
+        static __properties = ['inLanguage', 'phoneticText', 'speechToTextMarkup', 'textValue']
+        static _rdfs_comment = 'Data type: PronounceableText.'
+        static _rdfs_label = 'PronounceableText'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        inLanguage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http:\\/\\/tools.ietf.org\\/html\\/bcp47). See also [[availableLanguage]].",
+				container: $this,
+				propertyName: "inLanguage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Language"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        phoneticText($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Representation of a text [[textValue]] using the specified [[speechToTextMarkup]]. For example the city name of Houston in IPA: \\/\u02c8hju\u02d0st\u0259n\\/.",
+				container: $this,
+				propertyName: "phoneticText",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        speechToTextMarkup($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Form of markup used. eg. [SSML](https:\\/\\/www.w3.org\\/TR\\/speech-synthesis11) or [IPA](https:\\/\\/www.wikidata.org\\/wiki\\/Property:P898).",
+				container: $this,
+				propertyName: "speechToTextMarkup",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        textValue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Text value being annotated.",
+				container: $this,
+				propertyName: "textValue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

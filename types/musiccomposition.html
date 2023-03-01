@@ -1,0 +1,181 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MusicComposition extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MusicComposition'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['composer', 'firstPerformance', 'includedComposition', 'iswcCode', 'lyricist', 'lyrics', 'musicArrangement', 'musicCompositionForm', 'musicalKey', 'recordedAs']
+        static _rdfs_comment = 'A musical composition.'
+        static _rdfs_label = 'MusicComposition'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        composer($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The person or organization who wrote a composition, or who is the composer of a work performed at some event.",
+				container: $this,
+				propertyName: "composer",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        firstPerformance($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date and place the work was first performed.",
+				container: $this,
+				propertyName: "firstPerformance",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Event"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        includedComposition($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Smaller compositions included in this work (e.g. a movement in a symphony).",
+				container: $this,
+				propertyName: "includedComposition",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicComposition"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        iswcCode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The International Standard Musical Work Code for the composition.",
+				container: $this,
+				propertyName: "iswcCode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        lyricist($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The person who wrote the words.",
+				container: $this,
+				propertyName: "lyricist",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        lyrics($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The words in the song.",
+				container: $this,
+				propertyName: "lyrics",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        musicArrangement($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An arrangement derived from the composition.",
+				container: $this,
+				propertyName: "musicArrangement",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicComposition"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        musicCompositionForm($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type of composition (e.g. overture, sonata, symphony, etc.).",
+				container: $this,
+				propertyName: "musicCompositionForm",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        musicalKey($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The key, mode, or scale this composition uses.",
+				container: $this,
+				propertyName: "musicalKey",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        recordedAs($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An audio recording of the work.",
+				container: $this,
+				propertyName: "recordedAs",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicRecording"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

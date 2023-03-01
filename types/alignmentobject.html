@@ -1,0 +1,105 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AlignmentObject extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AlignmentObject'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['alignmentType', 'educationalFramework', 'targetDescription', 'targetName', 'targetUrl']
+        static _rdfs_comment = 'An intangible item that describes an alignment between a learning resource and a node in an educational framework.  Should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.'
+        static _rdfs_label = 'AlignmentObject'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        alignmentType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A category of alignment between the learning resource and the framework node. Recommended values include: 'requires', 'textComplexity', 'readingLevel', and 'educationalSubject'.",
+				container: $this,
+				propertyName: "alignmentType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        educationalFramework($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The framework to which the resource being described is aligned.",
+				container: $this,
+				propertyName: "educationalFramework",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        targetDescription($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The description of a node in an established educational framework.",
+				container: $this,
+				propertyName: "targetDescription",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        targetName($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The name of a node in an established educational framework.",
+				container: $this,
+				propertyName: "targetName",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        targetUrl($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The URL of a node in an established educational framework.",
+				container: $this,
+				propertyName: "targetUrl",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

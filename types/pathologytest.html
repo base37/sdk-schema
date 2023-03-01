@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PathologyTest extends window.LiveElement.Element.elements.MedicalTest {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PathologyTest'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalTest'
+        static __properties = ['tissueSample']
+        static _rdfs_comment = 'A medical test performed by a laboratory that typically involves examination of a tissue sample by a pathologist.'
+        static _rdfs_label = 'PathologyTest'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        tissueSample($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type of tissue sample required for the test.",
+				container: $this,
+				propertyName: "tissueSample",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

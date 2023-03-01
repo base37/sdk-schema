@@ -1,0 +1,399 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class SoftwareApplication extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:SoftwareApplication'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['applicationCategory', 'applicationSubCategory', 'applicationSuite', 'availableOnDevice', 'countriesNotSupported', 'countriesSupported', 'device', 'downloadUrl', 'featureList', 'fileSize', 'installUrl', 'memoryRequirements', 'operatingSystem', 'permissions', 'processorRequirements', 'releaseNotes', 'requirements', 'screenshot', 'softwareAddOn', 'softwareHelp', 'softwareRequirements', 'softwareVersion', 'storageRequirements', 'supportingData']
+        static _rdfs_comment = 'A software application.'
+        static _rdfs_label = 'SoftwareApplication'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        applicationCategory($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Type of software application, e.g. 'Game, Multimedia'.",
+				container: $this,
+				propertyName: "applicationCategory",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        applicationSubCategory($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Subcategory of the application, e.g. 'Arcade Game'.",
+				container: $this,
+				propertyName: "applicationSubCategory",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        applicationSuite($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The name of the application suite to which the application belongs (e.g. Excel belongs to Office).",
+				container: $this,
+				propertyName: "applicationSuite",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        availableOnDevice($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Device required to run the application. Used in cases where a specific make\\/model is required to run the application.",
+				container: $this,
+				propertyName: "availableOnDevice",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        countriesNotSupported($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Countries for which the application is not supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.",
+				container: $this,
+				propertyName: "countriesNotSupported",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        countriesSupported($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Countries for which the application is supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.",
+				container: $this,
+				propertyName: "countriesSupported",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        device($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Device required to run the application. Used in cases where a specific make\\/model is required to run the application.",
+				container: $this,
+				propertyName: "device",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        downloadUrl($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "If the file can be downloaded, URL to download the binary.",
+				container: $this,
+				propertyName: "downloadUrl",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        featureList($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Features or modules provided by this application (and possibly required by other applications).",
+				container: $this,
+				propertyName: "featureList",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        fileSize($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Size of the application \\/ package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.",
+				container: $this,
+				propertyName: "fileSize",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        installUrl($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "URL at which the app may be installed, if different from the URL of the item.",
+				container: $this,
+				propertyName: "installUrl",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        memoryRequirements($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Minimum memory requirements.",
+				container: $this,
+				propertyName: "memoryRequirements",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        operatingSystem($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Operating systems supported (Windows 7, OSX 10.6, Android 1.6).",
+				container: $this,
+				propertyName: "operatingSystem",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        permissions($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Permission(s) required to run the app (for example, a mobile app may require full internet access or may run only on wifi).",
+				container: $this,
+				propertyName: "permissions",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        processorRequirements($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Processor architecture required to run the application (e.g. IA64).",
+				container: $this,
+				propertyName: "processorRequirements",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        releaseNotes($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Description of what changed in this version.",
+				container: $this,
+				propertyName: "releaseNotes",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        requirements($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime).",
+				container: $this,
+				propertyName: "requirements",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        screenshot($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A link to a screenshot image of the app.",
+				container: $this,
+				propertyName: "screenshot",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"ImageObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        softwareAddOn($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Additional content for a software application.",
+				container: $this,
+				propertyName: "softwareAddOn",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"SoftwareApplication"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        softwareHelp($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Software application help.",
+				container: $this,
+				propertyName: "softwareHelp",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        softwareRequirements($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime).",
+				container: $this,
+				propertyName: "softwareRequirements",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        softwareVersion($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Version of the software instance.",
+				container: $this,
+				propertyName: "softwareVersion",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        storageRequirements($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Storage requirements (free space required).",
+				container: $this,
+				propertyName: "storageRequirements",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        supportingData($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Supporting data for a SoftwareApplication.",
+				container: $this,
+				propertyName: "supportingData",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DataFeed"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

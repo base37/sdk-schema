@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class RejectAction extends window.LiveElement.Element.elements.AllocateAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:RejectAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'AllocateAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of rejecting to\/adopting an object.\n\nRelated actions:\n\n* [[AcceptAction]]: The antonym of RejectAction.'
+        static _rdfs_label = 'RejectAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

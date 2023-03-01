@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalIndication extends window.LiveElement.Element.elements.MedicalEntity {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalIndication'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalEntity'
+        static __properties = []
+        static _rdfs_comment = 'A condition or factor that indicates use of a medical therapy, including signs, symptoms, risk factors, anatomical states, etc.'
+        static _rdfs_label = 'MedicalIndication'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

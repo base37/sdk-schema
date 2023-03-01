@@ -1,0 +1,61 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class WriteAction extends window.LiveElement.Element.elements.CreateAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:WriteAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreateAction'
+        static __properties = ['inLanguage', 'language']
+        static _rdfs_comment = 'The act of authoring written creative content.'
+        static _rdfs_label = 'WriteAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        inLanguage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http:\\/\\/tools.ietf.org\\/html\\/bcp47). See also [[availableLanguage]].",
+				container: $this,
+				propertyName: "inLanguage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Language"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        language($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of instrument. The language used on this action.",
+				container: $this,
+				propertyName: "language",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Language"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

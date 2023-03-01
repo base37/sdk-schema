@@ -1,0 +1,48 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PayAction extends window.LiveElement.Element.elements.TradeAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PayAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'TradeAction'
+        static __properties = ['recipient']
+        static _rdfs_comment = 'An agent pays a price to a participant.'
+        static _rdfs_label = 'PayAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        recipient($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of participant. The participant who is at the receiving end of the action.",
+				container: $this,
+				propertyName: "recipient",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Audience",
+					"ContactPoint",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

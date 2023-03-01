@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalGuidelineRecommendation extends window.LiveElement.Element.elements.MedicalGuideline {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalGuidelineRecommendation'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalGuideline'
+        static __properties = ['recommendationStrength']
+        static _rdfs_comment = 'A guideline recommendation that is regarded as efficacious and where quality of the data supporting the recommendation is sound.'
+        static _rdfs_label = 'MedicalGuidelineRecommendation'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        recommendationStrength($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Strength of the guideline's recommendation (e.g. 'class I').",
+				container: $this,
+				propertyName: "recommendationStrength",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

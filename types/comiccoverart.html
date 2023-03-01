@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ComicCoverArt extends window.LiveElement.Element.elements.ComicStory {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ComicCoverArt'
+        static __type = 'rdfs:Class'
+        static __extends = 'ComicStory'
+        static __properties = []
+        static _rdfs_comment = 'The artwork on the cover of a comic.'
+        static _rdfs_label = 'ComicCoverArt'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

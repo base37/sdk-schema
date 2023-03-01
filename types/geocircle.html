@@ -1,0 +1,62 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class GeoCircle extends window.LiveElement.Element.elements.GeoShape {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:GeoCircle'
+        static __type = 'rdfs:Class'
+        static __extends = 'GeoShape'
+        static __properties = ['geoMidpoint', 'geoRadius']
+        static _rdfs_comment = 'A GeoCircle is a GeoShape representing a circular geographic area. As it is a GeoShape           it provides the simple textual property \'circle\', but also allows the combination of postalCode alongside geoRadius.           The center of the circle can be indicated via the \'geoMidpoint\' property, or more approximately using \'address\', \'postalCode\'.        '
+        static _rdfs_label = 'GeoCircle'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        geoMidpoint($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.",
+				container: $this,
+				propertyName: "geoMidpoint",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"GeoCoordinates"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        geoRadius($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the approximate radius of a GeoCircle (metres unless indicated otherwise via Distance notation).",
+				container: $this,
+				propertyName: "geoRadius",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"Text",
+					"Distance"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

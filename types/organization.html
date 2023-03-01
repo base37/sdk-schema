@@ -1,0 +1,1020 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Organization extends window.LiveElement.Element.elements.Thing {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Organization'
+        static __type = 'rdfs:Class'
+        static __extends = 'Thing'
+        static __properties = ['actionableFeedbackPolicy', 'address', 'aggregateRating', 'alumni', 'areaServed', 'award', 'awards', 'brand', 'contactPoint', 'contactPoints', 'correctionsPolicy', 'department', 'dissolutionDate', 'diversityPolicy', 'diversityStaffingReport', 'duns', 'email', 'employee', 'employees', 'ethicsPolicy', 'event', 'events', 'faxNumber', 'founder', 'founders', 'foundingDate', 'foundingLocation', 'funder', 'globalLocationNumber', 'hasCredential', 'hasMerchantReturnPolicy', 'hasOfferCatalog', 'hasPOS', 'hasProductReturnPolicy', 'interactionStatistic', 'isicV4', 'knowsAbout', 'knowsLanguage', 'legalName', 'leiCode', 'location', 'logo', 'makesOffer', 'member', 'memberOf', 'members', 'naics', 'nonprofitStatus', 'numberOfEmployees', 'ownershipFundingInfo', 'owns', 'parentOrganization', 'publishingPrinciples', 'review', 'reviews', 'seeks', 'serviceArea', 'slogan', 'sponsor', 'subOrganization', 'taxID', 'telephone', 'unnamedSourcesPolicy', 'vatID']
+        static _rdfs_comment = 'An organization such as a school, NGO, corporation, club, etc.'
+        static _rdfs_label = 'Organization'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        actionableFeedbackPolicy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement about public engagement activities (for news media, the newsroom\u2019s), including involving the public - digitally or otherwise -- in coverage decisions, reporting and activities after publication.",
+				container: $this,
+				propertyName: "actionableFeedbackPolicy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        address($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Physical address of the item.",
+				container: $this,
+				propertyName: "address",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"PostalAddress"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        aggregateRating($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The overall rating, based on a collection of reviews or ratings, of the item.",
+				container: $this,
+				propertyName: "aggregateRating",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AggregateRating"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        alumni($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Alumni of an organization.",
+				container: $this,
+				propertyName: "alumni",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        areaServed($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The geographic area where a service or offered item is provided.",
+				container: $this,
+				propertyName: "areaServed",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place",
+					"AdministrativeArea",
+					"GeoShape",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        award($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An award won by or for this item.",
+				container: $this,
+				propertyName: "award",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        awards($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Awards won by or for this item.",
+				container: $this,
+				propertyName: "awards",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        brand($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.",
+				container: $this,
+				propertyName: "brand",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Brand"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        contactPoint($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A contact point for a person or organization.",
+				container: $this,
+				propertyName: "contactPoint",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ContactPoint"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        contactPoints($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A contact point for a person or organization.",
+				container: $this,
+				propertyName: "contactPoints",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ContactPoint"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        correctionsPolicy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement describing (in news media, the newsroom\u2019s) disclosure and correction policy for errors.",
+				container: $this,
+				propertyName: "correctionsPolicy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        department($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.",
+				container: $this,
+				propertyName: "department",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        dissolutionDate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date that this organization was dissolved.",
+				container: $this,
+				propertyName: "dissolutionDate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        diversityPolicy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Statement on diversity policy by an [[Organization]] e.g. a [[NewsMediaOrganization]]. For a [[NewsMediaOrganization]], a statement describing the newsroom\u2019s diversity policy on both staffing and sources, typically providing staffing data.",
+				container: $this,
+				propertyName: "diversityPolicy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        diversityStaffingReport($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a report on staffing diversity issues. In a news context this might be for example ASNE or RTDNA (US) reports, or self-reported.",
+				container: $this,
+				propertyName: "diversityStaffingReport",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Article",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        duns($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The Dun & Bradstreet DUNS number for identifying an organization or business person.",
+				container: $this,
+				propertyName: "duns",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        email($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Email address.",
+				container: $this,
+				propertyName: "email",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        employee($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Someone working for this organization.",
+				container: $this,
+				propertyName: "employee",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        employees($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "People working for this organization.",
+				container: $this,
+				propertyName: "employees",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        ethicsPolicy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Statement about ethics policy, e.g. of a [[NewsMediaOrganization]] regarding journalistic and publishing practices, or of a [[Restaurant]], a page describing food source policies. In the case of a [[NewsMediaOrganization]], an ethicsPolicy is typically a statement describing the personal, organizational, and corporate standards of behavior expected by the organization.",
+				container: $this,
+				propertyName: "ethicsPolicy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        event($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Upcoming or past event associated with this place, organization, or action.",
+				container: $this,
+				propertyName: "event",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Event"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        events($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Upcoming or past events associated with this place or organization.",
+				container: $this,
+				propertyName: "events",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Event"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        faxNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The fax number.",
+				container: $this,
+				propertyName: "faxNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        founder($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A person who founded this organization.",
+				container: $this,
+				propertyName: "founder",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        founders($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A person who founded this organization.",
+				container: $this,
+				propertyName: "founders",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        foundingDate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date that this organization was founded.",
+				container: $this,
+				propertyName: "foundingDate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        foundingLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The place where the Organization was founded.",
+				container: $this,
+				propertyName: "foundingLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        funder($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+				container: $this,
+				propertyName: "funder",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        globalLocationNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The [Global Location Number](http:\\/\\/www.gs1.org\\/gln) (GLN, sometimes also referred to as International Location Number or ILN) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.",
+				container: $this,
+				propertyName: "globalLocationNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hasCredential($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A credential awarded to the Person or Organization.",
+				container: $this,
+				propertyName: "hasCredential",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"EducationalOccupationalCredential"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hasMerchantReturnPolicy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates a MerchantReturnPolicy that may be applicable.",
+				container: $this,
+				propertyName: "hasMerchantReturnPolicy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MerchantReturnPolicy"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hasOfferCatalog($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates an OfferCatalog listing for this Organization, Person, or Service.",
+				container: $this,
+				propertyName: "hasOfferCatalog",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"OfferCatalog"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hasPOS($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Points-of-Sales operated by the organization or person.",
+				container: $this,
+				propertyName: "hasPOS",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hasProductReturnPolicy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates a ProductReturnPolicy that may be applicable.",
+				container: $this,
+				propertyName: "hasProductReturnPolicy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ProductReturnPolicy"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        interactionStatistic($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used.",
+				container: $this,
+				propertyName: "interactionStatistic",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"InteractionCounter"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isicV4($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular organization, business person, or place.",
+				container: $this,
+				propertyName: "isicV4",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        knowsAbout($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Of a [[Person]], and less typically of an [[Organization]], to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or [[JobPosting]] descriptions.",
+				container: $this,
+				propertyName: "knowsAbout",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing",
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        knowsLanguage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Of a [[Person]], and less typically of an [[Organization]], to indicate a known language. We do not distinguish skill levels or reading\\/writing\\/speaking\\/signing here. Use language codes from the [IETF BCP 47 standard](http:\\/\\/tools.ietf.org\\/html\\/bcp47).",
+				container: $this,
+				propertyName: "knowsLanguage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Language",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        legalName($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The official name of the organization, e.g. the registered company name.",
+				container: $this,
+				propertyName: "legalName",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        leiCode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An organization identifier that uniquely identifies a legal entity as defined in ISO 17442.",
+				container: $this,
+				propertyName: "leiCode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        location($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The location of, for example, where an event is happening, where an organization is located, or where an action takes place.",
+				container: $this,
+				propertyName: "location",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PostalAddress",
+					"Text",
+					"VirtualLocation",
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        logo($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An associated logo.",
+				container: $this,
+				propertyName: "logo",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ImageObject",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        makesOffer($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A pointer to products or services offered by the organization or person.",
+				container: $this,
+				propertyName: "makesOffer",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Offer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        member($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.",
+				container: $this,
+				propertyName: "member",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        memberOf($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An Organization (or ProgramMembership) to which this Person or Organization belongs.",
+				container: $this,
+				propertyName: "memberOf",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"ProgramMembership"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        members($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A member of this organization.",
+				container: $this,
+				propertyName: "members",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        naics($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The North American Industry Classification System (NAICS) code for a particular organization or business person.",
+				container: $this,
+				propertyName: "naics",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        nonprofitStatus($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "nonprofit Status indicates the legal status of a non-profit organization in its primary place of business.",
+				container: $this,
+				propertyName: "nonprofitStatus",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"NonprofitType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfEmployees($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of employees in an organization e.g. business.",
+				container: $this,
+				propertyName: "numberOfEmployees",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        ownershipFundingInfo($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "For an [[Organization]] (often but not necessarily a [[NewsMediaOrganization]]), a description of organizational ownership structure; funding and grants. In a news\\/media setting, this is with particular reference to editorial independence.   Note that the [[funder]] is also available and can be used to make basic funder information machine-readable.",
+				container: $this,
+				propertyName: "ownershipFundingInfo",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AboutPage",
+					"Text",
+					"CreativeWork",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        owns($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Products owned by the organization or person.",
+				container: $this,
+				propertyName: "owns",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"OwnershipInfo",
+					"Product"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        parentOrganization($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The larger organization that this organization is a [[subOrganization]] of, if any.",
+				container: $this,
+				propertyName: "parentOrganization",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        publishingPrinciples($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The publishingPrinciples property indicates (typically via [[URL]]) a document describing the editorial principles of an [[Organization]] (or individual e.g. a [[Person]] writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]].\n\nWhile such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology.\n",
+				container: $this,
+				propertyName: "publishingPrinciples",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        review($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A review of the item.",
+				container: $this,
+				propertyName: "review",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Review"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        reviews($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Review of the item.",
+				container: $this,
+				propertyName: "reviews",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Review"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        seeks($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A pointer to products or services sought by the organization or person (demand).",
+				container: $this,
+				propertyName: "seeks",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Demand"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        serviceArea($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The geographic area where the service is provided.",
+				container: $this,
+				propertyName: "serviceArea",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place",
+					"AdministrativeArea",
+					"GeoShape"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        slogan($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A slogan or motto associated with the item.",
+				container: $this,
+				propertyName: "slogan",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sponsor($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.",
+				container: $this,
+				propertyName: "sponsor",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        subOrganization($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.",
+				container: $this,
+				propertyName: "subOrganization",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        taxID($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The Tax \\/ Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF\\/NIF in Spain.",
+				container: $this,
+				propertyName: "taxID",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        telephone($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The telephone number.",
+				container: $this,
+				propertyName: "telephone",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        unnamedSourcesPolicy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "For an [[Organization]] (typically a [[NewsMediaOrganization]]), a statement about policy on use of unnamed sources and the decision process required.",
+				container: $this,
+				propertyName: "unnamedSourcesPolicy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        vatID($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The Value-added Tax ID of the organization or person.",
+				container: $this,
+				propertyName: "vatID",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

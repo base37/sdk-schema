@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class XPathType extends window.LiveElement.Element.elements.Text {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:XPathType'
+        static __type = 'rdfs:Class'
+        static __extends = 'Text'
+        static __properties = []
+        static _rdfs_comment = 'Text representing an XPath (typically but not necessarily version 1.0).'
+        static _rdfs_label = 'XPathType'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

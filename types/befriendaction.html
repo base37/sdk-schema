@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class BefriendAction extends window.LiveElement.Element.elements.InteractAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:BefriendAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'InteractAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of forming a personal connection with someone (object) mutually\/bidirectionally\/symmetrically.\n\nRelated actions:\n\n* [[FollowAction]]: Unlike FollowAction, BefriendAction implies that the connection is reciprocal.'
+        static _rdfs_label = 'BefriendAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

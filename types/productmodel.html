@@ -1,0 +1,76 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ProductModel extends window.LiveElement.Element.elements.Product {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ProductModel'
+        static __type = 'rdfs:Class'
+        static __extends = 'Product'
+        static __properties = ['isVariantOf', 'predecessorOf', 'successorOf']
+        static _rdfs_comment = 'A datasheet or vendor specification of a product (in the sense of a prototypical description).'
+        static _rdfs_label = 'ProductModel'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        isVariantOf($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the kind of product that this is a variant of. In the case of [[ProductModel]], this is a pointer (from a ProductModel) to a base product from which this product is a variant. It is safe to infer that the variant inherits all product features from the base model, unless defined locally. This is not transitive. In the case of a [[ProductGroup]], the group description also serves as a template, representing a set of Products that vary on explicitly defined, specific dimensions only (so it defines both a set of variants, as well as which values distinguish amongst those variants). When used with [[ProductGroup]], this property can apply to any [[Product]] included in the group.",
+				container: $this,
+				propertyName: "isVariantOf",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ProductGroup",
+					"ProductModel"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        predecessorOf($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A pointer from a previous, often discontinued variant of the product to its newer variant.",
+				container: $this,
+				propertyName: "predecessorOf",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ProductModel"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        successorOf($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A pointer from a newer variant of a product  to its previous, often discontinued predecessor.",
+				container: $this,
+				propertyName: "successorOf",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ProductModel"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

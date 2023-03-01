@@ -1,0 +1,47 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Enumeration extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Enumeration'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['supersededBy']
+        static _rdfs_comment = 'Lists or enumerations—for example, a list of cuisines or music genres, etc.'
+        static _rdfs_label = 'Enumeration'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        supersededBy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Relates a term (i.e. a property, class or enumeration) to one that supersedes it.",
+				container: $this,
+				propertyName: "supersededBy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Enumeration",
+					"Property",
+					"Class"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

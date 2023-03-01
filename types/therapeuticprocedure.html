@@ -1,0 +1,75 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TherapeuticProcedure extends window.LiveElement.Element.elements.MedicalProcedure {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TherapeuticProcedure'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalProcedure'
+        static __properties = ['adverseOutcome', 'doseSchedule', 'drug']
+        static _rdfs_comment = 'A medical procedure intended primarily for therapeutic purposes, aimed at improving a health condition.'
+        static _rdfs_label = 'TherapeuticProcedure'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        adverseOutcome($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A possible complication and\\/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in death, disability, or permanent damage; requiring hospitalization; or is otherwise life-threatening or requires immediate medical attention), tag it as a seriouseAdverseOutcome instead.",
+				container: $this,
+				propertyName: "adverseOutcome",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalEntity"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        doseSchedule($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A dosing schedule for the drug for a given population, either observed, recommended, or maximum dose based on the type used.",
+				container: $this,
+				propertyName: "doseSchedule",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DoseSchedule"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        drug($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specifying a drug or medicine used in a medication procedure",
+				container: $this,
+				propertyName: "drug",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Drug"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ActivateAction extends window.LiveElement.Element.elements.ControlAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ActivateAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'ControlAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of starting or activating a device or application (e.g. starting a timer or turning on a flashlight).'
+        static _rdfs_label = 'ActivateAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

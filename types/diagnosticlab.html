@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DiagnosticLab extends window.LiveElement.Element.elements.MedicalOrganization {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DiagnosticLab'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalOrganization'
+        static __properties = ['availableTest']
+        static _rdfs_comment = 'A medical laboratory that offers on-site or off-site diagnostic services.'
+        static _rdfs_label = 'DiagnosticLab'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        availableTest($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A diagnostic test or procedure offered by this lab.",
+				container: $this,
+				propertyName: "availableTest",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalTest"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

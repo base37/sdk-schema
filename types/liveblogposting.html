@@ -1,0 +1,75 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class LiveBlogPosting extends window.LiveElement.Element.elements.BlogPosting {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:LiveBlogPosting'
+        static __type = 'rdfs:Class'
+        static __extends = 'BlogPosting'
+        static __properties = ['coverageEndTime', 'coverageStartTime', 'liveBlogUpdate']
+        static _rdfs_comment = 'A blog post intended to provide a rolling textual coverage of an ongoing event through continuous updates.'
+        static _rdfs_label = 'LiveBlogPosting'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        coverageEndTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.",
+				container: $this,
+				propertyName: "coverageEndTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        coverageStartTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time. The LiveBlogPosting may also be created before coverage begins.",
+				container: $this,
+				propertyName: "coverageStartTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        liveBlogUpdate($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An update to the LiveBlog.",
+				container: $this,
+				propertyName: "liveBlogUpdate",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BlogPosting"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

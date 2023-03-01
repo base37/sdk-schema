@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalRiskScore extends window.LiveElement.Element.elements.MedicalRiskEstimator {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalRiskScore'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalRiskEstimator'
+        static __properties = ['algorithm']
+        static _rdfs_comment = 'A simple system that adds up the number of risk factors to yield a score that is associated with prognosis, e.g. CHAD score, TIMI risk score.'
+        static _rdfs_label = 'MedicalRiskScore'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        algorithm($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The algorithm or rules to follow to compute the score.",
+				container: $this,
+				propertyName: "algorithm",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

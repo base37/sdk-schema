@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ProductCollection extends window.LiveElement.Element.elements.Product {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ProductCollection'
+        static __type = 'rdfs:Class'
+        static __extends = 'Product'
+        static __properties = ['includesObject']
+        static _rdfs_comment = 'A set of products (either [[ProductGroup]]s or specific variants) that are listed together e.g. in an [[Offer]].'
+        static _rdfs_label = 'ProductCollection'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        includesObject($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "This links to a node or nodes indicating the exact quantity of the products included in  an [[Offer]] or [[ProductCollection]].",
+				container: $this,
+				propertyName: "includesObject",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"TypeAndQuantityNode"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

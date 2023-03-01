@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class RadioBroadcastService extends window.LiveElement.Element.elements.BroadcastService {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:RadioBroadcastService'
+        static __type = 'rdfs:Class'
+        static __extends = 'BroadcastService'
+        static __properties = []
+        static _rdfs_comment = 'A delivery service through which radio content is provided via broadcast over the air or online.'
+        static _rdfs_label = 'RadioBroadcastService'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

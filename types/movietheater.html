@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MovieTheater extends window.LiveElement.Element.elements.EntertainmentBusiness {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MovieTheater'
+        static __type = 'rdfs:Class'
+        static __extends = 'EntertainmentBusiness'
+        static __properties = ['screenCount']
+        static _rdfs_comment = 'A movie theater.'
+        static _rdfs_label = 'MovieTheater'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        screenCount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of screens in the movie theater.",
+				container: $this,
+				propertyName: "screenCount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

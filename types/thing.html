@@ -1,0 +1,215 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Thing extends window.LiveElement.Element.elements.Schema {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Thing'
+        static __type = 'rdfs:Class'
+        static __extends = 'Schema'
+        static __properties = ['additionalType', 'alternateName', 'description', 'disambiguatingDescription', 'identifier', 'image', 'mainEntityOfPage', 'name', 'potentialAction', 'sameAs', 'subjectOf', 'url']
+        static _rdfs_comment = 'The most generic type of item.'
+        static _rdfs_label = 'Thing'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        additionalType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+				container: $this,
+				propertyName: "additionalType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        alternateName($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An alias for the item.",
+				container: $this,
+				propertyName: "alternateName",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        description($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A description of the item.",
+				container: $this,
+				propertyName: "description",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        disambiguatingDescription($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.",
+				container: $this,
+				propertyName: "disambiguatingDescription",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        identifier($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](\\/docs\\/datamodel.html#identifierBg) for more details.\n        ",
+				container: $this,
+				propertyName: "identifier",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL",
+					"PropertyValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        image($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].",
+				container: $this,
+				propertyName: "image",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ImageObject",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        mainEntityOfPage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](\\/docs\\/datamodel.html#mainEntityBackground) for details.",
+				container: $this,
+				propertyName: "mainEntityOfPage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        name($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The name of the item.",
+				container: $this,
+				propertyName: "name",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        potentialAction($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.",
+				container: $this,
+				propertyName: "potentialAction",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Action"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sameAs($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+				container: $this,
+				propertyName: "sameAs",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        subjectOf($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A CreativeWork or Event about this Thing.",
+				container: $this,
+				propertyName: "subjectOf",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork",
+					"Event"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        url($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "URL of the item.",
+				container: $this,
+				propertyName: "url",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

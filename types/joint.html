@@ -1,0 +1,76 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Joint extends window.LiveElement.Element.elements.AnatomicalStructure {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Joint'
+        static __type = 'rdfs:Class'
+        static __extends = 'AnatomicalStructure'
+        static __properties = ['biomechnicalClass', 'functionalClass', 'structuralClass']
+        static _rdfs_comment = 'The anatomical location at which two or more bones make contact.'
+        static _rdfs_label = 'Joint'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        biomechnicalClass($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The biomechanical properties of the bone.",
+				container: $this,
+				propertyName: "biomechnicalClass",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        functionalClass($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The degree of mobility the joint allows.",
+				container: $this,
+				propertyName: "functionalClass",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"MedicalEntity"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        structuralClass($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The name given to how bone physically connects to each other.",
+				container: $this,
+				propertyName: "structuralClass",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

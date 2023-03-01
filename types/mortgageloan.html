@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MortgageLoan extends window.LiveElement.Element.elements.LoanOrCredit {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MortgageLoan'
+        static __type = 'rdfs:Class'
+        static __extends = 'LoanOrCredit'
+        static __properties = ['domiciledMortgage', 'loanMortgageMandateAmount']
+        static _rdfs_comment = 'A loan in which property or real estate is used as collateral. (A loan securitized against some real estate.)'
+        static _rdfs_label = 'MortgageLoan'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        domiciledMortgage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Whether borrower is a resident of the jurisdiction where the property is located.",
+				container: $this,
+				propertyName: "domiciledMortgage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        loanMortgageMandateAmount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Amount of mortgage mandate that can be converted into a proper mortgage at a later stage.",
+				container: $this,
+				propertyName: "loanMortgageMandateAmount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MonetaryAmount"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

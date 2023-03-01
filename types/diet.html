@@ -1,0 +1,106 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Diet extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Diet'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['dietFeatures', 'endorsers', 'expertConsiderations', 'physiologicalBenefits', 'risks']
+        static _rdfs_comment = 'A strategy of regulating the intake of food to achieve or maintain a specific health-related goal.'
+        static _rdfs_label = 'Diet'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        dietFeatures($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations\\/deviations from the USDA or other regulatory body's approved dietary guidelines.",
+				container: $this,
+				propertyName: "dietFeatures",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        endorsers($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "People or organizations that endorse the plan.",
+				container: $this,
+				propertyName: "endorsers",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        expertConsiderations($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Medical expert advice related to the plan.",
+				container: $this,
+				propertyName: "expertConsiderations",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        physiologicalBenefits($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specific physiologic benefits associated to the plan.",
+				container: $this,
+				propertyName: "physiologicalBenefits",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        risks($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specific physiologic risks associated to the diet plan.",
+				container: $this,
+				propertyName: "risks",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

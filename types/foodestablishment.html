@@ -1,0 +1,111 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class FoodEstablishment extends window.LiveElement.Element.elements.LocalBusiness {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:FoodEstablishment'
+        static __type = 'rdfs:Class'
+        static __extends = 'LocalBusiness'
+        static __properties = ['acceptsReservations', 'hasMenu', 'menu', 'servesCuisine', 'starRating']
+        static _rdfs_comment = 'A food-related business.'
+        static _rdfs_label = 'FoodEstablishment'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        acceptsReservations($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings ```Yes``` or ```No```.",
+				container: $this,
+				propertyName: "acceptsReservations",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean",
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hasMenu($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Either the actual menu as a structured representation, as text, or a URL of the menu.",
+				container: $this,
+				propertyName: "hasMenu",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL",
+					"Menu"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        menu($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Either the actual menu as a structured representation, as text, or a URL of the menu.",
+				container: $this,
+				propertyName: "menu",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Menu",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        servesCuisine($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The cuisine of the restaurant.",
+				container: $this,
+				propertyName: "servesCuisine",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        starRating($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An official rating for a lodging business or food establishment, e.g. from national associations or standards bodies. Use the author property to indicate the rating organization, e.g. as an Organization with name such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).",
+				container: $this,
+				propertyName: "starRating",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Rating"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

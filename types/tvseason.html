@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class TVSeason extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:TVSeason'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['countryOfOrigin', 'partOfTVSeries']
+        static _rdfs_comment = 'Season dedicated to TV broadcast and associated online delivery.'
+        static _rdfs_label = 'TVSeason'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        countryOfOrigin($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The country of the principal offices of the production company or individual responsible for the movie or program.",
+				container: $this,
+				propertyName: "countryOfOrigin",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Country"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        partOfTVSeries($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The TV series to which this episode or season belongs.",
+				container: $this,
+				propertyName: "partOfTVSeries",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"TVSeries"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

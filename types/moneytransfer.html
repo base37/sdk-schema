@@ -1,0 +1,62 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MoneyTransfer extends window.LiveElement.Element.elements.TransferAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MoneyTransfer'
+        static __type = 'rdfs:Class'
+        static __extends = 'TransferAction'
+        static __properties = ['amount', 'beneficiaryBank']
+        static _rdfs_comment = 'The act of transferring money from one place to another place. This may occur electronically or physically.'
+        static _rdfs_label = 'MoneyTransfer'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        amount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The amount of money.",
+				container: $this,
+				propertyName: "amount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"MonetaryAmount"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        beneficiaryBank($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A bank or bank\u2019s branch, financial institution or international financial institution operating the beneficiary\u2019s bank account or releasing funds for the beneficiary",
+				container: $this,
+				propertyName: "beneficiaryBank",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BankOrCreditUnion",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

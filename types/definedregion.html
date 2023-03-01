@@ -1,0 +1,106 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DefinedRegion extends window.LiveElement.Element.elements.StructuredValue {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DefinedRegion'
+        static __type = 'rdfs:Class'
+        static __extends = 'StructuredValue'
+        static __properties = ['addressCountry', 'addressRegion', 'postalCode', 'postalCodePrefix', 'postalCodeRange']
+        static _rdfs_comment = 'A DefinedRegion is a geographic area defined by potentially arbitrary (rather than political, administrative or natural geographical) criteria. Properties are provided for defining a region by reference to sets of postal codes.  Examples: a delivery destination when shopping. Region where regional pricing is configured.  Requirement 1: Country: US States: "NY", "CA"  Requirement 2: Country: US PostalCode Set: { [94000-94585], [97000, 97999], [13000, 13599]} { [12345, 12345], [78945, 78945], } Region = state, canton, prefecture, autonomous community... '
+        static _rdfs_label = 'DefinedRegion'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        addressCountry($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The country. For example, USA. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http:\\/\\/en.wikipedia.org\\/wiki\\/ISO_3166-1).",
+				container: $this,
+				propertyName: "addressCountry",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Country",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        addressRegion($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level [Administrative division](https:\\/\\/en.wikipedia.org\\/wiki\\/List_of_administrative_divisions_by_country) ",
+				container: $this,
+				propertyName: "addressRegion",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        postalCode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The postal code. For example, 94043.",
+				container: $this,
+				propertyName: "postalCode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        postalCodePrefix($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A defined range of postal codes indicated by a common textual prefix. Used for non-numeric systems such as UK.",
+				container: $this,
+				propertyName: "postalCodePrefix",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        postalCodeRange($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A defined range of postal codes.",
+				container: $this,
+				propertyName: "postalCodeRange",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PostalCodeRangeSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

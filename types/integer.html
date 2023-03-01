@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Integer extends window.LiveElement.Element.elements.Number {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Integer'
+        static __type = 'rdfs:Class'
+        static __extends = 'Number'
+        static __properties = []
+        static _rdfs_comment = 'Data type: Integer.'
+        static _rdfs_label = 'Integer'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

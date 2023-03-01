@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ReportedDoseSchedule extends window.LiveElement.Element.elements.DoseSchedule {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ReportedDoseSchedule'
+        static __type = 'rdfs:Class'
+        static __extends = 'DoseSchedule'
+        static __properties = []
+        static _rdfs_comment = 'A patient-reported or observed dosing schedule for a drug or supplement.'
+        static _rdfs_label = 'ReportedDoseSchedule'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

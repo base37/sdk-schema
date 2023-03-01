@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PhysicalExam extends window.LiveElement.Element.elements.MedicalEnumeration {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PhysicalExam'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalEnumeration'
+        static __properties = []
+        static _rdfs_comment = 'A type of physical examination of a patient performed by a physician. '
+        static _rdfs_label = 'PhysicalExam'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

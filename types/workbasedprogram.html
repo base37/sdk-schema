@@ -1,0 +1,61 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class WorkBasedProgram extends window.LiveElement.Element.elements.EducationalOccupationalProgram {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:WorkBasedProgram'
+        static __type = 'rdfs:Class'
+        static __extends = 'EducationalOccupationalProgram'
+        static __properties = ['occupationalCategory', 'trainingSalary']
+        static _rdfs_comment = 'A program with both an educational and employment component. Typically based at a workplace and structured around work-based learning, with the aim of instilling competencies related to an occupation. WorkBasedProgram is used to distinguish programs such as apprenticeships from school, college or other classroom based educational programs.'
+        static _rdfs_label = 'WorkBasedProgram'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        occupationalCategory($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http:\\/\\/www.onetcenter.org\\/taxonomy.html), [ISCO-08](https:\\/\\/www.ilo.org\\/public\\/english\\/bureau\\/stat\\/isco\\/isco08\\/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\\n\nNote: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.",
+				container: $this,
+				propertyName: "occupationalCategory",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CategoryCode",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        trainingSalary($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The estimated salary earned while in the program.",
+				container: $this,
+				propertyName: "trainingSalary",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MonetaryAmountDistribution"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

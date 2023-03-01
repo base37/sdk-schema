@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class GovernmentOrganization extends window.LiveElement.Element.elements.Organization {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:GovernmentOrganization'
+        static __type = 'rdfs:Class'
+        static __extends = 'Organization'
+        static __properties = []
+        static _rdfs_comment = 'A governmental organization or agency.'
+        static _rdfs_label = 'GovernmentOrganization'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

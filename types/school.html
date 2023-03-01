@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class School extends window.LiveElement.Element.elements.EducationalOrganization {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:School'
+        static __type = 'rdfs:Class'
+        static __extends = 'EducationalOrganization'
+        static __properties = []
+        static _rdfs_comment = 'A school.'
+        static _rdfs_label = 'School'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

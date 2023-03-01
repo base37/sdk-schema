@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ReservationPackage extends window.LiveElement.Element.elements.Reservation {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ReservationPackage'
+        static __type = 'rdfs:Class'
+        static __extends = 'Reservation'
+        static __properties = ['subReservation']
+        static _rdfs_comment = 'A group of multiple reservations with common values for all sub-reservations.'
+        static _rdfs_label = 'ReservationPackage'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        subReservation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The individual reservations included in the package. Typically a repeated property.",
+				container: $this,
+				propertyName: "subReservation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Reservation"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

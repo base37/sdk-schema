@@ -1,0 +1,92 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class OwnershipInfo extends window.LiveElement.Element.elements.StructuredValue {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:OwnershipInfo'
+        static __type = 'rdfs:Class'
+        static __extends = 'StructuredValue'
+        static __properties = ['acquiredFrom', 'ownedFrom', 'ownedThrough', 'typeOfGood']
+        static _rdfs_comment = 'A structured value providing information about when a certain organization or person owned a certain product.'
+        static _rdfs_label = 'OwnershipInfo'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        acquiredFrom($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The organization or person from which the product was acquired.",
+				container: $this,
+				propertyName: "acquiredFrom",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        ownedFrom($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date and time of obtaining the product.",
+				container: $this,
+				propertyName: "ownedFrom",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        ownedThrough($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date and time of giving up ownership on the product.",
+				container: $this,
+				propertyName: "ownedThrough",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        typeOfGood($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The product that this structured value is referring to.",
+				container: $this,
+				propertyName: "typeOfGood",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Service",
+					"Product"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

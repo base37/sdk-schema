@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalCode extends window.LiveElement.Element.elements.CategoryCode {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalCode'
+        static __type = 'rdfs:Class'
+        static __extends = 'CategoryCode'
+        static __properties = ['codeValue', 'codingSystem']
+        static _rdfs_comment = 'A code for a medical entity.'
+        static _rdfs_label = 'MedicalCode'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        codeValue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A short textual code that uniquely identifies the value.",
+				container: $this,
+				propertyName: "codeValue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        codingSystem($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The coding system, e.g. 'ICD-10'.",
+				container: $this,
+				propertyName: "codingSystem",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

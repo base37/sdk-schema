@@ -1,0 +1,259 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Accommodation extends window.LiveElement.Element.elements.Place {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Accommodation'
+        static __type = 'rdfs:Class'
+        static __extends = 'Place'
+        static __properties = ['accommodationCategory', 'accommodationFloorPlan', 'amenityFeature', 'floorLevel', 'floorSize', 'leaseLength', 'numberOfBathroomsTotal', 'numberOfBedrooms', 'numberOfFullBathrooms', 'numberOfPartialBathrooms', 'numberOfRooms', 'permittedUsage', 'petsAllowed', 'tourBookingPage', 'yearBuilt']
+        static _rdfs_comment = 'An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement. For more specific types of accommodations not defined in schema.org, one can use additionalType with external vocabularies. <br \/><br \/> See also the <a href="\/docs\/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations<\/a>. '
+        static _rdfs_label = 'Accommodation'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        accommodationCategory($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Category of an [[Accommodation]], following real estate conventions e.g. RESO (see [PropertySubType](https:\\/\\/ddwiki.reso.org\\/display\\/DDW17\\/PropertySubType+Field), and [PropertyType](https:\\/\\/ddwiki.reso.org\\/display\\/DDW17\\/PropertyType+Field) fields  for suggested values).",
+				container: $this,
+				propertyName: "accommodationCategory",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        accommodationFloorPlan($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A floorplan of some [[Accommodation]].",
+				container: $this,
+				propertyName: "accommodationFloorPlan",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"FloorPlan"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        amenityFeature($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.",
+				container: $this,
+				propertyName: "amenityFeature",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"LocationFeatureSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        floorLevel($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The floor level for an [[Accommodation]] in a multi-storey building. Since counting\n  systems [vary internationally](https:\\/\\/en.wikipedia.org\\/wiki\\/Storey#Consecutive_number_floor_designations), the local system should be used where possible.",
+				container: $this,
+				propertyName: "floorLevel",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        floorSize($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The size of the accommodation, e.g. in square meter or squarefoot.\nTypical unit code(s): MTK for square meter, FTK for square foot, or YDK for square yard ",
+				container: $this,
+				propertyName: "floorSize",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        leaseLength($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.",
+				container: $this,
+				propertyName: "leaseLength",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Duration",
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfBathroomsTotal($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The total integer number of bathrooms in a some [[Accommodation]], following real estate conventions as [documented in RESO](https:\\/\\/ddwiki.reso.org\\/display\\/DDW17\\/BathroomsTotalInteger+Field): \"The simple sum of the number of bathrooms. For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.\". See also [[numberOfRooms]].",
+				container: $this,
+				propertyName: "numberOfBathroomsTotal",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfBedrooms($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The total integer number of bedrooms in a some [[Accommodation]], [[ApartmentComplex]] or [[FloorPlan]].",
+				container: $this,
+				propertyName: "numberOfBedrooms",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfFullBathrooms($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Number of full bathrooms - The total number of full and \u00be bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsFull field in RESO](https:\\/\\/ddwiki.reso.org\\/display\\/DDW17\\/BathroomsFull+Field).",
+				container: $this,
+				propertyName: "numberOfFullBathrooms",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfPartialBathrooms($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Number of partial bathrooms - The total number of half and \u00bc bathrooms in an [[Accommodation]]. This corresponds to the [BathroomsPartial field in RESO](https:\\/\\/ddwiki.reso.org\\/display\\/DDW17\\/BathroomsPartial+Field). ",
+				container: $this,
+				propertyName: "numberOfPartialBathrooms",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfRooms($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.\nTypical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.",
+				container: $this,
+				propertyName: "numberOfRooms",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        permittedUsage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indications regarding the permitted usage of the accommodation.",
+				container: $this,
+				propertyName: "permittedUsage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        petsAllowed($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.",
+				container: $this,
+				propertyName: "petsAllowed",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        tourBookingPage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as other kinds of tours as appropriate.",
+				container: $this,
+				propertyName: "tourBookingPage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        yearBuilt($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The year an [[Accommodation]] was constructed. This corresponds to the [YearBuilt field in RESO](https:\\/\\/ddwiki.reso.org\\/display\\/DDW17\\/YearBuilt+Field). ",
+				container: $this,
+				propertyName: "yearBuilt",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,63 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class SendAction extends window.LiveElement.Element.elements.TransferAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:SendAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'TransferAction'
+        static __properties = ['deliveryMethod', 'recipient']
+        static _rdfs_comment = 'The act of physically\/electronically dispatching an object for transfer from an origin to a destination.Related actions:\n\n* [[ReceiveAction]]: The reciprocal of SendAction.\n* [[GiveAction]]: Unlike GiveAction, SendAction does not imply the transfer of ownership (e.g. I can send you my laptop, but I\'m not necessarily giving it to you).'
+        static _rdfs_label = 'SendAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        deliveryMethod($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of instrument. The method of delivery.",
+				container: $this,
+				propertyName: "deliveryMethod",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DeliveryMethod"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        recipient($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of participant. The participant who is at the receiving end of the action.",
+				container: $this,
+				propertyName: "recipient",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Audience",
+					"ContactPoint",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ScholarlyArticle extends window.LiveElement.Element.elements.Article {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ScholarlyArticle'
+        static __type = 'rdfs:Class'
+        static __extends = 'Article'
+        static __properties = []
+        static _rdfs_comment = 'A scholarly article.'
+        static _rdfs_label = 'ScholarlyArticle'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CategoryCodeSet extends window.LiveElement.Element.elements.DefinedTermSet {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CategoryCodeSet'
+        static __type = 'rdfs:Class'
+        static __extends = 'DefinedTermSet'
+        static __properties = ['hasCategoryCode']
+        static _rdfs_comment = 'A set of Category Code values.'
+        static _rdfs_label = 'CategoryCodeSet'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        hasCategoryCode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A Category code contained in this code set.",
+				container: $this,
+				propertyName: "hasCategoryCode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CategoryCode"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class EmailMessage extends window.LiveElement.Element.elements.Message {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:EmailMessage'
+        static __type = 'rdfs:Class'
+        static __extends = 'Message'
+        static __properties = []
+        static _rdfs_comment = 'An email message.'
+        static _rdfs_label = 'EmailMessage'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

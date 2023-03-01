@@ -1,0 +1,75 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class RsvpAction extends window.LiveElement.Element.elements.InformAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:RsvpAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'InformAction'
+        static __properties = ['additionalNumberOfGuests', 'comment', 'rsvpResponse']
+        static _rdfs_comment = 'The act of notifying an event organizer as to whether you expect to attend the event.'
+        static _rdfs_label = 'RsvpAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        additionalNumberOfGuests($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "If responding yes, the number of guests who will attend in addition to the invitee.",
+				container: $this,
+				propertyName: "additionalNumberOfGuests",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        comment($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Comments, typically from users.",
+				container: $this,
+				propertyName: "comment",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Comment"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        rsvpResponse($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The response (yes, no, maybe) to the RSVP.",
+				container: $this,
+				propertyName: "rsvpResponse",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"RsvpResponseType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

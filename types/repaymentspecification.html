@@ -1,0 +1,106 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class RepaymentSpecification extends window.LiveElement.Element.elements.StructuredValue {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:RepaymentSpecification'
+        static __type = 'rdfs:Class'
+        static __extends = 'StructuredValue'
+        static __properties = ['downPayment', 'earlyPrepaymentPenalty', 'loanPaymentAmount', 'loanPaymentFrequency', 'numberOfLoanPayments']
+        static _rdfs_comment = 'A structured value representing repayment.'
+        static _rdfs_label = 'RepaymentSpecification'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        downPayment($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "a type of payment made in cash during the onset of the purchase of an expensive good\\/service. The payment typically represents only a percentage of the full purchase price.",
+				container: $this,
+				propertyName: "downPayment",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"MonetaryAmount"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        earlyPrepaymentPenalty($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The amount to be paid as a penalty in the event of early payment of the loan.",
+				container: $this,
+				propertyName: "earlyPrepaymentPenalty",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MonetaryAmount"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        loanPaymentAmount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The amount of money to pay in a single payment.",
+				container: $this,
+				propertyName: "loanPaymentAmount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MonetaryAmount"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        loanPaymentFrequency($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Frequency of payments due, i.e. number of months between payments. This is defined as a frequency, i.e. the reciprocal of a period of time.",
+				container: $this,
+				propertyName: "loanPaymentFrequency",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfLoanPayments($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of payments contractually required at origination to repay the loan. For monthly paying loans this is the number of months from the contractual first payment date to the maturity date.",
+				container: $this,
+				propertyName: "numberOfLoanPayments",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

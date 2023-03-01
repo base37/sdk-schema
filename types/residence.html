@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Residence extends window.LiveElement.Element.elements.Place {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Residence'
+        static __type = 'rdfs:Class'
+        static __extends = 'Place'
+        static __properties = ['accommodationFloorPlan']
+        static _rdfs_comment = 'The place where a person lives.'
+        static _rdfs_label = 'Residence'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        accommodationFloorPlan($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A floorplan of some [[Accommodation]].",
+				container: $this,
+				propertyName: "accommodationFloorPlan",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"FloorPlan"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

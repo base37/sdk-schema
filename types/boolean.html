@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Boolean extends window.LiveElement.Element.elements.DataType {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Boolean'
+        static __type = 'schema:DataType'
+        static __extends = 'DataType'
+        static __properties = []
+        static _rdfs_comment = 'Boolean: True or False.'
+        static _rdfs_label = 'Boolean'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

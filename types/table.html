@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Table extends window.LiveElement.Element.elements.WebPageElement {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Table'
+        static __type = 'rdfs:Class'
+        static __extends = 'WebPageElement'
+        static __properties = []
+        static _rdfs_comment = 'A table on a Web page.'
+        static _rdfs_label = 'Table'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

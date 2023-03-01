@@ -1,0 +1,91 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DoseSchedule extends window.LiveElement.Element.elements.MedicalIntangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DoseSchedule'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalIntangible'
+        static __properties = ['doseUnit', 'doseValue', 'frequency', 'targetPopulation']
+        static _rdfs_comment = 'A specific dosing schedule for a drug or supplement.'
+        static _rdfs_label = 'DoseSchedule'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        doseUnit($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The unit of the dose, e.g. 'mg'.",
+				container: $this,
+				propertyName: "doseUnit",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        doseValue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The value of the dose, e.g. 500.",
+				container: $this,
+				propertyName: "doseValue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QualitativeValue",
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        frequency($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "How often the dose is taken, e.g. 'daily'.",
+				container: $this,
+				propertyName: "frequency",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        targetPopulation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.",
+				container: $this,
+				propertyName: "targetPopulation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

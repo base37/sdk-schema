@@ -1,0 +1,210 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class NutritionInformation extends window.LiveElement.Element.elements.StructuredValue {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:NutritionInformation'
+        static __type = 'rdfs:Class'
+        static __extends = 'StructuredValue'
+        static __properties = ['calories', 'carbohydrateContent', 'cholesterolContent', 'fatContent', 'fiberContent', 'proteinContent', 'saturatedFatContent', 'servingSize', 'sodiumContent', 'sugarContent', 'transFatContent', 'unsaturatedFatContent']
+        static _rdfs_comment = 'Nutritional information about the recipe.'
+        static _rdfs_label = 'NutritionInformation'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        calories($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of calories.",
+				container: $this,
+				propertyName: "calories",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Energy"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        carbohydrateContent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of grams of carbohydrates.",
+				container: $this,
+				propertyName: "carbohydrateContent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Mass"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        cholesterolContent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of milligrams of cholesterol.",
+				container: $this,
+				propertyName: "cholesterolContent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Mass"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        fatContent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of grams of fat.",
+				container: $this,
+				propertyName: "fatContent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Mass"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        fiberContent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of grams of fiber.",
+				container: $this,
+				propertyName: "fiberContent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Mass"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        proteinContent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of grams of protein.",
+				container: $this,
+				propertyName: "proteinContent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Mass"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        saturatedFatContent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of grams of saturated fat.",
+				container: $this,
+				propertyName: "saturatedFatContent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Mass"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        servingSize($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The serving size, in terms of the number of volume or mass.",
+				container: $this,
+				propertyName: "servingSize",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sodiumContent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of milligrams of sodium.",
+				container: $this,
+				propertyName: "sodiumContent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Mass"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sugarContent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of grams of sugar.",
+				container: $this,
+				propertyName: "sugarContent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Mass"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        transFatContent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of grams of trans fat.",
+				container: $this,
+				propertyName: "transFatContent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Mass"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        unsaturatedFatContent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of grams of unsaturated fat.",
+				container: $this,
+				propertyName: "unsaturatedFatContent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Mass"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class LegislationObject extends window.LiveElement.Element.elements.Legislation {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:LegislationObject'
+        static __type = 'rdfs:Class'
+        static __extends = 'Legislation'
+        static __properties = ['legislationLegalValue']
+        static _rdfs_comment = 'A specific object or file containing a Legislation. Note that the same Legislation can be published in multiple files. For example, a digitally signed PDF, a plain PDF and an HTML version.'
+        static _rdfs_label = 'LegislationObject'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        legislationLegalValue($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The legal value of this legislation file. The same legislation can be written in multiple files with different legal values. Typically a digitally signed PDF have a \"stronger\" legal value than the HTML file of the same act.",
+				container: $this,
+				propertyName: "legislationLegalValue",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"LegalValueLevel"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

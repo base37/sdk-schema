@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class AchieveAction extends window.LiveElement.Element.elements.Action {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:AchieveAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'Action'
+        static __properties = []
+        static _rdfs_comment = 'The act of accomplishing something via previous efforts. It is an instantaneous action rather than an ongoing process.'
+        static _rdfs_label = 'AchieveAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

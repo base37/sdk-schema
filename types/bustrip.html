@@ -1,0 +1,92 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class BusTrip extends window.LiveElement.Element.elements.Trip {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:BusTrip'
+        static __type = 'rdfs:Class'
+        static __extends = 'Trip'
+        static __properties = ['arrivalBusStop', 'busName', 'busNumber', 'departureBusStop']
+        static _rdfs_comment = 'A trip on a commercial bus line.'
+        static _rdfs_label = 'BusTrip'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        arrivalBusStop($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The stop or station from which the bus arrives.",
+				container: $this,
+				propertyName: "arrivalBusStop",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BusStation",
+					"BusStop"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        busName($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The name of the bus (e.g. Bolt Express).",
+				container: $this,
+				propertyName: "busName",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        busNumber($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The unique identifier for the bus.",
+				container: $this,
+				propertyName: "busNumber",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        departureBusStop($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The stop or station from which the bus departs.",
+				container: $this,
+				propertyName: "departureBusStop",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"BusStation",
+					"BusStop"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

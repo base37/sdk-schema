@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DiscoverAction extends window.LiveElement.Element.elements.FindAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DiscoverAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'FindAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of discovering\/finding an object.'
+        static _rdfs_label = 'DiscoverAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

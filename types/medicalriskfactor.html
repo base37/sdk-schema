@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalRiskFactor extends window.LiveElement.Element.elements.MedicalEntity {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalRiskFactor'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalEntity'
+        static __properties = ['increasesRiskOf']
+        static _rdfs_comment = 'A risk factor is anything that increases a person\'s likelihood of developing or contracting a disease, medical condition, or complication.'
+        static _rdfs_label = 'MedicalRiskFactor'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        increasesRiskOf($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The condition, complication, etc. influenced by this factor.",
+				container: $this,
+				propertyName: "increasesRiskOf",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalEntity"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalScholarlyArticle extends window.LiveElement.Element.elements.ScholarlyArticle {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalScholarlyArticle'
+        static __type = 'rdfs:Class'
+        static __extends = 'ScholarlyArticle'
+        static __properties = ['publicationType']
+        static _rdfs_comment = 'A scholarly article in the medical domain.'
+        static _rdfs_label = 'MedicalScholarlyArticle'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        publicationType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type of the medical article, taken from the US NLM MeSH publication type catalog. See also [MeSH documentation](http:\\/\\/www.nlm.nih.gov\\/mesh\\/pubtypes.html).",
+				container: $this,
+				propertyName: "publicationType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

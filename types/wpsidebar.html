@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class WPSideBar extends window.LiveElement.Element.elements.WebPageElement {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:WPSideBar'
+        static __type = 'rdfs:Class'
+        static __extends = 'WebPageElement'
+        static __properties = []
+        static _rdfs_comment = 'A sidebar section of the page.'
+        static _rdfs_label = 'WPSideBar'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

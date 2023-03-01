@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PhysicalTherapy extends window.LiveElement.Element.elements.MedicalTherapy {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PhysicalTherapy'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalTherapy'
+        static __properties = []
+        static _rdfs_comment = 'A process of progressive physical care and rehabilitation aimed at improving a health condition.'
+        static _rdfs_label = 'PhysicalTherapy'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

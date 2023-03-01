@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Researcher extends window.LiveElement.Element.elements.Audience {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Researcher'
+        static __type = 'rdfs:Class'
+        static __extends = 'Audience'
+        static __properties = []
+        static _rdfs_comment = 'Researchers.'
+        static _rdfs_label = 'Researcher'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

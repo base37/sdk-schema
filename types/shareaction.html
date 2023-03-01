@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ShareAction extends window.LiveElement.Element.elements.CommunicateAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ShareAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'CommunicateAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of distributing content to people for their amusement or edification.'
+        static _rdfs_label = 'ShareAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

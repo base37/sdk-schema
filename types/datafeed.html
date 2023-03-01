@@ -1,0 +1,47 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DataFeed extends window.LiveElement.Element.elements.Dataset {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DataFeed'
+        static __type = 'rdfs:Class'
+        static __extends = 'Dataset'
+        static __properties = ['dataFeedElement']
+        static _rdfs_comment = 'A single feed providing structured information about one or more entities or topics.'
+        static _rdfs_label = 'DataFeed'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        dataFeedElement($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An item within in a data feed. Data feeds may have many elements.",
+				container: $this,
+				propertyName: "dataFeedElement",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing",
+					"Text",
+					"DataFeedItem"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

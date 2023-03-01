@@ -1,0 +1,92 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Property extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Property'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['domainIncludes', 'inverseOf', 'rangeIncludes', 'supersededBy']
+        static _rdfs_comment = 'A property, used to indicate attributes and relationships of some Thing; equivalent to rdf:Property.'
+        static _rdfs_label = 'Property'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        domainIncludes($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Relates a property to a class that is (one of) the type(s) the property is expected to be used on.",
+				container: $this,
+				propertyName: "domainIncludes",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Class"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        inverseOf($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Relates a property to a property that is its inverse. Inverse properties relate the same pairs of items to each other, but in reversed direction. For example, the 'alumni' and 'alumniOf' properties are inverseOf each other. Some properties don't have explicit inverses; in these situations RDFa and JSON-LD syntax for reverse properties can be used.",
+				container: $this,
+				propertyName: "inverseOf",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Property"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        rangeIncludes($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Relates a property to a class that constitutes (one of) the expected type(s) for values of the property.",
+				container: $this,
+				propertyName: "rangeIncludes",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Class"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        supersededBy($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Relates a term (i.e. a property, class or enumeration) to one that supersedes it.",
+				container: $this,
+				propertyName: "supersededBy",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Enumeration",
+					"Property",
+					"Class"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

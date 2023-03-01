@@ -1,0 +1,90 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ShippingDeliveryTime extends window.LiveElement.Element.elements.StructuredValue {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ShippingDeliveryTime'
+        static __type = 'rdfs:Class'
+        static __extends = 'StructuredValue'
+        static __properties = ['businessDays', 'cutoffTime', 'handlingTime', 'transitTime']
+        static _rdfs_comment = 'ShippingDeliveryTime provides various pieces of information about delivery times for shipping.'
+        static _rdfs_label = 'ShippingDeliveryTime'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        businessDays($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Days of the week when the merchant typically operates, indicated via opening hours markup.",
+				container: $this,
+				propertyName: "businessDays",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"OpeningHoursSpecification"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        cutoffTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Order cutoff time allows merchants to describe the time after which they will no longer process orders received on that day. For orders processed after cutoff time, one day gets added to the delivery time estimate. This property is expected to be most typically used via the [[ShippingRateSettings]] publication pattern. The time is indicated using the ISO-8601 Time format, e.g. \"23:30:00-05:00\" would represent 6:30 pm Eastern Standard Time (EST) which is 5 hours behind Coordinated Universal Time (UTC).",
+				container: $this,
+				propertyName: "cutoffTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Time"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        handlingTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup, in case the delivery method is on site pickup. Typical properties: minValue, maxValue, unitCode (d for DAY).  This is by common convention assumed to mean business days (if a unitCode is used, coded as \"d\"), i.e. only counting days when the business normally operates.",
+				container: $this,
+				propertyName: "handlingTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        transitTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The typical delay the order has been sent for delivery and the goods reach the final customer. Typical properties: minValue, maxValue, unitCode (d for DAY).",
+				container: $this,
+				propertyName: "transitTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

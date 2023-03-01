@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CommentAction extends window.LiveElement.Element.elements.CommunicateAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CommentAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'CommunicateAction'
+        static __properties = ['resultComment']
+        static _rdfs_comment = 'The act of generating a comment about a subject.'
+        static _rdfs_label = 'CommentAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        resultComment($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A sub property of result. The Comment created or sent as a result of this action.",
+				container: $this,
+				propertyName: "resultComment",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Comment"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

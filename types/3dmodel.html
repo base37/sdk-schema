@@ -1,0 +1,45 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ThreeDModel extends window.LiveElement.Element.elements.MediaObject {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:3DModel'
+        static __type = 'rdfs:Class'
+        static __extends = 'MediaObject'
+        static __properties = ['isResizable']
+        static _rdfs_comment = 'A 3D model represents some kind of 3D content, which may have [[encoding]]s in one or more [[MediaObject]]s. Many 3D formats are available (e.g. see [Wikipedia](https:\/\/en.wikipedia.org\/wiki\/Category:3D_graphics_file_formats)); specific encoding formats can be represented using the [[encodingFormat]] property applied to the relevant [[MediaObject]]. For the case of a single file published after Zip compression, the convention of appending \'+zip\' to the [[encodingFormat]] can be used. Geospatial, AR\/VR, artistic\/animation, gaming, engineering and scientific content can all be represented using [[3DModel]].'
+        static _rdfs_label = '3DModel'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        isResizable($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Whether the 3DModel allows resizing. For example, room layout applications often do not allow 3DModel elements to be resized to reflect reality.",
+				container: $this,
+				propertyName: "isResizable",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,46 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class FinancialService extends window.LiveElement.Element.elements.LocalBusiness {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:FinancialService'
+        static __type = 'rdfs:Class'
+        static __extends = 'LocalBusiness'
+        static __properties = ['feesAndCommissionsSpecification']
+        static _rdfs_comment = 'Financial services business.'
+        static _rdfs_label = 'FinancialService'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        feesAndCommissionsSpecification($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.",
+				container: $this,
+				propertyName: "feesAndCommissionsSpecification",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

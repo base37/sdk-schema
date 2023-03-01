@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ConfirmAction extends window.LiveElement.Element.elements.InformAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ConfirmAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'InformAction'
+        static __properties = []
+        static _rdfs_comment = 'The act of notifying someone that a future event\/action is going to happen as expected.\n\nRelated actions:\n\n* [[CancelAction]]: The antonym of ConfirmAction.'
+        static _rdfs_label = 'ConfirmAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

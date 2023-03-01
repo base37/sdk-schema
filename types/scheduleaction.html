@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ScheduleAction extends window.LiveElement.Element.elements.PlanAction {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ScheduleAction'
+        static __type = 'rdfs:Class'
+        static __extends = 'PlanAction'
+        static __properties = []
+        static _rdfs_comment = 'Scheduling future actions, events, or tasks.\n\nRelated actions:\n\n* [[ReserveAction]]: Unlike ReserveAction, ScheduleAction allocates future actions (e.g. an event, a task, etc) towards a time slot \/ spatial allocation.'
+        static _rdfs_label = 'ScheduleAction'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

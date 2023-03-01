@@ -1,0 +1,63 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class DigitalDocumentPermission extends window.LiveElement.Element.elements.Intangible {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:DigitalDocumentPermission'
+        static __type = 'rdfs:Class'
+        static __extends = 'Intangible'
+        static __properties = ['grantee', 'permissionType']
+        static _rdfs_comment = 'A permission for a particular person or group to access a particular file.'
+        static _rdfs_label = 'DigitalDocumentPermission'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        grantee($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The person, organization, contact point, or audience that has been granted this permission.",
+				container: $this,
+				propertyName: "grantee",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Audience",
+					"Organization",
+					"ContactPoint"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        permissionType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The type of permission granted the person, organization, or audience.",
+				container: $this,
+				propertyName: "permissionType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DigitalDocumentPermissionType"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

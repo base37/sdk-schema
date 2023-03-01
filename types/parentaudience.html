@@ -1,0 +1,60 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class ParentAudience extends window.LiveElement.Element.elements.PeopleAudience {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:ParentAudience'
+        static __type = 'rdfs:Class'
+        static __extends = 'PeopleAudience'
+        static __properties = ['childMaxAge', 'childMinAge']
+        static _rdfs_comment = 'A set of characteristics describing parents, who can be interested in viewing some content.'
+        static _rdfs_label = 'ParentAudience'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        childMaxAge($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Maximal age of the child.",
+				container: $this,
+				propertyName: "childMaxAge",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        childMinAge($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Minimal age of the child.",
+				container: $this,
+				propertyName: "childMinAge",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

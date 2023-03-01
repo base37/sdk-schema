@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class PresentationDigitalDocument extends window.LiveElement.Element.elements.DigitalDocument {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:PresentationDigitalDocument'
+        static __type = 'rdfs:Class'
+        static __extends = 'DigitalDocument'
+        static __properties = []
+        static _rdfs_comment = 'A file containing slides or used for a presentation.'
+        static _rdfs_label = 'PresentationDigitalDocument'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

@@ -1,0 +1,1709 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CreativeWork extends window.LiveElement.Element.elements.Thing {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CreativeWork'
+        static __type = 'rdfs:Class'
+        static __extends = 'Thing'
+        static __properties = ['about', 'abstract', 'accessMode', 'accessModeSufficient', 'accessibilityAPI', 'accessibilityControl', 'accessibilityFeature', 'accessibilityHazard', 'accessibilitySummary', 'accountablePerson', 'acquireLicensePage', 'aggregateRating', 'alternativeHeadline', 'assesses', 'associatedMedia', 'audience', 'audio', 'author', 'award', 'awards', 'character', 'citation', 'comment', 'commentCount', 'conditionsOfAccess', 'contentLocation', 'contentRating', 'contentReferenceTime', 'contributor', 'copyrightHolder', 'copyrightNotice', 'copyrightYear', 'correction', 'creativeWorkStatus', 'creator', 'creditText', 'dateCreated', 'dateModified', 'datePublished', 'discussionUrl', 'editEIDR', 'editor', 'educationalAlignment', 'educationalLevel', 'educationalUse', 'encoding', 'encodingFormat', 'encodings', 'exampleOfWork', 'expires', 'fileFormat', 'funder', 'genre', 'hasPart', 'headline', 'inLanguage', 'interactionStatistic', 'interactivityType', 'isAccessibleForFree', 'isBasedOn', 'isBasedOnUrl', 'isFamilyFriendly', 'isPartOf', 'keywords', 'learningResourceType', 'license', 'locationCreated', 'mainEntity', 'maintainer', 'material', 'materialExtent', 'mentions', 'offers', 'pattern', 'position', 'producer', 'provider', 'publication', 'publisher', 'publisherImprint', 'publishingPrinciples', 'recordedAt', 'releasedEvent', 'review', 'reviews', 'schemaVersion', 'sdDatePublished', 'sdLicense', 'sdPublisher', 'size', 'sourceOrganization', 'spatial', 'spatialCoverage', 'sponsor', 'teaches', 'temporal', 'temporalCoverage', 'text', 'thumbnailUrl', 'timeRequired', 'translationOfWork', 'translator', 'typicalAgeRange', 'usageInfo', 'version', 'video', 'workExample', 'workTranslation']
+        static _rdfs_comment = 'The most generic kind of creative work, including books, movies, photographs, software programs, etc.'
+        static _rdfs_label = 'CreativeWork'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        about($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The subject matter of the content.",
+				container: $this,
+				propertyName: "about",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        abstract($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An abstract is a short description that summarizes a [[CreativeWork]].",
+				container: $this,
+				propertyName: "abstract",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        accessMode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The human sensory perceptual system or cognitive faculty through which a person may process or perceive information. Expected values include: auditory, tactile, textual, visual, colorDependent, chartOnVisual, chemOnVisual, diagramOnVisual, mathOnVisual, musicOnVisual, textOnVisual.\n      ",
+				container: $this,
+				propertyName: "accessMode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        accessModeSufficient($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A list of single or combined accessModes that are sufficient to understand all the intellectual content of a resource. Expected values include:  auditory, tactile, textual, visual.\n      ",
+				container: $this,
+				propertyName: "accessModeSufficient",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"ItemList"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        accessibilityAPI($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates that the resource is compatible with the referenced accessibility API ([WebSchemas wiki lists possible values](http:\\/\\/www.w3.org\\/wiki\\/WebSchemas\\/Accessibility)).",
+				container: $this,
+				propertyName: "accessibilityAPI",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        accessibilityControl($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Identifies input methods that are sufficient to fully control the described resource ([WebSchemas wiki lists possible values](http:\\/\\/www.w3.org\\/wiki\\/WebSchemas\\/Accessibility)).",
+				container: $this,
+				propertyName: "accessibilityControl",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        accessibilityFeature($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility ([WebSchemas wiki lists possible values](http:\\/\\/www.w3.org\\/wiki\\/WebSchemas\\/Accessibility)).",
+				container: $this,
+				propertyName: "accessibilityFeature",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        accessibilityHazard($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3 ([WebSchemas wiki lists possible values](http:\\/\\/www.w3.org\\/wiki\\/WebSchemas\\/Accessibility)).",
+				container: $this,
+				propertyName: "accessibilityHazard",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        accessibilitySummary($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as \"short descriptions are present but long descriptions will be needed for non-visual users\" or \"short descriptions are present and no long descriptions are needed.\"",
+				container: $this,
+				propertyName: "accessibilitySummary",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        accountablePerson($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specifies the Person that is legally accountable for the CreativeWork.",
+				container: $this,
+				propertyName: "accountablePerson",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        acquireLicensePage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates a page documenting how licenses can be purchased or otherwise acquired, for the current item.",
+				container: $this,
+				propertyName: "acquireLicensePage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        aggregateRating($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The overall rating, based on a collection of reviews or ratings, of the item.",
+				container: $this,
+				propertyName: "aggregateRating",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AggregateRating"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        alternativeHeadline($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A secondary title of the CreativeWork.",
+				container: $this,
+				propertyName: "alternativeHeadline",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        assesses($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The item being described is intended to assess the competency or learning outcome defined by the referenced term.",
+				container: $this,
+				propertyName: "assesses",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DefinedTerm",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        associatedMedia($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A media object that encodes this CreativeWork. This property is a synonym for encoding.",
+				container: $this,
+				propertyName: "associatedMedia",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MediaObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        audience($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An intended audience, i.e. a group for whom something was created.",
+				container: $this,
+				propertyName: "audience",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Audience"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        audio($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An embedded audio object.",
+				container: $this,
+				propertyName: "audio",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MusicRecording",
+					"Clip",
+					"AudioObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        author($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
+				container: $this,
+				propertyName: "author",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        award($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An award won by or for this item.",
+				container: $this,
+				propertyName: "award",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        awards($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Awards won by or for this item.",
+				container: $this,
+				propertyName: "awards",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        character($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Fictional person connected with a creative work.",
+				container: $this,
+				propertyName: "character",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        citation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+				container: $this,
+				propertyName: "citation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        comment($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Comments, typically from users.",
+				container: $this,
+				propertyName: "comment",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Comment"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        commentCount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.",
+				container: $this,
+				propertyName: "commentCount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        conditionsOfAccess($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an [[ArchiveComponent]] held by an [[ArchiveOrganization]]. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.\\n\\nFor example \"Available by appointment from the Reading Room\" or \"Accessible only from logged-in accounts \". ",
+				container: $this,
+				propertyName: "conditionsOfAccess",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        contentLocation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The location depicted or described in the content. For example, the location in a photograph or painting.",
+				container: $this,
+				propertyName: "contentLocation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        contentRating($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.",
+				container: $this,
+				propertyName: "contentRating",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Rating"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        contentReferenceTime($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The specific time described by a creative work, for works (e.g. articles, video objects etc.) that emphasise a particular moment within an Event.",
+				container: $this,
+				propertyName: "contentReferenceTime",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        contributor($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A secondary contributor to the CreativeWork or Event.",
+				container: $this,
+				propertyName: "contributor",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        copyrightHolder($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The party holding the legal copyright to the CreativeWork.",
+				container: $this,
+				propertyName: "copyrightHolder",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        copyrightNotice($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Text of a notice appropriate for describing the copyright aspects of this Creative Work, ideally indicating the owner of the copyright for the Work.",
+				container: $this,
+				propertyName: "copyrightNotice",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        copyrightYear($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The year during which the claimed copyright for the CreativeWork was first asserted.",
+				container: $this,
+				propertyName: "copyrightYear",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        correction($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates a correction to a [[CreativeWork]], either via a [[CorrectionComment]], textually or in another document.",
+				container: $this,
+				propertyName: "correction",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"CorrectionComment",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        creativeWorkStatus($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle.",
+				container: $this,
+				propertyName: "creativeWorkStatus",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"DefinedTerm"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        creator($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The creator\\/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
+				container: $this,
+				propertyName: "creator",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        creditText($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Text that can be used to credit person(s) and\\/or organization(s) associated with a published Creative Work.",
+				container: $this,
+				propertyName: "creditText",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        dateCreated($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date on which the CreativeWork was created or the item was added to a DataFeed.",
+				container: $this,
+				propertyName: "dateCreated",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        dateModified($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+				container: $this,
+				propertyName: "dateModified",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        datePublished($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Date of first broadcast\\/publication.",
+				container: $this,
+				propertyName: "datePublished",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Date",
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        discussionUrl($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A link to the page containing the comments of the CreativeWork.",
+				container: $this,
+				propertyName: "discussionUrl",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        editEIDR($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An [EIDR](https:\\/\\/eidr.org\\/) (Entertainment Identifier Registry) [[identifier]] representing a specific edit \\/ edition for a work of film or television.\n\nFor example, the motion picture known as \"Ghostbusters\" whose [[titleEIDR]] is \"10.5240\\/7EC7-228A-510A-053E-CBB8-J\", has several edits e.g. \"10.5240\\/1F2A-E1C5-680A-14C6-E76B-I\" and \"10.5240\\/8A35-3BEE-6497-5D12-9E4F-3\".\n\nSince schema.org types like [[Movie]] and [[TVEpisode]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.\n",
+				container: $this,
+				propertyName: "editEIDR",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        editor($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Specifies the Person who edited the CreativeWork.",
+				container: $this,
+				propertyName: "editor",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        educationalAlignment($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An alignment to an established educational framework.\n\nThis property should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.",
+				container: $this,
+				propertyName: "educationalAlignment",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"AlignmentObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        educationalLevel($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
+				container: $this,
+				propertyName: "educationalLevel",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text",
+					"DefinedTerm"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        educationalUse($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The purpose of a work in the context of education; for example, 'assignment', 'group work'.",
+				container: $this,
+				propertyName: "educationalUse",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DefinedTerm",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        encoding($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A media object that encodes this CreativeWork. This property is a synonym for associatedMedia.",
+				container: $this,
+				propertyName: "encoding",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MediaObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        encodingFormat($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Media type typically expressed using a MIME format (see [IANA site](http:\\/\\/www.iana.org\\/assignments\\/media-types\\/media-types.xhtml) and [MDN reference](https:\\/\\/developer.mozilla.org\\/en-US\\/docs\\/Web\\/HTTP\\/Basics_of_HTTP\\/MIME_types)) e.g. application\\/zip for a SoftwareApplication binary, audio\\/mpeg for .mp3 etc.).\n\nIn cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information.\n\nUnregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia\\/Wikidata entry.",
+				container: $this,
+				propertyName: "encodingFormat",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        encodings($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A media object that encodes this CreativeWork.",
+				container: $this,
+				propertyName: "encodings",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MediaObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        exampleOfWork($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A creative work that this work is an example\\/instance\\/realization\\/derivation of.",
+				container: $this,
+				propertyName: "exampleOfWork",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        expires($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Date the content expires and is no longer useful or available. For example a [[VideoObject]] or [[NewsArticle]] whose availability or relevance is time-limited, or a [[ClaimReview]] fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date.",
+				container: $this,
+				propertyName: "expires",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        fileFormat($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Media type, typically MIME format (see [IANA site](http:\\/\\/www.iana.org\\/assignments\\/media-types\\/media-types.xhtml)) of the content e.g. application\\/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.",
+				container: $this,
+				propertyName: "fileFormat",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        funder($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+				container: $this,
+				propertyName: "funder",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        genre($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Genre of the creative work, broadcast channel or group.",
+				container: $this,
+				propertyName: "genre",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hasPart($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
+				container: $this,
+				propertyName: "hasPart",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        headline($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Headline of the article.",
+				container: $this,
+				propertyName: "headline",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        inLanguage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http:\\/\\/tools.ietf.org\\/html\\/bcp47). See also [[availableLanguage]].",
+				container: $this,
+				propertyName: "inLanguage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Language"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        interactionStatistic($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used.",
+				container: $this,
+				propertyName: "interactionStatistic",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"InteractionCounter"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        interactivityType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.",
+				container: $this,
+				propertyName: "interactivityType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isAccessibleForFree($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A flag to signal that the item, event, or place is accessible for free.",
+				container: $this,
+				propertyName: "isAccessibleForFree",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isBasedOn($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A resource from which this work is derived or from which it is a modification or adaption.",
+				container: $this,
+				propertyName: "isBasedOn",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork",
+					"Product",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isBasedOnUrl($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http:\\/\\/example.com\\/great-multiplication-intro.html.",
+				container: $this,
+				propertyName: "isBasedOnUrl",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Product",
+					"CreativeWork",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isFamilyFriendly($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates whether this content is family friendly.",
+				container: $this,
+				propertyName: "isFamilyFriendly",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Boolean"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        isPartOf($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
+				container: $this,
+				propertyName: "isPartOf",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        keywords($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+				container: $this,
+				propertyName: "keywords",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"DefinedTerm",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        learningResourceType($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
+				container: $this,
+				propertyName: "learningResourceType",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DefinedTerm",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        license($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A license document that applies to this content, typically indicated by URL.",
+				container: $this,
+				propertyName: "license",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        locationCreated($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork.",
+				container: $this,
+				propertyName: "locationCreated",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        mainEntity($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the primary entity described in some page or other CreativeWork.",
+				container: $this,
+				propertyName: "mainEntity",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        maintainer($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A maintainer of a [[Dataset]], software package ([[SoftwareApplication]]), or other [[Project]]. A maintainer is a [[Person]] or [[Organization]] that manages contributions to, and\\/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on \"upstream\" sources. When [[maintainer]] is applied to a specific version of something e.g. a particular version or packaging of a [[Dataset]], it is always  possible that the upstream source has a different maintainer. The [[isBasedOn]] property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work.\n      ",
+				container: $this,
+				propertyName: "maintainer",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        material($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A material that something is made from, e.g. leather, wool, cotton, paper.",
+				container: $this,
+				propertyName: "material",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Product",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        materialExtent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The quantity of the materials being described or an expression of the physical space they occupy.",
+				container: $this,
+				propertyName: "materialExtent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        mentions($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
+				container: $this,
+				propertyName: "mentions",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Thing"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        offers($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.\n      ",
+				container: $this,
+				propertyName: "offers",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Demand",
+					"Offer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        pattern($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A pattern that something has, for example 'polka dot', 'striped', 'Canadian flag'. Values are typically expressed as text, although links to controlled value schemes are also supported.",
+				container: $this,
+				propertyName: "pattern",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"DefinedTerm"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        position($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The position of an item in a series or sequence of items.",
+				container: $this,
+				propertyName: "position",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        producer($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The person or organization who produced the work (e.g. music album, movie, tv\\/radio series etc.).",
+				container: $this,
+				propertyName: "producer",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        provider($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
+				container: $this,
+				propertyName: "provider",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        publication($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A publication event associated with the item.",
+				container: $this,
+				propertyName: "publication",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PublicationEvent"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        publisher($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The publisher of the creative work.",
+				container: $this,
+				propertyName: "publisher",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        publisherImprint($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The publishing division which published the comic.",
+				container: $this,
+				propertyName: "publisherImprint",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        publishingPrinciples($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The publishingPrinciples property indicates (typically via [[URL]]) a document describing the editorial principles of an [[Organization]] (or individual e.g. a [[Person]] writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]].\n\nWhile such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology.\n",
+				container: $this,
+				propertyName: "publishingPrinciples",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        recordedAt($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The Event where the CreativeWork was recorded. The CreativeWork may capture all or part of the event.",
+				container: $this,
+				propertyName: "recordedAt",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Event"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        releasedEvent($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The place and time the release was issued, expressed as a PublicationEvent.",
+				container: $this,
+				propertyName: "releasedEvent",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"PublicationEvent"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        review($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A review of the item.",
+				container: $this,
+				propertyName: "review",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Review"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        reviews($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Review of the item.",
+				container: $this,
+				propertyName: "reviews",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Review"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        schemaVersion($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as https:\\/\\/schema.org\\/version\\/2.0\\/ if precise indication of schema version was required by some application. ",
+				container: $this,
+				propertyName: "schemaVersion",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sdDatePublished($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the date on which the current structured data was generated \\/ published. Typically used alongside [[sdPublisher]]",
+				container: $this,
+				propertyName: "sdDatePublished",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Date"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sdLicense($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A license document that applies to this structured data, typically indicated by URL.",
+				container: $this,
+				propertyName: "sdLicense",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sdPublisher($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The\n[[sdPublisher]] property helps make such practices more explicit.",
+				container: $this,
+				propertyName: "sdPublisher",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        size($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A standardized size of a product or creative work, often simplifying richer information into a simple textual string, either through referring to named sizes or (in the case of product markup), by adopting conventional simplifications. Use of QuantitativeValue with a unitCode or unitText can add more structure; in other cases, the \\/width, \\/height, \\/depth and \\/weight properties may be more applicable. ",
+				container: $this,
+				propertyName: "size",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"QuantitativeValue",
+					"DefinedTerm",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sourceOrganization($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The Organization on whose behalf the creator was working.",
+				container: $this,
+				propertyName: "sourceOrganization",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        spatial($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The \"spatial\" property can be used in cases when more specific properties\n(e.g. [[locationCreated]], [[spatialCoverage]], [[contentLocation]]) are not known to be appropriate.",
+				container: $this,
+				propertyName: "spatial",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        spatialCoverage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of\n      contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates\n      areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York.",
+				container: $this,
+				propertyName: "spatialCoverage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Place"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sponsor($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.",
+				container: $this,
+				propertyName: "sponsor",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        teaches($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term.",
+				container: $this,
+				propertyName: "teaches",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DefinedTerm",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        temporal($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The \"temporal\" property can be used in cases where more specific properties\n(e.g. [[temporalCoverage]], [[dateCreated]], [[dateModified]], [[datePublished]]) are not known to be appropriate.",
+				container: $this,
+				propertyName: "temporal",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"DateTime"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        temporalCoverage($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https:\\/\\/en.wikipedia.org\\/wiki\\/ISO_8601#Time_intervals). In\n      the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011\\/2012\"). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL.\n      Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939\\/1945\".\n\nOpen-ended date ranges can be written with \"..\" in place of the end date. For example, \"2015-11\\/..\" indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.",
+				container: $this,
+				propertyName: "temporalCoverage",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"DateTime",
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        text($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The textual content of this CreativeWork.",
+				container: $this,
+				propertyName: "text",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        thumbnailUrl($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A thumbnail image relevant to the Thing.",
+				container: $this,
+				propertyName: "thumbnailUrl",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        timeRequired($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'PT30M', 'PT1H25M'.",
+				container: $this,
+				propertyName: "timeRequired",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Duration"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        translationOfWork($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The work that this work has been translated from. e.g. \u7269\u79cd\u8d77\u6e90 is a translationOf \u201cOn the Origin of Species\u201d",
+				container: $this,
+				propertyName: "translationOfWork",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        translator($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.",
+				container: $this,
+				propertyName: "translator",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"Organization"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        typicalAgeRange($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The typical expected age range, e.g. '7-9', '11-'.",
+				container: $this,
+				propertyName: "typicalAgeRange",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        usageInfo($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The schema.org [[usageInfo]] property indicates further information about a [[CreativeWork]]. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.\n\nThis property can be used alongside the license property which indicates license(s) applicable to some piece of content. The usageInfo property can provide information about other licensing options, e.g. acquiring commercial usage rights for an image that is also available under non-commercial creative commons licenses.",
+				container: $this,
+				propertyName: "usageInfo",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        version($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The version of the CreativeWork embodied by a specified resource.",
+				container: $this,
+				propertyName: "version",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text",
+					"Number"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        video($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An embedded video object.",
+				container: $this,
+				propertyName: "video",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Clip",
+					"VideoObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        workExample($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Example\\/instance\\/realization\\/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook.",
+				container: $this,
+				propertyName: "workExample",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        workTranslation($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A work that is a translation of the content of this work. e.g. \u897f\u904a\u8a18 has an English workTranslation \u201cJourney to the West\u201d,a German workTranslation \u201cMonkeys Pilgerfahrt\u201d and a Vietnamese  translation T\u00e2y du k\u00fd b\u00ecnh kh\u1ea3o.",
+				container: $this,
+				propertyName: "workTranslation",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CreativeWork"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

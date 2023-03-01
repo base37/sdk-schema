@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class OrderStatus extends window.LiveElement.Element.elements.StatusEnumeration {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:OrderStatus'
+        static __type = 'rdfs:Class'
+        static __extends = 'StatusEnumeration'
+        static __properties = []
+        static _rdfs_comment = 'Enumerated status values for Order.'
+        static _rdfs_label = 'OrderStatus'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

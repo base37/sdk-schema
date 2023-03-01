@@ -1,0 +1,62 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class MedicalClinic extends window.LiveElement.Element.elements.MedicalBusiness {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:MedicalClinic'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalBusiness'
+        static __properties = ['availableService', 'medicalSpecialty']
+        static _rdfs_comment = 'A facility, often associated with a hospital or medical school, that is devoted to the specific diagnosis and\/or healthcare. Previously limited to outpatients but with evolution it may be open to inpatients as well.'
+        static _rdfs_label = 'MedicalClinic'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        availableService($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A medical service available from this provider.",
+				container: $this,
+				propertyName: "availableService",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalTest",
+					"MedicalTherapy",
+					"MedicalProcedure"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        medicalSpecialty($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A medical specialty of the provider.",
+				container: $this,
+				propertyName: "medicalSpecialty",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"MedicalSpecialty"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

@@ -1,0 +1,31 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class CovidTestingFacility extends window.LiveElement.Element.elements.MedicalClinic {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:CovidTestingFacility'
+        static __type = 'rdfs:Class'
+        static __extends = 'MedicalClinic'
+        static __properties = []
+        static _rdfs_comment = 'A CovidTestingFacility is a [[MedicalClinic]] where testing for the COVID-19 Coronavirus       disease is available. If the facility is being made available from an established [[Pharmacy]], [[Hotel]], or other       non-medical organization, multiple types can be listed. This makes it easier to re-use existing schema.org information       about that place e.g. contact info, address, opening hours. Note that in an emergency, such information may not always be reliable.       '
+        static _rdfs_label = 'CovidTestingFacility'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        
+    }
+</script>

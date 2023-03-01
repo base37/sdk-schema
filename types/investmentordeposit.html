@@ -1,0 +1,46 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class InvestmentOrDeposit extends window.LiveElement.Element.elements.FinancialProduct {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:InvestmentOrDeposit'
+        static __type = 'rdfs:Class'
+        static __extends = 'FinancialProduct'
+        static __properties = ['amount']
+        static _rdfs_comment = 'A type of financial product that typically requires the client to transfer funds to a financial service in return for potential beneficial financial return.'
+        static _rdfs_label = 'InvestmentOrDeposit'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        amount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The amount of money.",
+				container: $this,
+				propertyName: "amount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Number",
+					"MonetaryAmount"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

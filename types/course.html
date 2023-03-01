@@ -1,0 +1,127 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Course extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Course'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['courseCode', 'coursePrerequisites', 'educationalCredentialAwarded', 'hasCourseInstance', 'numberOfCredits', 'occupationalCredentialAwarded']
+        static _rdfs_comment = 'A description of an educational course which may be offered as distinct instances at which take place at different times or take place at different locations, or be offered through different media or modes of study. An educational course is a sequence of one or more educational events and\/or creative works which aims to build knowledge, competence or ability of learners.'
+        static _rdfs_label = 'Course'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        courseCode($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The identifier for the [[Course]] used by the course [[provider]] (e.g. CS101 or 6.001).",
+				container: $this,
+				propertyName: "courseCode",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        coursePrerequisites($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "Requirements for taking the Course. May be completion of another [[Course]] or a textual description like \"permission of instructor\". Requirements may be a pre-requisite competency, referenced using [[AlignmentObject]].",
+				container: $this,
+				propertyName: "coursePrerequisites",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Course",
+					"Text",
+					"AlignmentObject"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        educationalCredentialAwarded($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course or program.",
+				container: $this,
+				propertyName: "educationalCredentialAwarded",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"EducationalOccupationalCredential",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        hasCourseInstance($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "An offering of the course at a specific time and place or through specific media or mode of study or to a specific section of students.",
+				container: $this,
+				propertyName: "hasCourseInstance",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"CourseInstance"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        numberOfCredits($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.",
+				container: $this,
+				propertyName: "numberOfCredits",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"StructuredValue",
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        occupationalCredentialAwarded($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this course or program.",
+				container: $this,
+				propertyName: "occupationalCredentialAwarded",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"EducationalOccupationalCredential",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

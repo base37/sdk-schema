@@ -1,0 +1,94 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class SportsEvent extends window.LiveElement.Element.elements.Event {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:SportsEvent'
+        static __type = 'rdfs:Class'
+        static __extends = 'Event'
+        static __properties = ['awayTeam', 'competitor', 'homeTeam', 'sport']
+        static _rdfs_comment = 'Event type: Sports event.'
+        static _rdfs_label = 'SportsEvent'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        awayTeam($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The away team in a sports event.",
+				container: $this,
+				propertyName: "awayTeam",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"SportsTeam",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        competitor($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A competitor in a sports event.",
+				container: $this,
+				propertyName: "competitor",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Person",
+					"SportsTeam"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        homeTeam($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The home team in a sports event.",
+				container: $this,
+				propertyName: "homeTeam",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"SportsTeam",
+					"Person"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        sport($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "A type of sport (e.g. Baseball).",
+				container: $this,
+				propertyName: "sport",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"URL",
+					"Text"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>

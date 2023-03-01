@@ -1,0 +1,75 @@
+<style>
+</style>
+<template>
+    <slot></slot>
+</template>
+<script>
+    /* global */
+    class Comment extends window.LiveElement.Element.elements.CreativeWork {
+
+        static __prefix = window.LiveElement.Element.prefix
+        
+        static __release = '11.01'
+        static __id = 'schema:Comment'
+        static __type = 'rdfs:Class'
+        static __extends = 'CreativeWork'
+        static __properties = ['downvoteCount', 'parentItem', 'upvoteCount']
+        static _rdfs_comment = 'A comment on an item - for example, a comment on a blog post. The comment\'s content is expressed via the [[text]] property, and its topic via [[about]], properties shared with all CreativeWorks.'
+        static _rdfs_label = 'Comment'
+
+        constructor() {
+            super()
+        }
+        
+        connectedCallback() {
+            super.connectedCallback()
+        }
+        
+        
+        downvoteCount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of downvotes this question, answer or comment has received from the community.",
+				container: $this,
+				propertyName: "downvoteCount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        parentItem($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The parent of a question, answer or item in general.",
+				container: $this,
+				propertyName: "parentItem",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Comment"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+
+        upvoteCount($this, value) {
+			window.LiveElement.Schema.setProperty({
+				comment: "The number of upvotes this question, answer or comment has received from the community.",
+				container: $this,
+				propertyName: "upvoteCount",
+				release: "11.01",
+				source: "schema.org",
+				types: [
+					"Integer"
+				],
+				value: value
+			})
+			return value && typeof value == 'object' ? undefined : value
+		}
+        
+    }
+</script>
